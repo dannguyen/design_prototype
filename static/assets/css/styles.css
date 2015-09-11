@@ -1,0 +1,364 @@
+@font-face {
+    font-family: 'Gudea';
+    font-style: normal;
+    font-weight: normal;
+    src: url(../fonts/Gudea/Gudea-Regular.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'Pathway Gothic One';
+    font-style: normal;
+    font-weight: normal;
+    src: url(../fonts/Pathway_Gothic_One/PathwayGothicOne-Regular.ttf) format('truetype');
+}
+
+* {
+    font-family: 'Gudea', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+body {
+    background-color: WhiteSmoke;
+    overflow-x: hidden;
+}
+html, body { height: 100%; }
+
+.wrapper { 
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -15em;
+}
+.wrapper.body { overflow-x: hidden; }
+.footer, .push {
+    height: 15em;
+}
+.footer  {
+    background-color: black;
+    color: white;
+}
+
+a {
+    color: #D00441;
+    text-decoration: none;
+}
+p { 
+    margin: 15px 0; 
+    line-height: 1.5em;
+    text-align: left;
+    font-size: 13pt;
+} 
+
+ul { 
+    text-align: left;
+    list-style: square inside url('data:image/gif;base64,R0lGODlhBQAKAIABAAAAAP///yH5BAEAAAEALAAAAAAFAAoAAAIIjI+ZwKwPUQEAOw=='); 
+}
+
+li { 
+    margin-left: 2em; 
+    font-size: 13pt;
+    line-height: 1.5em;
+}
+.sidebar li { margin-left: 0; }
+
+h1, h2, h3 { 
+    font-family: 'Pathway Gothic One', sans-serif;
+    color: #D00441
+}
+h1 { font-size: 2.7em }
+h2 { font-size: 2em; }
+h3 { font-size: 1.8em; color: black; font-weight: normal; }
+
+span { color: #D00441; }
+
+a#header {
+    color: WhiteSmoke;
+    font-size: 18pt;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+td {
+    padding: 20px;
+}
+th {
+    padding: 10px;
+}
+tr:nth-child(even) {
+    background: WhiteSmoke;
+}
+
+h2.subtitle {
+    color: gray;
+    margin-top: 0px;
+}
+div.contract {
+    background-color: WhiteSmoke;
+    padding: 15px;
+    margin: 15px;
+}
+
+div.sub-box {
+    border: 1px solid #F2F5F7;
+    border-radius: 3px;
+    width: 40%;
+    padding: 15px;
+    margin: 15px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+div.title-box{
+    width: 100%;
+    padding-left: 15px;
+}
+
+.container{
+    /*background-color: WhiteSmoke;*/
+    padding: 15px;
+    margin: 15px;
+    overflow: auto;
+}
+.container.main {
+    margin: 0 auto;
+    width: 85%;
+}
+.container.module {
+    background-color: white;
+    margin: 5px;
+    display: inline-block;
+    vertical-align: top;
+}
+.container.module.column {
+    width: 35%;
+    text-align: center;
+}
+.content {
+    width: 70%;
+    margin: 0;
+    display: inline-block;
+    vertical-align: top;
+    border-right: 3px solid Gainsboro;
+}
+.wrapper.content { z-index: 1; }
+.sidebar {
+    width: 30%;
+    margin: 0;
+    margin-left: -5px;
+    display: inline-block;
+    vertical-align: top;
+}
+.wrapper.sidebar { 
+    position: absolute;
+    right: 0;
+    z-index: 0;
+    padding-left: 3px;
+}
+.extra.sidebar {
+    margin: 0;
+    height: auto;
+    width: auto;
+    min-width: 100%;
+    cursor: pointer;
+    margin-left: 2px;
+}
+.extra.sidebar:hover { 
+    background-color: #CFCFCF;
+}
+.sidebar h2, .subhead h3 { text-align: center; }
+.sidebar .subhead h3 { display: block; }
+.sidebar .container { text-align: center; }
+.sidebar ul { margin-bottom: 15px; }
+.boxes {
+    display: flex;
+}
+.extra { 
+    height: 10em;
+    padding: 10px;
+    margin: 5px;
+    background-color: Gainsboro;
+    cursor: pointer;
+}
+.extra:hover { background-color: #CFCFCF; }
+.extra:first-child {
+    background-color: #D00441;
+}
+.extra:first-child:hover { background-color: #C2003A; }
+.extra:first-child h2 { color: white;}
+
+.page-type {
+    background-color: Gainsboro;
+    display: inline-block;
+    float: right;
+    margin: -7px 0;
+    padding: 22px;
+    font-size: 13pt;
+    letter-spacing: 2px; 
+}
+.page-identifier { 
+    padding: 10px 0 20px 20px;
+    background-color: WhiteSmoke;
+    height: 36px;
+    /*width: 70%;*/
+}
+.page-identifier h1 { display: inline-block; }
+
+.subhead { 
+    background-color: white; 
+    padding: 15px 0 15px 15px; 
+    border-bottom: 3px solid Gainsboro;
+    border-top: 3px solid Gainsboro;
+    height: 30px;
+}
+.subhead h3 { display: inline-block; }
+.sidebar .subhead { 
+    width: 100%; 
+    margin-left: 2px; 
+}
+
+.option {
+    background-color: #57C3EC;
+    color: white;
+    padding: 5px;
+    height: 19px;
+    display: inline-block;
+    width: 70px;
+    text-align: center;
+}
+.option:hover { background-color: #45B5D8}
+.option:first-child {
+    border-bottom: 3px solid white;
+}
+.wrapper.option {
+    background-color: white;
+    float: right;
+    padding: 0;
+    margin-top: -15px;
+    width: 80px;
+}
+.chart {
+    width: 100%;
+}
+table { 
+    width: 100%; 
+    background-color: white;
+}
+
+input[type=text] {
+    padding: 20px;
+    width: 94%;
+    margin: 5px;
+    font-size: 16pt;
+    border: none;
+    border:none;
+    letter-spacing: .1em;
+}
+
+div#title {
+    padding: 2px 15px;
+    margin: 2px 15px;
+    display: inline-block;
+}
+
+div#subtitle {
+    background-color: #CCCCCC;
+    color: white;
+    display: inline-block;
+    padding: 2px 15px;
+    margin: 2px 15px;
+}
+
+.more { 
+    padding: 5px 20px; 
+    background-color: #D00441;
+    margin: 0 auto;
+    display: inline-block;
+    color: white;
+    cursor: pointer;
+}
+.fa.fa-caret-down { margin-left: 10px; }
+.more:hover { background-color: #C2003A; }
+
+div#map-cities {
+    width: 35%;
+    max-width: 100%;
+    float: left;
+    margin-right: 15px;
+    vertical-align: top;
+}
+
+div#map {
+    width: 63%;
+    max-width: 100%;
+    height: 400px;
+    overflow: hidden;
+    vertical-align: top;
+}
+
+div#detail {
+    margin: 0px;
+    margin-top: -10px;
+    padding: 0px;
+    width: 100%;
+}
+/* HEADER CSS */
+div.header {
+    background-color: black;
+    color: white;
+    width: 100%;
+    letter-spacing: 2px;
+    padding: 15px 30px;
+    position: fixed;
+    z-index: 10;
+}
+div.header.spacer {
+    position: relative;
+    visibility: hidden;
+    height: 27px;
+}
+#login { 
+    background-color: Gainsboro;
+    position: absolute;
+    right: 60px;
+    top: 0;
+    padding: 20px;
+    color: black;
+    cursor: pointer;
+}
+#login:hover {
+    background-color: #D00441;
+    color: white;
+}
+.fa.fa-bars {
+    position: absolute;
+    right: 160px;
+    font-size: 18pt;
+    cursor: pointer;
+    color: WhiteSmoke;
+}
+.fa.fa-bars:hover { color: #D00441; }
+
+/* END HEADER CSS */
+hr {
+    border-color: none;
+    color: gray;
+    background-color: #gray;
+    height: 1px;
+    margin: 10px;
+}
+
+div.bar {
+    height: 20px;
+    background-color: black;
+}
+
+div.subtitle {
+    background-color: black;
+    color: white;
+    padding: 15px;
+}
+

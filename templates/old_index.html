@@ -1,0 +1,77 @@
+        <div class="contract">
+        <h2 class="subtitle">Most common products or services</h2>
+            <table>
+                <tr>
+                    <th>Product or service</th>
+                    <th># of contracts</th>
+                     <th>Total dollars</th>
+                     <th></th>
+                </tr>
+                {% for prod in products_list[:5] %}
+                <tr>
+                    <td style="max-width:500px"><a href="product/{{ prod[4] }} ">{{ prod[0] }}</a></td>
+                    <td style="text-align:center">{{ prod[2] }}</td>
+                    <td style="text-align:right">${{ prod[1] }}</td>
+                    <td style="max-width:500px"><div class="bar" style="width:{{ prod[3]}}px"></div></td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+        <div class="container">
+            <div id="map-cities">
+                <h2 class="subtitle">Top recipient cities</h2>
+                    <table>
+                        <tr>
+                            <th>City</th>
+                            <th># of contracts</th>
+                            <th>Total dollars</th>
+                        </tr>
+                        {% for recip in recipient_city_list[:5] %}
+                        <tr>
+                            <td><a href="city/{{ recip[5] }} ">{{ recip[0] }}</td>
+                            <td style="text-align:center">{{ recip[2] }}</td>
+                            <td style="text-align:right">${{ recip[1] }}</td>
+                        </tr>
+                        {% endfor %}
+                    </table>
+            </div>
+            <div id="map"></div>
+        </div>
+
+        <script type="text/javascript">
+            var map = L.map('map').setView([37.8, -96], 4);
+            var mapquestLayer = new L.TileLayer('http://{s}.mqcdn.com/tiles/1.0.0/map/{z}/{x}/{y}.png', {
+                maxZoom: 16,
+                attribution: 'Data, imagery and map information provided by <a href="http://open.mapquest.co.uk" target="_blank">MapQuest</a>,<a href="http://www.openstreetmap.org/" target="_blank">OpenStreetMap</a> and contributors.',
+                subdomains: ['otile1','otile2','otile3','otile4']
+            });
+            map.addLayer(mapquestLayer);
+            var data = {
+              "type": "FeatureCollection",
+              "features": [
+                {% for recip in recipient_city_list %}
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Site_Name": "{{ recip[0] }}",
+                    "id": "city/{{ recip[5] }}"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [{{ recip[4] }}, {{ recip[3] }}]
+                  }
+                }{% if not loop.last %},{% endif %}
+                {% endfor %}
+              ]
+            };
+            var dataLayer = L.geoJson(data, {
+                onEachFeature: function(feature, layer) {
+                    layer.bindPopup(
+                        '<a href="' + feature.properties.id + '/">' +
+                            feature.properties.Site_Name +
+                        '</a>'
+                    );
+                }
+            });
+            map.addLayer(dataLayer);
+        </script>

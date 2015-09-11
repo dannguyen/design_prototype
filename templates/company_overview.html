@@ -1,0 +1,106 @@
+{% include 'partials/head.html' %}
+
+
+<!-- BEGIN LEFT CONTENT COLUMN -->
+<div class="wrapper content">
+    <div class="page-identifier">
+        <h1>{{ object_list[0]['RecipientName'] }}</h1>
+        <div class="page-type">Overview</div>
+    </div>
+
+
+
+    <div class="subhead">
+        <h3>Contract earnings per year</h3>
+        <div class="wrapper option">
+            <div class="option">embed</div>
+            <div class="option">export</div>
+        </div>
+    </div>
+
+    <!-- PLACEHOLDER IMAGE -->
+    <img class="chart" src="../../static/assets/images/company_chart.png">
+
+    <div class="container">
+        <h3>Total dollars from contracts: <span>${{ object_list[0]['DollarsObligated'] }}</span></h3>
+    </div>
+
+
+
+    <div class="subhead">
+        <h3>Most common contract codes</h3>
+        <div class="wrapper option">
+            <div class="option">embed</div>
+            <div class="option">export</div>
+        </div>
+    </div>
+        <table>
+        {% for prod in products_list[:5] %}
+            <tr>
+                <td style="max-width:300px"><a href="product/{{ prod[4] }} ">{{ prod[0] }}</a></td>
+                <td style="text-align:center">{{ prod[2] }}</td>
+                <td style="text-align:right">${{ prod[1] }}</td>                    
+                <td style="max-width:300px"><div class="bar" style="width:{{ prod[3]}}px"></div></td>
+            </tr>
+        {% endfor %}
+        </table>
+
+
+
+    <div class="subhead">
+        <h3>Contracting agencies</h3>
+        <div class="wrapper option">
+            <div class="option">embed</div>
+            <div class="option">export</div>
+        </div>
+    </div>
+
+    <!-- PLACEHOLDER IMAGE -->
+    <img class="chart" src="../../static/assets/images/company_treechart.png">
+
+
+
+    <div class="subhead">
+        <h3>Contract performance location</h3>
+        <div class="wrapper option">
+            <div class="option">embed</div>
+            <div class="option">export</div>
+        </div>
+    </div>
+
+    <!-- PLACEHOLDER IMAGE -->
+    <img class="chart" src="../../static/assets/images/company_map.png">
+
+</div>
+
+<!-- END LEFT COLUMN -->
+<!-- BEGIN SIDEBAR -->
+
+<div class="wrapper sidebar">
+    <div class="extra sidebar">
+        <h2>View glossary of terms</h2>
+    </div>
+    <div class="subhead"><h3>American subsidiaries</h3></div>
+    <div class="container">
+    <!-- STATIC PLACEHOLDER NAMES -->
+        <ul>
+            <li>3Com International, Inc.</li>
+            <li>3Par Inc.</li>
+            <li>ArcSight, LLC</li>
+            <li>Compaq Computer (Delaware), LLC</li>
+            <li>EDS Global Contracts, LLC</li>
+            <li>EYP Mission Critical Facilities, Inc.</li>
+            <li>HPFS Global Holdings I, LLC</li>
+            <li>Indigo America, Inc.</li>
+        </ul>
+        <div class="more">more<i class="fa fa-caret-down"></i></div>
+    </div>
+    <div class="subhead"><h3>Mergers</h3></div>
+        <img class="chart" src="../../static/assets/images/company_bubblechart.png">
+
+    <div class="subhead"><h3>Comments</h3></div>
+
+</div>
+<!-- END SIDEBAR -->
+
+{% include 'partials/foot.html' %}
