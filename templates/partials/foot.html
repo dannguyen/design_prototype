@@ -4,4 +4,22 @@
       {% include 'partials/footer.html' %}
 
     </body>
+    
+    <script src="/static/assets/scripts/jquery-1.10.2.js"></script>
+    <script type="text/javascript">
+
+        $(document).ready(function(){  
+
+
+            $('.more.subsidiaries').on('click', function(){
+                $('#subsidiaries').toggleClass('down');
+            });
+
+            $('.more.products').on('click', function(){
+                $('.hidden tbody').slideToggle();
+            });
+
+
+        });
+    </script>
 </html>

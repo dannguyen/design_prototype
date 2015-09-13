@@ -1,0 +1,48 @@
+{% include 'partials/head.html' %}
+
+<!-- SEARCH BAR -->
+<input type="text" placeholder="search">
+
+<!-- BEGIN LEFT CONTENT COLUMN -->
+
+<div class="wrapper content">
+
+    <div class="page-identifier">
+        <h1>{{ object_list[0]['RecipientName'] }}</h1>
+        <div class="page-type">Contract</div>
+    </div>
+
+    <div class="subhead">
+        <h3>Contract details</h3>
+        <div class="wrapper option">
+            <div class="option">embed</div>
+            <div class="option">export</div>
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <div class="container">
+            <p>{{ object_list[0]['RecipientName'] }} recieved this ${{ object_list[0]['DollarsObligated'] }} contract from {{ object_list[0]['ContractingAgency'] }} for {{ object_list[0]['ProductorServiceCode'] }} </p>
+        </div>
+        <div class="wrapper column">
+            <div class="subhead">
+                <h3>Involved parties</h3>
+            </div>
+        </div>
+        <div class="wrapper column">
+            <div class="subhead">
+                <h3>Recipient information</h3>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- END LEFT CONTENT COLUMN -->
+<!-- BEGIN SIDEBAR -->
+
+<div class="wrapper sidebar">
+    <div class="subhead"><h3>Comments</h3></div>
+</div>
+<!-- END SIDEBAR -->
+
+{% include 'partials/foot.html' %}
