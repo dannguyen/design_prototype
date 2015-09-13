@@ -3,9 +3,7 @@ from flask import abort
 from flask import render_template
 from helpers import hp_data
 
-
 app = Flask(__name__)
-
 
 @app.route("/")
 def index():
@@ -74,7 +72,6 @@ def contract_list(product_id):
             return render_template(template, object_list=object_list)
     abort(404)
 
-
 @app.route('/city/<city_id>/')
 def list(city_id):
     template = 'geo-list.html'
@@ -86,7 +83,6 @@ def list(city_id):
             return render_template(template, object_list=object_list)
     abort(404)
 
-
 @app.route('/product/<product_id>/<contract_id>/')
 def product_contract(product_id, contract_id):
     template = 'contract.html'
@@ -94,14 +90,12 @@ def product_contract(product_id, contract_id):
     record = [o for o in object_list if o['record_count'] == contract_id]
     return render_template(template, object=record)
 
-
 @app.route('/city/<city_id>/<contract_id>/')
 def city_contract(city_id, contract_id):
     template = 'contract.html'
     object_list = hp_data.load_data()
     record = [o for o in object_list if o['record_count'] == contract_id]
     return render_template(template, object=record)
-
 
 if __name__ == '__main__':
     app.run(debug=True, use_reloader=True)
