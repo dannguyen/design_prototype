@@ -5,38 +5,45 @@
 
 
 <!-- BEGIN LEFT CONTENT COLUMN -->
-<div class="wrapper content">
-    <div class="page-identifier">
+<div class="col-md-8">
+<div class="row">
+    <div class="page-identifier col-md-10">
         <h1>{{ object_list[0]['RecipientName'] }}</h1>
-        <div class="page-type">Overview</div>
     </div>
+    <div class="page-type col-md-2">Overview</div>
+</div>
+    
 
 
+    <section id="contract_earnings_per_year">
+        <div class="row">
+            <div class="subhead col-md-10">
+                <h3>Contract earnings per year</h3>
+            </div>
+            <div class="option-wrapper col-md-2">
+                    <div class="option">embed</div>
+                    <div class="option">export</div>
+            </div>
+        </div>
 
-    <div class="subhead">
-        <h3>Contract earnings per year</h3>
-        <div class="wrapper option">
-            <div class="option">embed</div>
-            <div class="option">export</div>
+        <!-- PLACEHOLDER IMAGE -->
+        <img class="chart" src="../../static/assets/images/company_chart.png">
+
+        <div class="container">
+            <h3>Total dollars from contracts: <span>${{ object_list[0]['DollarsObligated'] }}</span></h3>
+        </div>
+    </section>
+
+    <div class="row">
+        <div class="subhead col-md-10">
+            <h3>Most common contract codes</h3>
+        </div>
+        <div class="option-wrapper col-md-2">
+                <div class="option">embed</div>
+                <div class="option">export</div>
         </div>
     </div>
 
-    <!-- PLACEHOLDER IMAGE -->
-    <img class="chart" src="../../static/assets/images/company_chart.png">
-
-    <div class="container">
-        <h3>Total dollars from contracts: <span>${{ object_list[0]['DollarsObligated'] }}</span></h3>
-    </div>
-
-
-
-    <div class="subhead">
-        <h3>Most common contract codes</h3>
-        <div class="wrapper option">
-            <div class="option">embed</div>
-            <div class="option">export</div>
-        </div>
-    </div>
     <div class="hidden">
         <table>
         <thead>
@@ -66,25 +73,28 @@
         </table>
 
 
-
-    <div class="subhead">
-        <h3>Contracting agencies</h3>
-        <div class="wrapper option">
-            <div class="option">embed</div>
-            <div class="option">export</div>
+    <div class="row">
+        <div class="subhead col-md-10">
+            <h3>Most common contract codes</h3>
+        </div>
+        <div class="option-wrapper col-md-2">
+                <div class="option">embed</div>
+                <div class="option">export</div>
         </div>
     </div>
+    
 
     <!-- PLACEHOLDER IMAGE -->
     <img class="chart" src="../../static/assets/images/company_treechart.png">
 
 
-
-    <div class="subhead">
-        <h3>Contract performance location</h3>
-        <div class="wrapper option">
-            <div class="option">embed</div>
-            <div class="option">export</div>
+    <div class="row">
+        <div class="subhead col-md-10">
+            <h3>Contract performance location</h3>
+        </div>
+        <div class="option-wrapper col-md-2">
+                <div class="option">embed</div>
+                <div class="option">export</div>
         </div>
     </div>
 
@@ -96,7 +106,7 @@
 <!-- END LEFT COLUMN -->
 <!-- BEGIN SIDEBAR -->
 
-<div class="wrapper sidebar">
+<div class="col-md-4">
     <div class="extra sidebar">
         <h2>View glossary of terms</h2>
     </div>

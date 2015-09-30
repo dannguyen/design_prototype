@@ -4,12 +4,10 @@
 <input type="text" placeholder="search">
 
 <!-- BEGIN LEFT CONTENT COLUMN -->
-<div class="col-md-8">
-    <div class="row">
-        <div class="page-identifier col-md-10">
-            <h1>{{ object_list[0]['RecipientName'] }}</h1>
-        </div>
-        <div class="page-type col-md-2">Detail</div>
+<div class="wrapper content">
+    <div class="page-identifier">
+        <h1>{{ object_list[0]['RecipientName'] }}</h1>
+        <div class="page-type">Detail</div>
     </div>
 
     <div class="subhead">
@@ -36,14 +34,12 @@
     </table>
     <!-- END LIST VIEW TABLE SUMMARY -->
 
-    <div class="row">
-        <div class="subhead col-md-10">
-            <h3>Contracts</h3>
-            
-        </div>
-        <div class="option-wrapper col-md-2">
-                <div class="option">embed</div>
-                <div class="option">export</div>
+
+    <div class="subhead">
+        <h3>Contracts</h3>
+        <div class="wrapper option">
+            <div class="option">embed</div>
+            <div class="option">export</div>
         </div>
     </div>
 
@@ -104,7 +100,7 @@
 <!-- END LEFT CONTENT COLUMN -->
 <!-- BEGIN SIDEBAR -->
 
-<div class="col-md-4">
+<div class="wrapper sidebar">
     <div class="extra sidebar">
         <h2>View glossary of terms</h2>
     </div>

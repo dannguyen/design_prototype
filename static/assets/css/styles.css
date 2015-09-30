@@ -32,8 +32,9 @@ html, body { height: 100%; }
     margin: 0 auto -15em;
 }
 .wrapper.body { overflow-x: hidden; }
+.col-md-8 { border-right: 3px solid Gainsboro; }
 .footer, .push {
-    height: 15em;
+    height: 18em;
 }
 .footer  {
     background-color: black;
@@ -44,6 +45,7 @@ a {
     color: #D00441;
     text-decoration: none;
 }
+a:hover { text-decoration: none; }
 p { 
     margin: 15px 0; 
     line-height: 1.5em;
@@ -133,6 +135,8 @@ div.title-box{
     display: inline-block;
     vertical-align: top;
 }
+
+
 .container.module.column {
     width: 35%;
     text-align: center;
@@ -170,13 +174,12 @@ div.title-box{
     width: auto;
     min-width: 100%;
     cursor: pointer;
-    margin-left: 2px;
 }
 .extra.sidebar:hover { 
     background-color: #CFCFCF;
 }
-.sidebar h2, .subhead h3 { text-align: center; }
-.sidebar .subhead h3 { display: block; }
+.col-md-4 h2, .subhead h3 { text-align: center; }
+.col-md-4 .subhead h3 { display: block; }
 .sidebar ul { margin-bottom: 15px; }
 .boxes {
     display: flex;
@@ -193,33 +196,31 @@ div.title-box{
     background-color: #D00441;
 }
 .extra:first-child:hover { background-color: #C2003A; }
-.extra:first-child h2 { color: white;}
+.extra:first-child h2 { color: white; margin: 0; }
 
 .page-type {
     background-color: Gainsboro;
-    display: inline-block;
-    float: right;
-    margin: -10px 0;
-    padding: 22px;
+    padding: 18px;
     font-size: 14pt;
+    text-align: center;
     letter-spacing: 2px; 
 }
 .page-identifier { 
-    padding: 10px 0 20px 25px;
+    padding: 10px 0 10px 25px;
     background-color: WhiteSmoke;
-    height: 36px;
+    /*height: 36px;*/
     /*width: 70%;*/
 }
-.page-identifier h1 { display: inline-block; }
+.page-identifier h1 { display: inline-block; margin: 0; }
 
 .subhead { 
     background-color: white; 
     padding: 15px 0 15px 25px; 
     border-bottom: 3px solid Gainsboro;
     border-top: 3px solid Gainsboro;
-    height: 30px;
+    /*height: 30px;*/
 }
-.subhead h3 { display: inline-block; }
+.subhead h3 { display: inline-block; margin: 0; }
 .sidebar .subhead { 
     width: 100%; 
     margin-left: 2px;
@@ -231,25 +232,22 @@ div.title-box{
     background-color: #57C3EC;
     color: white;
     padding: 5px;
-    height: 19px;
-    display: inline-block;
-    width: 70px;
     text-align: center;
     cursor: pointer;
 }
 .option:hover { background-color: #45B5D8}
 .option:first-child {
-    border-bottom: 3px solid white;
+    border-bottom: 1px solid white;
+}
+
+.option-wrapper {
+    background-color: white;
+    padding: 0;
+    border-bottom: 3px solid Gainsboro;
 }
 /* End embed and export functions */
 
-.wrapper.option {
-    background-color: white;
-    float: right;
-    padding: 0;
-    margin-top: -15px;
-    width: 80px;
-}
+
 .chart {
     width: 100%;
 }
@@ -262,6 +260,7 @@ table.list-summary th {
     background-color: black;
     color: white;
     height:40px;
+    text-align: center;
 }
 table.list-summary td {
     height: 50px;
@@ -330,8 +329,20 @@ div#subtitle {
     line-height: 40px;
     text-align: center;
     cursor: pointer;
+    -webkit-transition: 0.4s ease-in-out;
+    -moz-transition: 0.4s ease-in-out;
+    -ms-transition: 0.4s ease-in-out;
+    -o-transition: 0.4s ease-in-out; 
+    transition: 0.4s ease-in-out;
 }
-.fa.fa-caret-down { margin-left: 10px; }
+.fa.fa-caret-down { 
+    margin-left: 10px; 
+    -webkit-transition: 0.4s ease-in-out;
+    -moz-transition: 0.4s ease-in-out;
+    -ms-transition: 0.4s ease-in-out;
+    -o-transition: 0.4s ease-in-out; 
+    transition: 0.4s ease-in-out;
+}
 .more:hover { background-color: #C2003A; }
 
 .hidden tbody{
@@ -396,16 +407,16 @@ div#detail {
 div.header.spacer {
     position: relative;
     visibility: hidden;
-    height: 30px;
+    height: 65px;
 }
 
 /* LOGIN BUTTON*/
 #login { 
     background-color: Gainsboro;
     position: absolute;
-    right: 50px;
+    right: 0;
     top: 0;
-    padding: 20px;
+    padding: 22px;
     color: black;
     cursor: pointer;
 }
@@ -415,7 +426,7 @@ div.header.spacer {
 }
 .fa.fa-bars {
     position: absolute;
-    right: 150px;
+    right: 100px;
     font-size: 18pt;
     cursor: pointer;
     color: WhiteSmoke;
@@ -440,4 +451,8 @@ div.subtitle {
     color: white;
     padding: 15px;
 }
-
+@media (max-width: 991px) {
+    .option { width: 50%; float: left; }
+    .option:first-child { border-bottom: 0; border-right: 1px solid white; }
+    .page-type { padding: 8px; }
+}

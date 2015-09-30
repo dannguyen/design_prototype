@@ -6,16 +6,28 @@
     </body>
     
     <script src="/static/assets/scripts/jquery-1.10.2.js"></script>
+    <script src="/static/assets/scripts/d3.js"></script>
     <script type="text/javascript">
 
         $(document).ready(function(){  
 
 
             $('.more.subsidiaries').on('click', function(){
-                $('#subsidiaries').toggleClass('down');
+                var el = $('#subsidiaries'),
+                    curHeight = el.height(),
+                    autoHeight = el.css('height', 'auto').height();
+                if (el.hasClass('up')) {
+                    el.height(curHeight).animate({height: autoHeight}, 1000);
+                    el.removeClass('up');
+                    $('.more.subsidiaries i').addClass('fa-rotate-180');
+                } else {
+                    el.addClass('up');
+                    $('.more.subsidiaries i').removeClass('fa-rotate-180');
+                }
             });
 
             $('.more.products').on('click', function(){
+                $('.more.products i').toggleClass('fa-rotate-180');
                 $('.hidden tbody').slideToggle();
             });
 
