@@ -32,7 +32,7 @@ html, body { height: 100%; }
     margin: 0 auto -18em;
 }
 .container-fluid { overflow-x: hidden; }
-.col-md-8 { border-right: 3px solid Gainsboro; }
+.col-md-8 { border-right: 1px solid Gainsboro; }
 .footer, .push {
     height: 18em;
 }
@@ -106,7 +106,7 @@ div.contract {
 
 div.sub-box {
     border: 1px solid #F2F5F7;
-    border-radius: 3px;
+    border-radius: 1px;
     width: 40%;
     padding: 15px;
     margin: 15px;
@@ -138,8 +138,8 @@ div.title-box{
     background-color: white;
     vertical-align: top;
     padding: 15px;
-    border-right: 3px solid WhiteSmoke;
-    border-bottom: 3px solid WhiteSmoke;
+    border-right: 5px solid WhiteSmoke;
+    border-bottom: 5px solid WhiteSmoke;
 }
 
 
@@ -151,14 +151,14 @@ div.title-box{
     width: 49%;
     display: inline-block;
     margin-left: -4px;
-    border-right: 3px solid Gainsboro;
+    border-right: 1px solid Gainsboro;
 }
 .content {
     width: 70%;
     margin: 0;
     display: inline-block;
     vertical-align: top;
-    border-right: 3px solid Gainsboro;
+    border-right: 1px solid Gainsboro;
 }
 .wrapper.content { z-index: 1; }
 .sidebar {
@@ -172,7 +172,7 @@ div.title-box{
     position: absolute;
     right: 0;
     z-index: 0;
-    padding-left: 3px;
+    padding-left: 1px;
 }
 .col-md-4 h2, .subhead h3 { text-align: center; }
 .col-md-4 .subhead h3 { display: block; }
@@ -184,7 +184,7 @@ div.title-box{
     height: 10em;
     padding: 10px;
     background-color: Gainsboro;
-    border-bottom: 3px solid WhiteSmoke;
+    border-bottom: 1px solid WhiteSmoke;
     cursor: pointer;
 }
 .extra:hover { background-color: #CFCFCF; }
@@ -224,8 +224,8 @@ div.title-box{
 .subhead { 
     background-color: white; 
     padding: 15px 0 15px 25px; 
-    border-bottom: 3px solid Gainsboro;
-    border-top: 3px solid Gainsboro;
+    border-bottom: 1px solid Gainsboro;
+    border-top: 1px solid Gainsboro;
     /*height: 30px;*/
 }
 .subhead h3 { display: inline-block; margin: 0; }
@@ -234,7 +234,7 @@ div.title-box{
     margin-left: 2px;
     padding: 15px 0; 
 }
-.left { border-right: 3px solid Gainsboro; }
+.left { border-right: 1px solid Gainsboro; }
 
 /* Embed and export buttons */
 .option {
@@ -252,7 +252,6 @@ div.title-box{
 .option-wrapper {
     background-color: white;
     padding: 0;
-    border-bottom: 3px solid Gainsboro;
 }
 /* End embed and export functions */
 
@@ -277,7 +276,7 @@ table.list-summary td {
 }
 
 table.contract-list {
-    border-bottom: 3px solid Gainsboro;
+    border-bottom: 1px solid Gainsboro;
 }
 table.contract-list tr {
     background: white;
