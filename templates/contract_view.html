@@ -1,35 +1,43 @@
 {% include 'partials/head.html' %}
 
 <!-- SEARCH BAR -->
-<input type="text" placeholder="search">
+<div class="row">
+    <div class="col-md-1 col-sm-1 col-xs-1 search-indicator" ><i class="fa fa-search"></i></div>
+    <input type="text" class="col-md-11 col-sm-11 col-xs-11" placeholder="Search for a term, e.g. 'Hewlett-Packard' or 'Dallas, TX'">
+</div>
 
 <!-- BEGIN LEFT CONTENT COLUMN -->
 
-<div class="wrapper content">
+<div class="col-md-8">
 
-    <div class="page-identifier">
-        <h1>{{ object_list[0]['RecipientName'] }}</h1>
-        <div class="page-type">Contract</div>
+    <div class="row">
+        <div class="page-identifier col-md-10">
+            <h1>{{ object_list[0]['RecipientName'] }}</h1>
+        </div>
+        <div class="page-type col-md-2">Contract</div>
     </div>
 
-    <div class="subhead">
-        <h3>Contract details</h3>
-        <div class="wrapper option">
-            <div class="option">embed</div>
-            <div class="option">export</div>
+
+    <div class="row">
+        <div class="subhead col-md-10">
+            <h3>Contract details</h3>
+        </div>
+        <div class="option-wrapper col-md-2">
+                <div class="option">embed</div>
+                <div class="option">export</div>
         </div>
     </div>
 
     <div class="wrapper">
-        <div class="container">
+        <div class="container inner">
             <p>{{ object_list[0]['RecipientName'] }} recieved this ${{ object_list[0]['DollarsObligated'] }} contract from {{ object_list[0]['ContractingAgency'] }} for {{ object_list[0]['ProductorServiceCode'] }} </p>
         </div>
-        <div class="wrapper column">
+        <div class="col-md-6">
             <div class="subhead">
                 <h3>Involved parties</h3>
             </div>
         </div>
-        <div class="wrapper column">
+        <div class="col-md-6">
             <div class="subhead">
                 <h3>Recipient information</h3>
             </div>

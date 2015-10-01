@@ -1,11 +1,12 @@
 {% include 'partials/head.html' %}
-
-<input type="text" placeholder="Search for a term, e.g. 'Hewlett-Packard' or 'Dallas, TX'">
-
+<div class="row">
+    <div class="col-md-1 col-sm-1 col-xs-1 search-indicator" ><i class="fa fa-search"></i></div>
+    <input type="text" class="col-md-11 col-sm-11 col-xs-11" placeholder="Search for a term, e.g. 'Hewlett-Packard' or 'Dallas, TX'">
+</div>
     <div class="container main">
         
-        <div class="boxes">
-            <div class="container module column">
+        <div class="row">
+            <div class="module col-md-4">
                 <h2>Search Tips</h2>
                 <p>open.contractors returns different page types for each of the following types of queries:</p>
                     <ul>
@@ -18,14 +19,14 @@
                 <p>It is best to start with only one search term and narrow from there.</p>                
                 <a href="/search-tips"><div class="more">more<i class="fa fa-caret-down"></i></div></a>
             </div>
-            <div class="container module column">
+            <div class="module col-md-4">
                 <h2>About the data</h2>
                 <p>Data on this site was taken from <a href="https://www.usaspending.gov/" target="_blank">USAspending.gov</a>, the American government’s website for open and unclassified contractor data.</p>
                 <p>This site does not include classified data.</p>
                 <p>open.contractors also aggregates from other government data sources including Congress’s membership database and the SEC’s EDGAR database.</p>
                 <a href="/about-the-data"><div class="more">more<i class="fa fa-caret-down"></i></div></a>
             </div>
-            <div class="module">
+            <div class="col-md-4">
                 <a href="/glossary"><div class="extra"><h2>View glossary of terms</h2></div></a>
                 <div class="extra"><h2>See upcoming features</h2></div>
             </div>

@@ -1,7 +1,10 @@
 {% include 'partials/head.html' %}
 
 <!-- SEARCH BAR -->
-<input type="text" placeholder="search">
+<div class="row">
+    <div class="col-md-1 col-sm-1 col-xs-1 search-indicator" ><i class="fa fa-search"></i></div>
+    <input type="text" class="col-md-11 col-sm-11 col-xs-11" placeholder="Search for a term, e.g. 'Hewlett-Packard' or 'Dallas, TX'">
+</div>
 
 
 <!-- BEGIN LEFT CONTENT COLUMN -->
@@ -88,7 +91,8 @@
     <img class="chart" src="../../static/assets/images/company_treechart.png">
 
 
-    <div class="row">
+    <!-- CONTRACT PERFORMANCE LOCATION -->
+    <div class="row"> <!-- SUBHEAD -->
         <div class="subhead col-md-10">
             <h3>Contract performance location</h3>
         </div>

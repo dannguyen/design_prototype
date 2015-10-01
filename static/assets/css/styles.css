@@ -25,13 +25,13 @@ body {
 }
 html, body { height: 100%; }
 
-.wrapper { 
+.container-fluid { 
     min-height: 100%;
     height: auto !important;
     height: 100%;
-    margin: 0 auto -15em;
+    margin: 0 auto -18em;
 }
-.wrapper.body { overflow-x: hidden; }
+.container-fluid { overflow-x: hidden; }
 .col-md-8 { border-right: 3px solid Gainsboro; }
 .footer, .push {
     height: 18em;
@@ -125,15 +125,21 @@ div.title-box{
     margin: 15px;
     overflow: auto;
 }
+.container.inner { width: auto; }
 .container.main {
     margin: 0 auto;
-    width: 85%;
+    width: 95%;
 }
-.container.module {
+@media (min-width: 992px ) {
+    .container.main .row { display: flex; }
+}
+
+.module {
     background-color: white;
-    margin: 5px;
-    display: inline-block;
     vertical-align: top;
+    padding: 15px;
+    border-right: 3px solid WhiteSmoke;
+    border-bottom: 3px solid WhiteSmoke;
 }
 
 
@@ -168,16 +174,6 @@ div.title-box{
     z-index: 0;
     padding-left: 3px;
 }
-.extra.sidebar {
-    margin: 0;
-    height: auto;
-    width: auto;
-    min-width: 100%;
-    cursor: pointer;
-}
-.extra.sidebar:hover { 
-    background-color: #CFCFCF;
-}
 .col-md-4 h2, .subhead h3 { text-align: center; }
 .col-md-4 .subhead h3 { display: block; }
 .sidebar ul { margin-bottom: 15px; }
@@ -187,16 +183,28 @@ div.title-box{
 .extra { 
     height: 10em;
     padding: 10px;
-    margin: 5px;
     background-color: Gainsboro;
+    border-bottom: 3px solid WhiteSmoke;
     cursor: pointer;
 }
 .extra:hover { background-color: #CFCFCF; }
-.extra:first-child {
+.extra:first-child, .extra.sidebar:hover {
     background-color: #D00441;
 }
 .extra:first-child:hover { background-color: #C2003A; }
 .extra:first-child h2 { color: white; margin: 0; }
+
+.extra.sidebar {
+    margin: 0;
+    height: auto;
+    width: auto;
+    min-width: 100%;
+    cursor: pointer;
+    border-bottom: 0;
+}
+/*.extra.sidebar:hover { 
+    background-color: #CFCFCF;
+}*/
 
 .page-type {
     background-color: Gainsboro;
@@ -291,10 +299,9 @@ table.contract-list th {
 }
 
 
-
+/* SEARCH BAR */
 input[type=text] {
     padding: 20px 25px;
-    width: 100%;
     /*margin: 5px;*/
     font-size: 16pt;
     border: none;
@@ -305,6 +312,14 @@ input[type=text] {
     width: 94%;
     margin: 5px;
 }
+.fa.fa-search {
+    line-height: 70px;
+    color: white;
+    font-size: 20pt;
+}
+.search-indicator { height:70px; background-color: #57C3EC; text-align: center; }
+/* END SEARCH BAR */
+
 
 div#title {
     padding: 2px 15px;
@@ -407,7 +422,7 @@ div#detail {
 div.header.spacer {
     position: relative;
     visibility: hidden;
-    height: 65px;
+    height: 64px;
 }
 
 /* LOGIN BUTTON*/
