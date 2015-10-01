@@ -7,50 +7,79 @@
 </div>
 
 <!-- BEGIN LEFT CONTENT COLUMN -->
-
-<div class="col-md-8">
-
-    <div class="row">
-        <div class="page-identifier col-md-10">
-            <h1>{{ object_list[0]['RecipientName'] }}</h1>
+<div class="row">
+    <div class="col-md-8">
+        <div class="row">
+            <div class="page-identifier col-md-10">
+                <h1>{{ object_list[0]['RecipientName'] }}</h1>
+            </div>
+            <div class="page-type col-md-2">Contract</div>
         </div>
-        <div class="page-type col-md-2">Contract</div>
-    </div>
 
 
-    <div class="row">
-        <div class="subhead col-md-10">
-            <h3>Contract details</h3>
-        </div>
-        <div class="option-wrapper col-md-2">
-                <div class="option">embed</div>
-                <div class="option">export</div>
-        </div>
-    </div>
-
-    <div class="wrapper">
-        <div class="container inner">
-            <p>{{ object_list[0]['RecipientName'] }} recieved this ${{ object_list[0]['DollarsObligated'] }} contract from {{ object_list[0]['ContractingAgency'] }} for {{ object_list[0]['ProductorServiceCode'] }} </p>
-        </div>
-        <div class="col-md-6">
-            <div class="subhead">
-                <h3>Involved parties</h3>
+        <div class="row">
+            <div class="subhead col-md-10">
+                <h3>Contract details</h3>
+            </div>
+            <div class="option-wrapper col-md-2">
+                    <div class="option">embed</div>
+                    <div class="option">export</div>
             </div>
         </div>
-        <div class="col-md-6">
-            <div class="subhead">
-                <h3>Recipient information</h3>
-            </div>
-        </div>
-    </div>
 
+        <div class="wrapper">
+            <div class="container inner">
+                <p>{{ object_list[0]['RecipientName'] }} recieved this ${{ object_list[0]['DollarsObligated'] }} contract from {{ object_list[0]['ContractingAgency'] }} for {{ object_list[0]['ProductorServiceCode'] }} </p>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="subhead left">
+                        <h3>Involved parties</h3>
+                    </div>
+                    <table class="left">
+                        <tr><td>Contract recipient</td><td>{{ object_list[0]['RecipientOrContractorName'] }} </td></tr>
+                        <tr><td>Recipient alt. name</td><td>TKTK</td></tr>
+                        <tr><td>Requesting agency</td><td>{{ object_list[0]['AgencyID'] }}</td></tr>
+                        <tr><td>Requesting office</td><td>TKTK</td></tr>
+                    </table>
+                </div>
+                <div class="col-md-6">
+                    <div class="subhead">
+                        <h3>Recipient information</h3>
+                    </div>
+                    <table>
+                        <tr><td>Address</td><td>{{ object_list[0]['RecipientAddressLine123'] }} {{ object_list[0]['RecipientCity'] }}, {{ object_list[0]['RecipientState'] }}</td></tr>
+                        <tr><td>Number of employees</td><td>TKTK</td></tr>
+                        <tr><td>Site code</td><td>TKTK</td></tr>
+                        <tr><td>DUNS number</td><td>{{ object_list[0]['DUNSNumber'] }}</td></tr>
+                        <tr><td>Business size</td><td>TKTK</td></tr>
+                    </table>
+                </div>
+            </div>
+            <div class="row">
+                <div class="subhead col-md-10">
+                    <h3>Performance location information</h3>
+                </div>
+                <div class="option-wrapper col-md-2">
+                        <div class="option">embed</div>
+                        <div class="option">export</div>
+                </div>
+            </div>    
+        </div>
+
+    </div>
+    <!-- END LEFT CONTENT COLUMN -->
+    <!-- BEGIN SIDEBAR -->
+
+    <div class="col-md-4">
+        <div class="extra sidebar">
+            <h2>View glossary of terms</h2>
+        </div>
+        <div class="subhead"><h3>Contract Identifiers</h3></div>
+
+
+    </div>
 </div>
-<!-- END LEFT CONTENT COLUMN -->
-<!-- BEGIN SIDEBAR -->
-
-<!-- <div class="wrapper sidebar">
-    <div class="subhead"><h3>Comments</h3></div>
-</div> -->
 <!-- END SIDEBAR -->
 
 {% include 'partials/foot.html' %}

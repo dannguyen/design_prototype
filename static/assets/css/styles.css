@@ -234,6 +234,7 @@ div.title-box{
     margin-left: 2px;
     padding: 15px 0; 
 }
+.left { border-right: 3px solid Gainsboro; }
 
 /* Embed and export buttons */
 .option {
