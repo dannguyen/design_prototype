@@ -1,10 +1,7 @@
 {% include 'partials/head.html' %}
 
 <!-- SEARCH BAR -->
-<div class="row">
-    <div class="col-md-1 col-sm-1 col-xs-1 search-indicator" ><i class="fa fa-search"></i></div>
-    <input type="text" class="col-md-11 col-sm-11 col-xs-11" placeholder="Search for a term, e.g. 'Hewlett-Packard' or 'Dallas, TX'">
-</div>
+{% include 'partials/search_bar.html' %}
 
 <div class="row">
 
@@ -17,10 +14,10 @@
             <div class="page-type col-md-2">Contract</div>
         </div>
 
-        <!-- CONTRACT DETAILS -->
+        <!-- SUMMARY -->
         <div class="row">
             <div class="subhead col-md-10">
-                <h3>Contract details</h3>
+                <h3>Summary</h3>
             </div>
             <div class="option-wrapper col-md-2">
                     <div class="option">embed</div>
@@ -61,15 +58,24 @@
             <!-- CONTRACT PERFORMANCE LOCATION -->
             <div class="row">
                 <div class="subhead col-md-10">
-                    <h3>Performance location information</h3>
+                    <h3>Contract performance location</h3>
                 </div>
                 <div class="option-wrapper col-md-2">
                         <div class="option">embed</div>
                         <div class="option">export</div>
                 </div>
-            </div>    
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <table>
+                        <tr><td>City</td><td>TKTK</td></tr>
+                        <tr><td>State</td><td>{{ object_list[0]['PlaceofPerformanceState'] }}</td></tr>
+                        <tr><td>ZIP code</td><td>{{ object_list[0]['PlaceofPerformanceZipCode'] }}</td></tr>
+                    </table>
+                </div>
+            </div>  
         </div>
-
+    {{ object_list[0] }}
     </div>
     <!-- END LEFT CONTENT COLUMN -->
     <!-- BEGIN SIDEBAR -->

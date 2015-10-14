@@ -1,17 +1,14 @@
 {% include 'partials/head.html' %}
 
 <!-- SEARCH BAR -->
-<div class="row">
-    <div class="col-md-1 col-sm-1 col-xs-1 search-indicator" ><i class="fa fa-search"></i></div>
-    <input type="text" class="col-md-11 col-sm-11 col-xs-11" placeholder="Search for a term, e.g. 'Hewlett-Packard' or 'Dallas, TX'">
-</div>
+{% include 'partials/search_bar.html' %}
 
 <div class="row">
     <!-- BEGIN LEFT CONTENT COLUMN -->
-    <div class="col-md-8">
+    <div class="col-md-10 col-md-offset-1">
         <div class="row">
             <div class="page-identifier col-md-10">
-                <h1>{{ object_list[0]['RecipientName'] }}</h1>
+                <h1>{{ object_list[0]['vendorName'] }}</h1>
             </div>
             <div class="page-type col-md-2">Overview</div>
         </div>
@@ -24,16 +21,18 @@
                     <h3>Contract earnings per year</h3>
                 </div>
                 <div class="option-wrapper col-md-2">
-                        <div class="option">embed</div>
+                        <div class="option"><i class="fa fa-code"> embed</i></div>
                         <div class="option">export</div>
                 </div>
             </div>
 
+            <div id="company_chart" class="col-md-12" height="500"></div>
+
             <!-- PLACEHOLDER IMAGE -->
-            <img class="chart" src="../../static/assets/images/company_chart.png">
+            <!-- <img class="chart" src="../../static/assets/images/company_chart.png"> -->
 
             <div class="container">
-                <h3>Total dollars from contracts: <span>${{ object_list[0]['DollarsObligated'] }}</span></h3>
+                <h3>Total dollars from contracts: <span>${{ object_list[0]['obligatedAmount'] }}</span></h3>
             </div>
         </section>
 
@@ -42,7 +41,7 @@
                 <h3>Most common contract codes</h3>
             </div>
             <div class="option-wrapper col-md-2">
-                    <div class="option">embed</div>
+                    <div class="option"><i class="fa fa-code"> embed</i></div>
                     <div class="option">export</div>
             </div>
         </div>
@@ -81,7 +80,7 @@
                 <h3>Most common contract codes</h3>
             </div>
             <div class="option-wrapper col-md-2">
-                    <div class="option">embed</div>
+                    <div class="option"><i class="fa fa-code"> embed</i></div>
                     <div class="option">export</div>
             </div>
         </div>
@@ -97,7 +96,7 @@
                 <h3>Contract performance location</h3>
             </div>
             <div class="option-wrapper col-md-2">
-                    <div class="option">embed</div>
+                    <div class="option"><i class="fa fa-code"> embed</i></div>
                     <div class="option">export</div>
             </div>
         </div>
@@ -105,15 +104,8 @@
         <!-- PLACEHOLDER IMAGE -->
         <img class="chart" src="../../static/assets/images/company_map.png">
 
-    </div>
 
-    <!-- END LEFT COLUMN -->
-    <!-- BEGIN SIDEBAR -->
-
-    <div class="col-md-4">
-        <div class="extra sidebar">
-            <h2>View glossary of terms</h2>
-        </div>
+        <!-- SUBSIDIARIES -->
         <div class="subhead"><h3>American subsidiaries</h3></div>
         <div class="container">
         <!-- STATIC PLACEHOLDER NAMES -->
@@ -139,9 +131,20 @@
         <div class="subhead"><h3>Mergers</h3></div>
             <img class="chart" src="../../static/assets/images/company_bubblechart.png">
 
+    </div>
+
+    <!-- END LEFT COLUMN -->
+    <!-- BEGIN SIDEBAR -->
+
+    <!-- <div class="col-md-4">
+        <div class="extra sidebar">
+            <h2>View glossary of terms</h2>
+        </div>
+        
+
         <div class="subhead"><h3>Comments</h3></div>
 
-    </div>
+    </div> -->
     <!-- END SIDEBAR -->
 </div>
 

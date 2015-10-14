@@ -2,14 +2,28 @@
     </div> <!-- END CONTAINER-FLUID -->
 
       {% include 'partials/footer.html' %}
-
+</main>
 </body>
     
     <script src="/static/assets/scripts/jquery-1.10.2.js"></script>
     <script src="/static/assets/scripts/d3.js"></script>
+    <script src="/static/assets/scripts/line-chart.js"></script>
+    <script src="/static/assets/scripts/tree-map.js"></script>
+    <script src="/static/assets/scripts/slideout.js"></script>
     <script type="text/javascript">
 
         $(document).ready(function(){  
+
+            var slideout = new Slideout({
+                'panel': document.getElementById('panel'),
+                'menu': document.getElementById('menu'),
+                'padding': 180,
+                'tolerance': 70
+            });
+
+            document.querySelector('.fa.fa-bars').addEventListener('click', function() {
+                slideout.toggle();
+            });
 
 
             $('.more.subsidiaries').on('click', function(){
@@ -29,6 +43,20 @@
             $('.more.products').on('click', function(){
                 $('.more.products i').toggleClass('fa-rotate-180');
                 $('.hidden tbody').slideToggle();
+            });
+
+            // var keyword = $("input#search").val() != '' ? '&text=' + $("input#search").val() : '';
+
+            var keyword = document.getElementById('keyword'),
+                base_url = 'https://www.usaspending.gov/fpds/fpds.php?detail=c&fiscal_year=2015&company_name=';
+
+            document.querySelector('form#search').addEventListener('submit', function (e) {
+                //prevent the normal submission of the form
+                e.preventDefault();
+
+                var url = base_url + keyword.value + '&max_records=10';
+
+                console.log(url);    
             });
 
 

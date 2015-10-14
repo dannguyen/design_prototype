@@ -1,7 +1,8 @@
 from flask import Flask
 from flask import abort
 from flask import render_template
-from helpers import hp_data
+from helpers import data
+# from helpers import scrape
 
 app = Flask(__name__)
 
@@ -10,28 +11,29 @@ def index():
     template = 'index.html'
     return render_template(template)
 
-@app.route('/company-overview/')
+@app.route('/company-overview/', methods=['GET', 'POST'])
 def overview_data():
+    # form = searchForm(request.form)
     template = 'company_overview.html'
-    object_list = hp_data.load_data()
-    products_list = hp_data.dollars_by_product_service_code(object_list)
-    recipient_city_list = hp_data.contracts_by_city(object_list)
+    object_list = data.load_data()
+    products_list = data.dollars_by_product_service_code(object_list)
+    recipient_city_list = data.contracts_by_city(object_list)
     return render_template(template, object_list=object_list, products_list=products_list, recipient_city_list=recipient_city_list)
 
 @app.route('/contract-list/')
 def list_view():
     template = 'list_view.html'
-    object_list = hp_data.load_data()
-    products_list = hp_data.dollars_by_product_service_code(object_list)
-    recipient_city_list = hp_data.contracts_by_city(object_list)
+    object_list = data.load_data()
+    products_list = data.dollars_by_product_service_code(object_list)
+    recipient_city_list = data.contracts_by_city(object_list)
     return render_template(template, object_list=object_list, products_list=products_list, recipient_city_list=recipient_city_list)
 
 @app.route('/contract-detail/')
 def contract_view():
     template = 'contract_view.html'
-    object_list = hp_data.load_data()
-    products_list = hp_data.dollars_by_product_service_code(object_list)
-    recipient_city_list = hp_data.contracts_by_city(object_list)
+    object_list = data.load_data()
+    products_list = data.dollars_by_product_service_code(object_list)
+    recipient_city_list = data.contracts_by_city(object_list)
     return render_template(template, object_list=object_list, products_list=products_list, recipient_city_list=recipient_city_list)
 
 @app.route('/glossary/')
@@ -64,8 +66,8 @@ def search_tips():
 @app.route('/product/<product_id>/')
 def contract_list(product_id):
     template = 'list.html'
-    object_list = hp_data.load_data()
-    products_list = hp_data.dollars_by_product_service_code(object_list)
+    object_list = data.load_data()
+    products_list = data.dollars_by_product_service_code(object_list)
     for p in products_list:
         if p[4] == product_id:
             object_list = [o for o in object_list if p[0] == o["ProductorServiceCode"]]
@@ -75,8 +77,8 @@ def contract_list(product_id):
 @app.route('/city/<city_id>/')
 def list(city_id):
     template = 'geo-list.html'
-    object_list = hp_data.load_data()
-    cities_list = hp_data.contracts_by_city(object_list)
+    object_list = data.load_data()
+    cities_list = data.contracts_by_city(object_list)
     for c in cities_list:
         if c[5] == city_id:
             object_list = [o for o in object_list if c[5] == o["RecipientCity"]]
@@ -86,14 +88,14 @@ def list(city_id):
 @app.route('/product/<product_id>/<contract_id>/')
 def product_contract(product_id, contract_id):
     template = 'contract.html'
-    object_list = hp_data.load_data()
+    object_list = data.load_data()
     record = [o for o in object_list if o['record_count'] == contract_id]
     return render_template(template, object=record)
 
 @app.route('/city/<city_id>/<contract_id>/')
 def city_contract(city_id, contract_id):
     template = 'contract.html'
-    object_list = hp_data.load_data()
+    object_list = data.load_data()
     record = [o for o in object_list if o['record_count'] == contract_id]
     return render_template(template, object=record)
 

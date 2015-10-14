@@ -8,16 +8,16 @@
 
 <div class="row">
 <!-- BEGIN LEFT CONTENT COLUMN -->
-    <div class="col-md-8">
+    <div class="col-md-10 col-md-offset-1">
         <div class="row">
             <div class="page-identifier col-md-10">
-                <h1>{{ object_list[0]['RecipientName'] }}</h1>
+                <h1>{{ object_list[0]['vendorName'] }}</h1>
             </div>
             <div class="page-type col-md-2">Detail</div>
         </div>
 
         <div class="subhead">
-            <h3>{{ object_list[0]['ProductorServiceCode'] }}</h3>
+            <h3>{{ object_list[0]['productOrServiceCode'] }}</h3>
         </div>
 
 
@@ -56,31 +56,19 @@
         {% for o in object_list %}
         <table class="contract-list">
             <tr>
-                <th colspan="4">{{ o['RecipientName'] }}</th>
+                <th colspan="4">{{ o['vendorName'] }}</th>
             </tr>
             <tr>
-                <td>PIID</td>
-                <td>{{ o['ProcurementInstrumentID'] }}</td>
-                <td>VISUAL GOES HERE</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>IDVPIID</td>
-                <td>{{ o['IDVProcurementInstrumentID'] }}</td>
-                <td>VISUAL GOES HERE</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>Agency ID</td>
-                <td>{{ o['AgencyID'] }}</td>
+                <td>PIID/IDVPIID</td>
+                <td>{{ o['PIID'] }} / {{ o['IDVModificationNumber'] }}</td>
                 <td>VISUAL GOES HERE</td>
                 <td></td>
             </tr>
             <tr>
                 <td>Contracting Agency</td>
-                <td>{{ o['ContractingAgency'] }}</td>
+                <td>{{ o['contractingOfficeAgencyID'] }}</td>
                 <td>VISUAL GOES HERE</td>
-                <td>${{ o['DollarsObligated'] }} </td>
+                <td>${{ o['obligatedAmount'] }}</td>
             </tr>
             <tr>
                 <td>Date signed</td>
@@ -90,6 +78,7 @@
             </tr>
             <tr>
                 <td>Performance location</td>
+                <!-- Google Maps city lookup name by ZIP code https://maps.googleapis.com/maps/api/geocode/json?address=ZIP-GOES-HERE&sensor=true -->
                 <td>{{ o['PrincipalPlaceCountyOrCity'] }}, {{ o['PlaceofPerformanceState'] }}</td>
                 <td>VISUAL GOES HERE</td>
                 <td></td>
@@ -108,14 +97,14 @@
     <!-- END LEFT CONTENT COLUMN -->
     <!-- BEGIN SIDEBAR -->
 
-    <div class="col-md-4">
+    <!-- <div class="col-md-4">
         <div class="extra sidebar">
             <h2>View glossary of terms</h2>
         </div>
         <div class="subhead"><h3>American subsidiaries</h3></div>
-        <div class="container">
+        <div class="container"> -->
         <!-- STATIC PLACEHOLDER NAMES -->
-            <div id="subsidiaries" class="up">
+            <!-- <div id="subsidiaries" class="up">
                 <ul>
                     <li>3Com International, Inc.</li>
                     <li>3Par Inc.</li>
@@ -139,7 +128,7 @@
 
         <div class="subhead"><h3>Comments</h3></div>
 
-    </div>
+    </div> -->
     <!-- END SIDEBAR -->
 </div>
 

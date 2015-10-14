@@ -17,7 +17,9 @@
     padding: 0;
 }
 
-
+main {
+    background-color: WhiteSmoke;
+}
 
 body {
     background-color: WhiteSmoke;
@@ -32,7 +34,6 @@ html, body { height: 100%; }
     margin: 0 auto -18em;
 }
 .container-fluid { overflow-x: hidden; }
-.col-md-8 { border-right: 1px solid Gainsboro; }
 .footer, .push {
     height: 18em;
 }
@@ -75,7 +76,7 @@ h3 { font-size: 1.8em; color: black; font-weight: normal; }
 
 span { color: #D00441; }
 
-a#header {
+header a {
     color: WhiteSmoke;
     font-size: 18pt;
 }
@@ -95,7 +96,7 @@ tr:nth-child(even) {
 }
 
 h2.subtitle {
-    color: gray;
+    color: #404348;
     margin-top: 0px;
 }
 div.contract {
@@ -222,13 +223,13 @@ div.title-box{
 .page-identifier h1 { display: inline-block; margin: 0; }
 
 .subhead { 
-    background-color: white; 
-    padding: 15px 0 15px 25px; 
-    border-bottom: 1px solid Gainsboro;
-    border-top: 1px solid Gainsboro;
+    background-color: black; 
+    padding: 16px 0 16px 25px; 
+    /*border-bottom: 1px solid Gainsboro;*/
+    /*border-top: 1px solid Gainsboro;*/
     /*height: 30px;*/
 }
-.subhead h3 { display: inline-block; margin: 0; }
+.subhead h3 { display: inline-block; margin: 0; color: white; }
 .sidebar .subhead { 
     width: 100%; 
     margin-left: 2px;
@@ -265,7 +266,7 @@ table {
 }
 
 table.list-summary th {
-    background-color: black;
+    background-color: #404348;
     color: white;
     height:40px;
     text-align: center;
@@ -306,7 +307,15 @@ input[type=text] {
     font-size: 16pt;
     border: none;
     border:none;
+    outline: none;
     letter-spacing: .1em;
+}
+input[type=submit] {
+    position: absolute;
+    right: 5px;
+    top: 80px;
+    padding: 10px 15px;
+    border: none;
 }
 .container.main input[type=text] {
     width: 94%;
@@ -403,7 +412,7 @@ div#detail {
     width: 100%;
 }
 /* HEADER CSS */
-.header {
+header {
     background-color: black;
     color: white;
     width: 100%;
@@ -440,8 +449,8 @@ div.header.spacer {
     color: white;
 }
 .fa.fa-bars {
-    position: absolute;
-    right: 100px;
+    /*position: absolute;*/
+    /*right: 100px;*/
     font-size: 18pt;
     cursor: pointer;
     color: WhiteSmoke;
@@ -471,3 +480,86 @@ div.subtitle {
     .option:first-child { border-bottom: 0; border-right: 1px solid white; }
     .page-type { padding: 8px; }
 }
+
+/* D3 CSS */
+path {
+    stroke: #57C3EC;
+    stroke-width: 1;
+    fill: none;
+}
+
+.axis {
+  shape-rendering: crispEdges;
+}
+.x.axis line {
+  stroke: lightgrey;
+}
+.x.axis .minor {
+  stroke-opacity: .5;
+}
+.x.axis path {
+  display: none;
+}
+.y.axis line, .y.axis path {
+  fill: none;
+  stroke: #000;
+}
+/* END D3 */
+
+
+
+/* MENU */
+.slideout-menu {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 0;
+  width: 180px;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  display: none;
+  -webkit-transition: 0.4s ease-in-out;
+    -moz-transition: 0.4s ease-in-out;
+    -ms-transition: 0.4s ease-in-out;
+    -o-transition: 0.4s ease-in-out; 
+    transition: 0.4s ease-in-out;
+}
+
+.slideout-panel {
+  position:relative;
+  z-index: 1;
+}
+
+.slideout-open,
+.slideout-open body,
+.slideout-open .slideout-panel {
+  overflow: hidden;
+}
+
+.slideout-open .slideout-menu {
+  display: block;
+}
+.menu-section-list a {
+    display: block;
+    padding: 10px 20px;
+    color: white;
+}
+.menu-header {
+    background-color: #2F3238;
+}
+.menu-header-title { color: white; }
+.menu-section { margin-top: 50px; }
+nav li {
+    list-style:none;
+    margin-left: 0;
+}
+nav li:hover {
+    background-color: gray;
+}
+
+nav { 
+    background-color: #404348;
+}
+/* END MENU */

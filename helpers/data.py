@@ -2,19 +2,26 @@ import json
 import operator
 import os
 import requests
+import re
 
-DATA_PATH = os.path.join(os.path.dirname(__file__), '../static/hp-data-2015.json')
+DATA_PATH = os.path.join(os.path.dirname(__file__), '../static/data.json')
 def load_data():
     with open(DATA_PATH) as f:
         d = json.loads(f.read())
     return d['usaspendingSearchResults']['result']['doc']
+
+# CLEAN AGENCY FIELD
+def clean_officeID(hpdata):
+    for h in hpdata:
+        office = h['contractingOfficeID']
+        return re.sub(r"\\d+", "", office)
 
 
 def contracts_by_agency(hpdata):
     agencies = {}
     for h in hpdata:
         agency = h['AgencyID']
-        contract_amount = float(h['DollarsObligated'])
+        contract_amount = float(h['obligatedAmount'])
         if agency in agencies:
             agencies[agency] += contract_amount
         else:
@@ -29,9 +36,9 @@ def contracts_by_city(hpdata):
     recipient_city = []
     cities = []
     for h in hpdata:
-        city_state = str(h['RecipientCity'] + ", " + h['RecipientState'])
-        ident = h['RecipientCity']
-        contract_amount = int(float(h['DollarsObligated']))
+        city_state = str(h['city'] + ", " + h['state'])
+        ident = h['city']
+        contract_amount = int(float(h['obligatedAmount']))
         if city_state not in cities:
             recipient_city.append([city_state, contract_amount, 1, 'x', 'y', ident])
             cities.append(city_state)
@@ -67,8 +74,8 @@ def dollars_by_product_service_code(hpdata):
     products_code = []
     codes = []
     for h in hpdata:
-        code = h['ProductorServiceCode']
-        contract_amount = int(float(h['DollarsObligated']))
+        code = h['productOrServiceCode']
+        contract_amount = int(float(h['obligatedAmount']))
         if code not in codes:
             products_code.append([code, contract_amount, 1, 'width', 'id'])
             codes.append(code)
