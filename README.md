@@ -10,7 +10,7 @@ Create a virtual environment
 
 Then inside your new virtualenv install the requirements
 
-`pip install -r requirements`
+`pip install -r requirements.txt`
 
 Then run the server
 
