@@ -28,6 +28,8 @@
                 // return the Y coordinate where we want to plot this datapoint
                 return y(d); 
             })
+
+            
             // Add an SVG element with the desired dimensions and margin.
             var graph = d3.select("#company_chart").append("svg:svg")
                   .attr("width", w + m[1] + m[3])
