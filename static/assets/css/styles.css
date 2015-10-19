@@ -321,7 +321,7 @@ input[type=submit] {
     width: 94%;
     margin: 5px;
 }
-.fa.fa-search {
+.search-indicator .fa.fa-search {
     line-height: 70px;
     color: white;
     font-size: 20pt;
@@ -374,11 +374,7 @@ div#subtitle {
 }
 
 #subsidiaries {
-      -webkit-transition: 0.4s ease-in-out;
-    -moz-transition: 0.4s ease-in-out;
-    -ms-transition: 0.4s ease-in-out;
-    -o-transition: 0.4s ease-in-out; 
-    transition: 0.4s ease-in-out; 
+    padding: 20px 0;
 }
 #subsidiaries.up { 
     height: 210px;
@@ -555,6 +551,7 @@ nav li {
     list-style:none;
     margin-left: 0;
 }
+
 nav li:hover {
     background-color: gray;
 }
