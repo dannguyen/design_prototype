@@ -16,19 +16,17 @@
 
         <!-- SUMMARY -->
         <div class="row">
-            <div class="subhead col-md-10">
+            <div class="subhead">
                 <h3>Summary</h3>
-            </div>
-            <div class="option-wrapper col-md-2">
-                    <div class="option">embed</div>
-                    <div class="option">export</div>
             </div>
         </div>
 
         <div class="wrapper">
             <div class="container inner">
-                <p>{{ object_list[0]['vendorName'] }} recieved this ${{ object_list[0]['obligatedAmount'] }} contract from {{ object_list[0]['contractingOfficeAgencyID'] }} for {{ object_list[0]['ProductorServiceCode'] }} </p>
+                <p>{{ object_list[0]['vendorName'] }} recieved this ${{ object_list[0]['obligatedAmount'] }} contract from {{ object_list[0]['contractingOfficeAgencyID'] }} for {{ object_list[0]['productOrServiceCode'] }} </p>
             </div>
+
+            <!-- INVOLVED PARTIES AND RECIPIENT DESCRIPITON -->
             <div class="row">
                 <div class="col-md-6">
                     <div class="subhead left">
@@ -55,6 +53,20 @@
                 </div>
             </div>
 
+            <!-- CONTRACT DESCRIPTION -->
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="subhead">
+                        <h3>Contract description</h3>
+                    </div>
+                    <div class="container inner">
+                        <p>{{ object_list[0]['descriptionOfContractRequirement'] }}</p>
+                    </div>
+                </div>
+            </div>
+
+            
+
             <!-- CONTRACT PERFORMANCE LOCATION -->
             <div class="row">
                 <div class="subhead col-md-10">
@@ -70,8 +82,8 @@
                 <div class="col-md-3">
                         <table>
                             <tr><td>City</td><td>TKTK</td></tr>
-                            <tr><td>State</td><td>{{ object_list[0]['PlaceofPerformanceState'] }}</td></tr>
-                            <tr><td>ZIP code</td><td>{{ object_list[0]['PlaceofPerformanceZipCode'] }}</td></tr>
+                            <tr><td>State</td><td>{{ object_list[0]['state'] }}</td></tr>
+                            <tr><td>ZIP code</td><td>{{ object_list[0]['placeOfPerformanceZIPCode'] }}</td></tr>
                         </table>
                     </div>
                 <!-- MAP? -->

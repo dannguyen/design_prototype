@@ -15,3 +15,10 @@ Then inside your new virtualenv install the requirements
 Then run the server
 
 `python app.py`
+
+The main working templates can be accessed with following URLs:
+
+http://localhost:5000/
+http://localhost:5000/company-overview
+http://localhost:5000/contract-list
+http://localhost:5000/contract-detail
