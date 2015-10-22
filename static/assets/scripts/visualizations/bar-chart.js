@@ -3,8 +3,8 @@ var url = "/static/assets/scripts/visualizations/maps/bachelors-degrees2.csv"
   , width = parseInt(d3.select('#bar-chart').style('width'), 10)
   , width = width - margin.left - margin.right
   , height = 200 // placeholder
-  , barHeight = 25
   , spacing = 5
+  , barHeight = 35
   , percent = d3.format('%');
 
 // scales and axes
@@ -12,11 +12,17 @@ var x = d3.scale.linear()
     .range([0, width])
     .domain([0, .25]); // hard-coding this because I know the data
 
+var colors = d3.scale.quantize()
+    .range(colorbrewer.Blues[7]);    
+
 var y = d3.scale.ordinal();
 
 var xAxis = d3.svg.axis()
     .scale(x)
-    .tickFormat(percent);
+    .ticks(5)
+    .tickSize(-h - 35)
+    .tickPadding(10)
+    .tickFormat(function(d) { return d * 10000});
 
 var colors = d3.scale.quantize()
     .range(colorbrewer.Blues[7]);    
@@ -45,6 +51,9 @@ d3.csv(url).row(function(d) {
     height = y.rangeExtent()[1];
     d3.select(chart.node().parentNode)
         .style('height', (height + margin.top + margin.bottom) + 'px')
+        .attr("fill", function(d) {
+            return "rgb(0, 0, " + (d * 10) + ")";
+        });
 
     // render the chart
 
@@ -53,10 +62,10 @@ d3.csv(url).row(function(d) {
         .attr('class', 'x axis top')
         .call(xAxis.orient('top'));
 
-    chart.append('g')
-        .attr('class', 'x axis bottom')
-        .attr('transform', 'translate(0,' + height + ')')
-        .call(xAxis.orient('bottom'));
+    // chart.append('g')
+    //     .attr('class', 'x axis bottom')
+    //     .attr('transform', 'translate(0,' + height + ')')
+    //     .call(xAxis.orient('bottom'));
 
     var bars = chart.selectAll('.bar')
         .data(data)
@@ -77,6 +86,7 @@ d3.csv(url).row(function(d) {
     bars.append('text')
         .text(function(d) { return d.Name; })
         .attr('class', 'name')
+        .attr('id', function(d) { return d.Name; })
         .attr('y', y.rangeBand() - 5)
         .attr('x', spacing);
 
@@ -124,7 +134,7 @@ function resize() {
 
     // update axes
     chart.select('.x.axis.top').call(xAxis.orient('top'));
-    chart.select('.x.axis.bottom').call(xAxis.orient('bottom'));
+    // chart.select('.x.axis.bottom').call(xAxis.orient('bottom'));
 
 }
 

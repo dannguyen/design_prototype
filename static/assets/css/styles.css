@@ -515,7 +515,8 @@ path {
 #map path {
     stroke: WhiteSmoke;
 }
-.states:hover { fill: #D00441; }
+#map path:hover { fill: #D00441 !important; }
+
 .treemap { height: 350px; }
 .treemap .node {
     font-size: 150%;
@@ -531,7 +532,7 @@ path {
       background: #D00441 !important;
       color: white;    
 }
-.background { fill: WhiteSmoke; }
+.background { fill: none; }
 .percent { fill: #57C3EC; stroke: WhiteSmoke; }
 .percent:hover { 
     fill: #D00441;
@@ -541,7 +542,7 @@ path {
     -o-transition: 0.1s ease-in-out; 
     transition: 0.1s ease-in-out;
 }
-#bar-chart .name { fill: white; font-size: 12pt; }
+#bar-chart .name { fill: white; font-size: 14pt; }
 .bar { padding: 10px; }
 /* END D3 */
 

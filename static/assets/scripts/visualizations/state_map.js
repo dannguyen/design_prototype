@@ -71,7 +71,7 @@ function render(err, us, data) {
       .enter().append('path')
         .attr('class', 'state')
         .attr('id', function(d) { 
-            return d.properties.name.toLowerCase().replace(/\s/g, '-'); 
+            return d.properties.name.replace(/\s/g, '-'); // changed from d.properties.name.toLowerCase.replace(/\s/g, '-');
         })
         .attr('d', path)
         .style('fill', function(d) {
