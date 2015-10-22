@@ -9,7 +9,7 @@
     <div class="col-md-10 col-md-offset-1">
         <div class="row">
             <div class="page-identifier col-md-10">
-                <h1>{{ object_list[0]['vendorName'] }}</h1>
+                <h1>{{ object_list[1]['vendorName'] }}</h1>
             </div>
             <div class="page-type col-md-2">Contract</div>
         </div>
@@ -23,33 +23,29 @@
 
         <div class="wrapper">
             <div class="container inner">
-                <p>{{ object_list[0]['vendorName'] }} recieved this ${{ object_list[0]['obligatedAmount'] }} contract from {{ object_list[0]['contractingOfficeAgencyID'] }} for {{ object_list[0]['productOrServiceCode'] }} </p>
+                <p>{{ object_list[1]['vendorName'] }} recieved this ${{ object_list[1]['obligatedAmount'] }} contract from {{ object_list[1]['contractingOfficeAgencyID'] }} for {{ object_list[1]['productOrServiceCode'] }}.</p>
             </div>
+        </div>
 
-            <!-- INVOLVED PARTIES AND RECIPIENT DESCRIPITON -->
+        <!-- INVOLVED PARTIES AND RECIPIENT DESCRIPITON -->
             <div class="row">
                 <div class="col-md-6">
                     <div class="subhead left">
-                        <h3>Involved parties</h3>
+                        <h3>Contract requestor information</h3>
                     </div>
                     <table class="left">
-                        <tr><td>Contract recipient</td><td>{{ object_list[0]['vendorName'] }} </td></tr>
-                        <tr><td>Recipient alt. name</td><td>{{ object_list[0]['vendorAlternateName'] }}</td></tr>
-                        <tr><td>Requesting agency</td><td>{{ object_list[0]['contractingOfficeAgencyID'] }}</td></tr>
-                        <tr><td>Requesting office</td><td>{{ object_list[0]['contractingOfficeID'] }}</td></tr>
+                        <tr><td>Major funding agency</td><td>{{ object_list[1]['maj_fund_agency_cat'] }}</td></tr>
+                        <tr><td>Requesting agency</td><td>{{ object_list[1]['contractingOfficeAgencyID'] }}</td></tr>
+                        <tr><td>Requesting office</td><td>{{ object_list[1]['fundingRequestingOfficeID'] }}</td></tr>
+                        <tr><td>Funded by foreign entity</td><td>{{ object_list[1]['fundedByForeignEntity'] }}</td></tr>
+                        <tr><td>Humanitarian or peacekeeping operation</td><td>{{ object_list[1]['contingencyHumanitarianPeacekeepingOperation'] }}</td></tr>
                     </table>
                 </div>
                 <div class="col-md-6">
                     <div class="subhead">
-                        <h3>Recipient information</h3>
+                        <h3>TKTK</h3>
                     </div>
-                    <table>
-                        <tr><td>Address</td><td>{{ object_list[0]['streetAddress'] }} {{ object_list[0]['city'] }}, {{ object_list[0]['state'] }}</td></tr>
-                        <tr><td>Number of employees</td><td>{{ object_list[0]['numberOfEmployees'] }}</td></tr>
-                        <tr><td>Site code</td><td>{{ object_list[0]['vendorSiteCode'] }}</td></tr>
-                        <tr><td>DUNS number</td><td>{{ object_list[0]['DUNSNumber'] }}</td></tr>
-                        <tr><td>Business size</td><td>{{ object_list[0]['contractingOfficerBusinessSizeDetermination'] }}</td></tr>
-                    </table>
+                    
                 </div>
             </div>
 
@@ -60,10 +56,34 @@
                         <h3>Contract description</h3>
                     </div>
                     <div class="container inner">
-                        <p>{{ object_list[0]['descriptionOfContractRequirement'] }}</p>
+                        <p>{{ object_list[1]['descriptionOfContractRequirement'] }}</p>
                     </div>
                 </div>
             </div>
+
+
+            <!-- CONTRACT TIMELINE -->
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="subhead left">
+                        <h3>Contract timeline</h3>
+                    </div>
+                    <div class="col-md-6">
+                        <table>
+                            <tr><td>Signed date</td><td>{{ object_list[1]['signedDate'] }}</td></tr>
+                            <tr><td>Effective date</td><td>{{ object_list[1]['effectiveDate'] }}</td></tr>
+                            <tr><td>Current completion date</td><td>{{ object_list[1]['currentCompletionDate'] }}</td></tr>
+                            <tr><td>Ultimate completion date</td><td>{{ object_list[1]['ultimateCompletionDate'] }}</td></tr>
+                        </table>
+                    </div>
+                    <div class="col-md-6">
+                        <!-- D3 GOES HERE -->
+                        <!-- <div id="calendar"></div> -->
+                    </div>
+                </div>
+            </div>
+
+            
 
             
 
@@ -79,15 +99,43 @@
             </div>
 
             <div class="row">
-                <div class="col-md-3">
+                <div class="col-md-4">
                         <table>
                             <tr><td>City</td><td>TKTK</td></tr>
-                            <tr><td>State</td><td>{{ object_list[0]['state'] }}</td></tr>
-                            <tr><td>ZIP code</td><td>{{ object_list[0]['placeOfPerformanceZIPCode'] }}</td></tr>
+                            <tr><td>State / Country</td><td>{{ object_list[1]['popStateCode'] }} / {{ object_list[1]['placeOfPerformanceCountryCode'] }}</td></tr>
+                            <tr><td>ZIP code</td><td>{{ object_list[1]['placeOfPerformanceZIPCode'] }}</td></tr>
+                            <tr><td>Congressional district</td><td>{{ object_list[1]['popStateCode'] }}{{ object_list[1]['placeOfPerformanceCongressionalDistrict'] }}</td></tr>
                         </table>
                     </div>
                 <!-- MAP? -->
-                <div id="detail" class="col-md-9"></div>
+                <div id="detail" class="col-md-8"></div>
+            </div>
+
+            <!-- INVOLVED PARTIES AND RECIPIENT DESCRIPITON -->
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="subhead left">
+                        <h3>Vendor information</h3>
+                    </div>
+                    <table>
+                        <tr><td>Contract recipient</td><td>{{ object_list[1]['vendorName'] }} </td></tr>
+                        <tr><td>Recipient alt. name</td><td>{{ object_list[1]['vendorAlternateName'] }}</td></tr>
+                        <tr><td>Address</td><td>{{ object_list[1]['streetAddress'] }} {{ object_list[1]['city'] }}, {{ object_list[1]['state'] }} {{ object_list[1]['ZIPCode'] }}</td></tr>
+                        <tr><td>Congressional district</td><td>{{ object_list[1]['state'] }}{{ object_list[1]['congressionalDistrict'] }}</td></tr>
+                        <tr><td>Business size</td><td>{{ object_list[1]['contractingOfficerBusinessSizeDetermination'] }}</td></tr>
+                        <tr><td>Number of employees</td><td>{{ object_list[1]['numberOfEmployees'] }}</td></tr>
+                        <tr><td>Annual revenue</td><td>${{ object_list[1]['annualRevenue'] }}</td></tr>
+                        <tr><td>Site code / alternate site code</td><td>{{ object_list[1]['vendorSiteCode'] }} / {{ object_list[1]['vendorAlternateSiteCode'] }}</td></tr>
+                        <tr><td>DUNS number</td><td>{{ object_list[1]['DUNSNumber'] }}</td></tr>
+                        
+                    </table>
+                </div>
+                <div class="col-md-6">
+                    <div class="subhead">
+                        <h3>Company network diagram</h3>
+                    </div>
+
+                </div>
             </div>
             
 
@@ -99,10 +147,9 @@
                     <div class="option">embed</div>
                     <div class="option">export</div>
             </div>
-        </div>
 
         </div>
-    {{ object_list[0] }}
+    {{ object_list[1] }}
     </div>
     <!-- END LEFT CONTENT COLUMN -->
 
@@ -113,7 +160,7 @@
     <script type="text/javascript">
 
             var geocoder = new google.maps.Geocoder();
-            var address = "{{ object_list[0]['streetAddress'] }}, {{ object_list[0]['city'] }}, {{ object_list[0]['state']}}" ;
+            var address = "{{ object_list[1]['streetAddress'] }}, {{ object_list[1]['city'] }}, {{ object_list[1]['state']}}";
 
             geocoder.geocode( {'address': address}, function(results, status) {
 
@@ -121,12 +168,19 @@
                 var y = results[0].geometry.location.lng();
 
                 var map = L.map('detail').setView([x, y], 10);
-                var mapquestLayer = new L.TileLayer('http://{s}.mqcdn.com/tiles/1.0.0/map/{z}/{x}/{y}.png', {
-                    maxZoom: 18,
-                    attribution: 'Data, imagery and map information provided by <a href="http://open.mapquest.co.uk" target="_blank">MapQuest</a>,<a href="http://www.openstreetmap.org/" target="_blank">OpenStreetMap</a> and contributors.',
-                    subdomains: ['otile1','otile2','otile3','otile4']
+                var Hydda_Full = L.tileLayer('http://{s}.tile.openstreetmap.se/hydda/full/{z}/{x}/{y}.png', {
+                    attribution: 'Tiles courtesy of <a href="http://openstreetmap.se/" target="_blank">OpenStreetMap Sweden</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
                 });
-                map.addLayer(mapquestLayer);
+                var dataLayer = L.geoJson(data, {
+                    onEachFeature: function(feature, layer) {
+                        layer.bindPopup(
+                            '<a href="' + feature.properties.id + '/">' +
+                                feature.properties.Site_Name +
+                            '</a>'
+                        );
+                    }
+                });
+                map.addLayer(Hydda_Full);
                 var marker = L.marker([x, y]).addTo(map);
                 }); 
             
