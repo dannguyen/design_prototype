@@ -36,8 +36,8 @@ queue()
     .defer(d3.csv, urls.data)
     .await(render);
 
-// catch the resize
-d3.select(window).on('resize', resize);
+// resize
+d3.select(window).on('resize.map', resize); 
 
 // template, for later
 var template = _.template(d3.select('#map-tooltip-template').html());
@@ -69,9 +69,8 @@ function render(err, us, data) {
     var states = map.selectAll('path.state')
         .data(states.features)
       .enter().append('path')
-        .attr('class', 'state')
-        .attr('id', function(d) { 
-            return d.properties.name.replace(/\s/g, '-'); // changed from d.properties.name.toLowerCase.replace(/\s/g, '-');
+        .attr('class', function(d) { 
+            return "state " + d.properties.name.replace(/\s/g, '-'); // changed from d.properties.name.toLowerCase.replace(/\s/g, '-');
         })
         .attr('d', path)
         .style('fill', function(d) {
@@ -80,16 +79,22 @@ function render(err, us, data) {
 
             return colors(value);
         });
+    
 
-    states.on('mouseover', tooltipShow)
-        .on('mouseout', tooltipHide);
-
+    states.on('mouseover', syncedMouseIn)
+        .on('mouseout', syncedMouseOut);
+    
+    // var stateClasses = states.attr('class').split(' ')[1];
+    states.each(function(d){
+        var name =  d.properties.name.replace(/\s/g, '-');
+        // console.log(name);
+    });
 }
 
 function resize() {
+
     // adjust things when the window size changes
-    width = parseInt(d3.select('#map').style('width'));
-    width = width - margin.left - margin.right;
+    width = parseInt(d3.select('#map').style('width')) - margin.left - margin.right;
     height = width * mapRatio;
 
     // update projection
@@ -125,10 +130,22 @@ function tooltipHide(d, i) {
     $(this).tooltip('hide');
 }
 
-// highlight my code blocks
-// d3.selectAll('pre code').each(function() {
-//     var code = d3.select(this)
-//       , highlight = hljs.highlight('javascript', code.html());
+function syncedMouseIn(d) {
+    tooltipShow; // NOT WORKING
+    var name =  d.properties.name.replace(/\s/g, '-');
+        d3.selectAll('.percent.' + name).style('fill', '#D00441');
+}
+function syncedMouseOut(d) {
+    tooltipHide; // NOT WORKING
+    var name =  d.properties.name.replace(/\s/g, '-');
+        d3.selectAll('.percent.' + name ).style('fill', '#57C3EC')
+            
+}
 
-//     code.html(highlight.value);
-// });
+// highlight my code blocks
+d3.selectAll('pre code').each(function() {
+    var code = d3.select(this)
+      , highlight = hljs.highlight('javascript', code.html());
+
+    code.html(highlight.value);
+});

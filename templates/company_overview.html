@@ -13,6 +13,7 @@
             <div class="page-type col-md-2">Overview</div>
         </div>
         
+        <div id="example"></div>
 
 
         <section id="contract_earnings_per_year">
@@ -26,7 +27,7 @@
                 </div>
             </div>
 
-            <div id="company_chart" class="col-md-12" height="500"></div>
+            <div id="graph" class="col-md-12 aGraph"></div>
 
             <!-- PLACEHOLDER IMAGE -->
             <!-- <img class="chart" src="../../static/assets/images/company_chart.png"> -->
@@ -175,5 +176,4 @@
     <h5><%= Name %></h5>
     <p>$<%= percent * 1000000000 %> in contracts 2000 - 2015.</p>
 </script>
-
 {% include 'partials/foot.html' %}

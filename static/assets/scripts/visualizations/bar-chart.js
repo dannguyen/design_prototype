@@ -2,10 +2,12 @@ var url = "/static/assets/scripts/visualizations/maps/bachelors-degrees2.csv"
   , margin = {top: 30, right: 10, bottom: 30, left: 20}
   , width = parseInt(d3.select('#bar-chart').style('width'), 10)
   , width = width - margin.left - margin.right
-  , height = 200 // placeholder
+  , height = width // placeholder
   , spacing = 5
-  , barHeight = 35
+  , breakPoint = 992
+  , barHeight = height / 10
   , percent = d3.format('%');
+
 
 // scales and axes
 var x = d3.scale.linear()
@@ -17,10 +19,10 @@ var colors = d3.scale.quantize()
 
 var y = d3.scale.ordinal();
 
-var xAxis = d3.svg.axis()
+var barXAxis = d3.svg.axis()
     .scale(x)
     .ticks(5)
-    .tickSize(-h - 35)
+    .tickSize(-height)
     .tickPadding(10)
     .tickFormat(function(d) { return d * 10000});
 
@@ -32,6 +34,8 @@ var chart = d3.select('#bar-chart').append('svg')
     .style('width', (width + margin.left + margin.right) + 'px')
   .append('g')
     .attr('transform', 'translate(' + [margin.left, margin.top] + ')');
+
+
 
 d3.csv(url).row(function(d) {
     d.Total = +d.Total;
@@ -49,23 +53,25 @@ d3.csv(url).row(function(d) {
 
     // set height based on data
     height = y.rangeExtent()[1];
+    chartRatio = .4;
     d3.select(chart.node().parentNode)
-        .style('height', (height + margin.top + margin.bottom) + 'px')
+        .style('height', function() {
+            if (window.innerWidth > breakPoint) { return (height + margin.top + margin.bottom) + 'px' }
+                else { return(((height + margin.top + margin.bottom) * chartRatio )+ 'px' )}
+        })
         .attr("fill", function(d) {
             return "rgb(0, 0, " + (d * 10) + ")";
         });
 
-    // render the chart
-
+    // reset y domain to fit new chart size
+    barHeight = parseInt(d3.select("#bar-chart").style("height")) / 10;
+    y.domain(d3.range(data.length))
+        .rangeBands([0, data.length * barHeight]);
+            
     // add top and bottom axes
     chart.append('g')
-        .attr('class', 'x axis top')
-        .call(xAxis.orient('top'));
-
-    // chart.append('g')
-    //     .attr('class', 'x axis bottom')
-    //     .attr('transform', 'translate(0,' + height + ')')
-    //     .call(xAxis.orient('bottom'));
+        .attr('class', 'bar-chart x axis top')
+        .call(barXAxis.orient('top'));
 
     var bars = chart.selectAll('.bar')
         .data(data)
@@ -79,15 +85,14 @@ d3.csv(url).row(function(d) {
         .attr('width', width);
 
     bars.append('rect')
-        .attr('class', 'percent')
+        .attr('class', function(d) { return 'percent ' + d.Name; })
         .attr('height', y.rangeBand())
         .attr('width', function(d) { return x(d.percent); })
 
     bars.append('text')
         .text(function(d) { return d.Name; })
-        .attr('class', 'name')
-        .attr('id', function(d) { return d.Name; })
-        .attr('y', y.rangeBand() - 5)
+        .attr('class', function(d) { return 'name ' + d.Name; })
+        .attr('y', y.rangeBand() - 10)
         .attr('x', spacing);
 
     // add median ticks
@@ -107,6 +112,8 @@ d3.csv(url).row(function(d) {
 d3.select(window).on('resize', resize); 
 
 function resize() {
+
+    var chartRatio = .4;
     // update width
     width = parseInt(d3.select('#bar-chart').style('width'), 10);
     width = width - margin.left - margin.right;
@@ -114,13 +121,28 @@ function resize() {
     // resize the chart
     x.range([0, width]);
     d3.select(chart.node().parentNode)
-        .style('height', (y.rangeExtent()[1] + margin.top + margin.bottom) + 'px')
+        .style('height', function() {
+            if (window.innerWidth > breakPoint) { return width + 'px' }
+                else { return (width * chartRatio) + 'px' }
+        })
         .style('width', (width + margin.left + margin.right) + 'px');
 
+    barHeight = parseInt(d3.select(chart.node().parentNode).style('height')) / 10;
+
+    var bars = chart.selectAll('.bar')
+        .attr('transform', function(d, i) { return 'translate(0,'  + barHeight * i + ')'; });
+
+    var barHeight = parseInt(d3.select("#bar-chart").style("height")) / 10; 
+
+    bars.append('text')
+        .attr('y', y.rangeBand() - 10);
+
     chart.selectAll('rect.background')
+        .attr('height', barHeight)
         .attr('width', width);
 
     chart.selectAll('rect.percent')
+        .attr('height', barHeight)
         .attr('width', function(d) { return x(d.percent); });
 
     // update median ticks
@@ -133,8 +155,7 @@ function resize() {
 
 
     // update axes
-    chart.select('.x.axis.top').call(xAxis.orient('top'));
-    // chart.select('.x.axis.bottom').call(xAxis.orient('bottom'));
+    chart.select('.bar-chart.x.axis.top').call(barXAxis.orient('top'));
 
 }
 

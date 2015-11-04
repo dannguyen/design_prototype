@@ -544,9 +544,24 @@ path {
 }
 #bar-chart .name { fill: white; font-size: 14pt; }
 .bar { padding: 10px; }
+.bar { max-height: 20px !important; }
+
+#graph {
+    position: relative;
+    width: 100%;
+    padding-bottom: 35%;
+    float: left;
+    height: 0;
+}
+
+#lineChart {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+}
+
 /* END D3 */
-
-
 
 /* MENU */
 .slideout-menu {
@@ -603,4 +618,5 @@ nav li:hover {
 nav { 
     background-color: #404348;
 }
+
 /* END MENU */
