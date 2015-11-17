@@ -4,18 +4,20 @@
 {% include 'partials/search_bar.html' %}
 
 <div class="row">
-    <!-- BEGIN LEFT CONTENT COLUMN -->
+    <!-- BEGIN MAIN CONTENT -->
     <div class="col-md-10 col-md-offset-1">
-        <div class="row">
-            <div class="page-identifier col-md-10">
-                <h1>{{ object_list[0]['vendorName'] }}</h1>
+        <section id="vendor-name">
+            <div class="row">
+                <div class="page-identifier col-md-10">
+                    <h1>{{ object_list[0]['vendorName'] }}</h1>
+                </div>
+                <div class="page-type col-md-2">Overview</div>
             </div>
-            <div class="page-type col-md-2">Overview</div>
-        </div>
-        
-        <div id="example"></div>
+        </section>  
+        <!-- <div id="example"></div> --> <!-- TESTING REACT, WILL REMOVE -->
 
 
+        <!-- COMPANY CONTRACT EARNINGS PER YEAR -->
         <section id="contract_earnings_per_year">
             <div class="row">
                 <div class="subhead col-md-10">
@@ -27,40 +29,30 @@
                 </div>
             </div>
 
+            <!-- CHART, CREATED BY LINE-CHART.JS IN ~/static/assets/scripts/visualizations -->
             <div id="graph" class="col-md-12 aGraph"></div>
-
-            <!-- PLACEHOLDER IMAGE -->
-            <!-- <img class="chart" src="../../static/assets/images/company_chart.png"> -->
 
             <div class="container">
                 <h3>Total dollars from contracts: <span>${{ object_list[0]['obligatedAmount'] }}</span></h3>
             </div>
         </section>
 
-        <div class="row">
-            <div class="subhead col-md-10">
-                <h3>Most common contract codes</h3>
+        
+        <!-- MOST COMMON CONTRACT CODES FOR THIS COMPANY -->
+        <section id="contract-codes">
+            <div class="row">
+                <div class="subhead col-md-10">
+                    <h3>Most common contract codes</h3>
+                </div>
+                <div class="option-wrapper col-md-2">
+                        <div class="option"><i class="fa fa-code"> embed</i></div>
+                        <div class="option"><i class="fa fa-external-link"> export</i></div>
+                </div>
             </div>
-            <div class="option-wrapper col-md-2">
-                    <div class="option"><i class="fa fa-code"> embed</i></div>
-                    <div class="option"><i class="fa fa-external-link"> export</i></div>
-            </div>
-        </div>
-
-        <div class="hidden">
-            <table>
-            <thead>
-            {% for prod in products_list[:5] %}
-                <tr>
-                    <td style="max-width:300px"><a href="product/{{ prod[4] }} ">{{ prod[0] }}</a></td>
-                    <td style="text-align:center">{{ prod[2] }}</td>
-                    <td style="text-align:right">${{ prod[1] }}</td>                    
-                    <td style="max-width:300px"><div class="bar" style="width:{{ prod[3]}}px"></div></td>
-                </tr>
-            {% endfor %}
-            </thead>
-                <tbody>
-                    {% for prod in products_list[6:] %}
+            <div>
+                <table>
+                    <thead>
+                    {% for prod in products_list[:5] %} <!-- CURRENTLY SHOWS ONLY FIRST FIVE RESULTS -->
                         <tr>
                             <td style="max-width:300px"><a href="product/{{ prod[4] }} ">{{ prod[0] }}</a></td>
                             <td style="text-align:center">{{ prod[2] }}</td>
@@ -68,109 +60,128 @@
                             <td style="max-width:300px"><div class="bar" style="width:{{ prod[3]}}px"></div></td>
                         </tr>
                     {% endfor %}
-                </tbody>    
-            </table>
-        </div>
+                    </thead>
+                    <!-- EVENTUALLY WILL SHOW ALL RESULTS, ALLOW USERS TO EXPAND OR PAGINATE THEM -->
+                    <!-- <tbody style="display:none">
+                        {% for prod in products_list[6:] %}
+                            <tr>
+                                <td style="max-width:300px"><a href="product/{{ prod[4] }} ">{{ prod[0] }}</a></td>
+                                <td style="text-align:center">{{ prod[2] }}</td>
+                                <td style="text-align:right">${{ prod[1] }}</td>                    
+                                <td style="max-width:300px"><div class="bar" style="width:{{ prod[3]}}px"></div></td>
+                            </tr>
+                        {% endfor %}
+                    </tbody> -->    
+                </table>
+            </div>
             <div class="more products">more<i class="fa fa-caret-down"></i></div>
-
-            </table>
-
-
-        <div class="row">
-            <div class="subhead col-md-10">
-                <h3>Most common requesting agencies</h3>
-            </div>
-            <div class="option-wrapper col-md-2">
-                    <div class="option"><i class="fa fa-code"> embed</i></div>
-                    <div class="option"><i class="fa fa-external-link"> export</i></div>
-            </div>
-        </div>
-        
-        <!-- PLACEHOLDER REQUESTER D3 -->
-        <div class="row">
-            <div class="col-md-12">
-                <div class="treemap"></div>
-            </div>
-        </div>
-            
-
-        <!-- CONTRACT PERFORMANCE LOCATION -->
-        <div class="row"> <!-- SUBHEAD -->
-            <div class="subhead col-md-10">
-                <h3>Contract performance location</h3>
-            </div>
-            <div class="option-wrapper col-md-2">
-                    <div class="option"><i class="fa fa-code"> embed</i></div>
-                    <div class="option"><i class="fa fa-external-link"> export</i></div>
-            </div>
-        </div>
-
-        <!-- PLACEHOLDER LOCATIONS D3 -->
-        <div class="row">
-            <div class="col-md-4">
-                <!-- <table>
-                    <tr><td>TKTK</td><td>TKTK</td></tr>
-                    <tr><td>TKTK</td><td>TKTK</td></tr>
-                    <tr><td>TKTK</td><td>TKTK</td></tr>
-                    <tr><td>TKTK</td><td>TKTK</td></tr>
-                    <tr><td>TKTK</td><td>TKTK</td></tr>
-                </table> -->
-
-                <div id="bar-chart"></div>
-            </div>
-            <div class="col-md-8">
-                <div id="map"></div>
-            </div>
-        </div>
+        </section>
 
 
-        <div class="row">
-            <!-- SUBSIDIARIES -->
-            <div class="col-md-6">
-                <div class="subhead left"><h3>American subsidiaries</h3></div>
-                <!-- STATIC PLACEHOLDER NAMES -->
-                <div id="subsidiaries" class="up">
-                    <ul>
-                        <li>3Com International, Inc.</li>
-                        <li>3Par Inc.</li>
-                        <li>ArcSight, LLC</li>
-                        <li>Compaq Computer (Delaware), LLC</li>
-                        <li>EDS Global Contracts, LLC</li>
-                        <li>EYP Mission Critical Facilities, Inc.</li>
-                        <li>HPFS Global Holdings I, LLC</li>
-                        <li>Indigo America, Inc.</li>
-                        <li>Additional hidden company</li>
-                        <li>Additional hidden company</li>
-                        <li>Additional hidden company</li>
-                        <li>Additional hidden company</li>
-                        <li>Additional hidden company</li>
-                    </ul>
-                <div class="more subsidiaries">more<i class="fa fa-caret-down"></i></div>
+        <!--  MOST COMMON REQUESTING AGENCIES -->
+        <section id="requesting-agencies">
+            <div class="row">
+                <div class="subhead col-md-10">
+                    <h3>Most common requesting agencies</h3>
+                </div>
+                <div class="option-wrapper col-md-2">
+                        <div class="option"><i class="fa fa-code"> embed</i></div>
+                        <div class="option"><i class="fa fa-external-link"> export</i></div>
+                </div>
+            </div> 
+            <!-- PLACEHOLDER REQUESTER D3 -->
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="treemap"></div>
                 </div>
             </div>
-            <div class="col-md-6">
-                <div class="subhead"><h3>Mergers</h3></div>
-                    <img class="chart" src="../../static/assets/images/company_bubblechart.png">
-            </div>        
-        </div>
-        
+        </section>
 
+
+        <!-- RECIPIENT OFFICE LOCATIONS -->
+        <section id="recipient-office-location">
+            <div class="row">
+                <div class="subhead col-md-10">
+                    <h3>Recipient office locations</h3>
+                </div>
+                <div class="option-wrapper col-md-2">
+                        <div class="option"><i class="fa fa-code"> embed</i></div>
+                        <div class="option"><i class="fa fa-external-link"> export</i></div>
+                </div>
+            </div>    
+            <div class="row">
+                <!-- UNDER CONSTRUCTION. WILL BE A MAP. -->
+            </div>
+        </section>    
+
+
+        <!-- CONTRACT PERFORMANCE LOCATION -->
+        <section id="contract-performance-location">
+            <div class="row">
+                <div class="subhead col-md-10">
+                    <h3>Contract performance location</h3>
+                </div>
+                <div class="option-wrapper col-md-2">
+                        <div class="option"><i class="fa fa-code"> embed</i></div>
+                        <div class="option"><i class="fa fa-external-link"> export</i></div>
+                </div>
+            </div>
+            <!-- PLACEHOLDER CHOROPLETH AND BAR CHART-->
+            <div class="row">
+                <div class="col-md-4">
+                    <div id="bar-chart"></div>
+                </div>
+                <div class="col-md-8">
+                    <div id="map"></div>
+                </div>
+            </div> 
+        </section>
+
+
+        <!-- EDGAR (COMPANY STRUCTURE) DATA -->
+        <section id="EDGAR-data">
+            <div class="row">
+                <div class="subhead col-md-10">
+                    <h3>EDGAR data</h3>
+                </div>
+                <div class="option-wrapper col-md-2">
+                        <div class="option"><i class="fa fa-code"> embed</i></div>
+                        <div class="option"><i class="fa fa-external-link"> export</i></div>
+                </div>
+            </div>
+
+            <div class="row">
+                <!-- SUBSIDIARIES -->
+                <div class="col-md-6">
+                    <!-- STATIC PLACEHOLDER NAMES -->
+                    <!-- <div id="subsidiaries" class="up">
+                            <li>3Com International, Inc.</li>
+                            <li>3Par Inc.</li>
+                            <li>ArcSight, LLC</li>
+                            <li>Compaq Computer (Delaware), LLC</li>
+                            <li>EDS Global Contracts, LLC</li>
+                            <li>EYP Mission Critical Facilities, Inc.</li>
+                            <li>HPFS Global Holdings I, LLC</li>
+                            <li>Indigo America, Inc.</li>
+                            <li>Additional hidden company</li>
+                            <li>Additional hidden company</li>
+                            <li>Additional hidden company</li>
+                            <li>Additional hidden company</li>
+                            <li>Additional hidden company</li>
+                        </ul>
+                    <div class="more subsidiaries">more<i class="fa fa-caret-down"></i></div>
+                    </div>
+                </div> -->
+                <div class="col-md-12">
+                        <div id="network-diagram"></div>
+                </div>        
+            </div>
+        </section>
+        
     </div>
-
-    <!-- END LEFT COLUMN -->
-    <!-- BEGIN SIDEBAR -->
-
-    <!-- <div class="col-md-4">
-        <div class="extra sidebar">
-            <h2>View glossary of terms</h2>
-        </div>
-        
-
-        <div class="subhead"><h3>Comments</h3></div>
-
-    </div> -->
-    <!-- END SIDEBAR -->
 </div>
+<!-- END MAIN CONTENT-->
+
 
 <script type="x-jst" id="map-tooltip-template">
     <h5><%= Name %></h5>

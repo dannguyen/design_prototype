@@ -4,7 +4,7 @@ import os
 import requests
 import re
 
-DATA_PATH = os.path.join(os.path.dirname(__file__), '../static/data.json')
+DATA_PATH = os.path.join(os.path.dirname(__file__), '../static/data/sampleHPdata.json')
 def load_data():
     with open(DATA_PATH) as f:
         d = json.loads(f.read())
@@ -36,7 +36,16 @@ def contracts_by_city(hpdata):
     recipient_city = []
     cities = []
     for h in hpdata:
-        city_state = str(h['city'] + ", " + h['state'])
+
+        if 'city' in h and 'state' in h: 
+            city_state = str(h['city'] + ", " + h['state'])
+        elif 'city' in h and 'state' not in h:
+            city_state = str(h['city'])
+        elif 'city' not in h and 'state' in h:
+            city_state = str(h['state'])
+        else:
+            print 'NULL'
+
         ident = h['city']
         contract_amount = int(float(h['obligatedAmount']))
         if city_state not in cities:
@@ -74,7 +83,10 @@ def dollars_by_product_service_code(hpdata):
     products_code = []
     codes = []
     for h in hpdata:
-        code = h['productOrServiceCode']
+        if 'productOrServiceCode' in h:
+            code = h['productOrServiceCode']
+        else:
+            print 'NULL'    
         contract_amount = int(float(h['obligatedAmount']))
         if code not in codes:
             products_code.append([code, contract_amount, 1, 'width', 'id'])

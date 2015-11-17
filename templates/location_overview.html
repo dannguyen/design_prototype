@@ -1,0 +1,190 @@
+{% include 'partials/head.html' %}
+
+<!-- SEARCH BAR -->
+{% include 'partials/search_bar.html' %}
+
+<div class="row">
+    <!-- BEGIN MAIN CONTENT -->
+    <div class="col-md-10 col-md-offset-1">
+        
+        <!-- NAME OF LOCATION, USING FIRST PLACE IN SAMPLE DATASET FOR NOW -->
+        <section id="location-name">
+            <div class="row">
+                <div class="page-identifier col-md-10">
+                    <h1>{{ object_list[0]['city'] }}, {{ object_list[0]['state'] }}</h1>
+                </div>
+                <div class="page-type col-md-2">Overview</div>
+            </div>
+        </section>
+        
+        <!-- <div id="example"></div> --> <!-- TESTING REACT, WILL REMOVE -->
+
+        <!-- MAP, CREATED BY CODE AT BOTTOM OF DOCUMENT -->
+        <section id="location-map">
+            <div class="row">
+                <div id="detail"></div>
+            </div>
+        </section>
+
+
+        <!-- CONTRACT REVENUE PER YEAR -->
+        <section id="contract-revenue-per-year">
+            <div class="row"> <!-- SUBHEAD -->
+                <div class="subhead col-md-10">
+                    <h3>Contract revenue per year</h3>
+                </div>
+                <div class="option-wrapper col-md-2">
+                        <div class="option"><i class="fa fa-code"> embed</i></div>
+                        <div class="option"><i class="fa fa-external-link"> export</i></div>
+                </div>
+            </div>
+            <div id="graph" class="col-md-12 aGraph"></div>
+
+            <div class="container">
+                <h3>Total dollars from contracts: <span>${{ object_list[0]['obligatedAmount'] }}</span></h3>
+            </div>
+        </section>
+
+
+        <!-- TOP COMPANIES IN LOCATION -->
+        <section id="top-companies">
+            <div class="row"> <!-- SUBHEAD -->
+                <div class="subhead col-md-10">
+                    <h3>Top companies</h3>
+                </div>
+                <div class="option-wrapper col-md-2">
+                        <div class="option"><i class="fa fa-code"> embed</i></div>
+                        <div class="option"><i class="fa fa-external-link"> export</i></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3 col-sm-6 col-xs-6" style="padding: 10px;">
+                    <div class="col-md-12 logo-container" style="background:url(/static/assets/images/logos/Hewlett-Packard.png) no-repeat center center; background-size: contain;"></div>
+                    <h4>{{ object_list[0]['vendorName'] }} </h4>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-6" style="padding: 10px;">
+                    <div class="col-md-12 logo-container" style="background:url(/static/assets/images/logos/Raytheon.png) no-repeat center center; background-size: contain;"></div>
+                    <h4>Raytheon</h4> 
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-6" style="padding: 10px;">
+                    <div class="col-md-12 logo-container" style="background:url(/static/assets/images/logos/Google.png) no-repeat center center; background-size: contain;"></div>
+                    <h4>Google</h4>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-6" style="padding: 10px;">
+                    <div class="col-md-12 logo-container" style="background:url(/static/assets/images/logos/Halliburton.png) no-repeat center center; background-size: contain;"></div>
+                    <h4>Halliburton</h4>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- MOST COMMON CONTRACT CODES IN THIS LOCATION -->
+        <section id="common-contract-codes">
+            <div class="row">
+                <div class="subhead col-md-10">
+                    <h3>Most common services rendered</h3>
+                </div>
+                <div class="option-wrapper col-md-2">
+                        <div class="option"><i class="fa fa-code"> embed</i></div>
+                        <div class="option"><i class="fa fa-external-link"> export</i></div>
+                </div>
+            </div>
+
+            <div>
+                <table>
+                    <thead>
+                    {% for prod in products_list[:5] %} <!-- CURRENTLY SHOWS ONLY FIRST FIVE RESULTS -->
+                        <tr>
+                            <td style="max-width:300px"><a href="product/{{ prod[4] }} ">{{ prod[0] }}</a></td>
+                            <td style="text-align:center">{{ prod[2] }}</td>
+                            <td style="text-align:right">${{ prod[1] }}</td>                    
+                            <td style="max-width:300px"><div class="bar" style="width:{{ prod[3]}}px"></div></td>
+                        </tr>
+                    {% endfor %}
+                    </thead>
+                    <!-- EVENTUALLY WILL SHOW ALL RESULTS, ALLOW USERS TO EXPAND OR PAGINATE THEM -->
+                    <!-- <tbody style="display:none">
+                        {% for prod in products_list[6:] %}
+                            <tr>
+                                <td style="max-width:300px"><a href="product/{{ prod[4] }} ">{{ prod[0] }}</a></td>
+                                <td style="text-align:center">{{ prod[2] }}</td>
+                                <td style="text-align:right">${{ prod[1] }}</td>                    
+                                <td style="max-width:300px"><div class="bar" style="width:{{ prod[3]}}px"></div></td>
+                            </tr>
+                        {% endfor %}
+                    </tbody> -->    
+                </table>
+            </div>
+                <div class="more products">more<i class="fa fa-caret-down"></i></div>
+        </section>
+
+
+        <!-- MOST COMMON REQUESTING AGENCIES IN LOCATION -->
+        <section id="requesting-agencies">
+            <div class="row">
+                <div class="subhead col-md-10">
+                    <h3>Most common requesting agencies</h3>
+                </div>
+                <div class="option-wrapper col-md-2">
+                        <div class="option"><i class="fa fa-code"> embed</i></div>
+                        <div class="option"><i class="fa fa-external-link"> export</i></div>
+                </div>
+            </div>
+            <!-- UNDER CONSTRUCTION -->
+        </section>
+        
+
+        <!-- PLACEHOLDER REQUESTER D3, CREATED BY TREE-MAP.JS IN IN ~/static/assets/scripts/visualizations -->
+        <section id="requester-treemap">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="treemap"></div>
+                </div>
+            </div>
+        </section>
+            
+
+        <!-- REST STILL UNDER CONSTRUCTION -->
+        
+
+    </div>
+</div>
+<!-- END MAIN CONTENT -->
+
+<!-- GEOCODE SCRIPT -->
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+    <script type="text/javascript">
+
+            var geocoder = new google.maps.Geocoder();
+            var address = "{{ object_list[0]['city'] }}, {{ object_list[0]['state']}}";
+
+            console.log('address: ' + address);
+
+            geocoder.geocode( {'address': address}, function(results, status) {
+
+                var x = results[0].geometry.location.lat();
+                var y = results[0].geometry.location.lng();
+
+                var map = L.map('detail').setView([x, y], 10);
+                var Hydda_Full = L.tileLayer('http://{s}.tile.openstreetmap.se/hydda/full/{z}/{x}/{y}.png', {
+                    attribution: 'Tiles courtesy of <a href="http://openstreetmap.se/" target="_blank">OpenStreetMap Sweden</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+                });
+                // THIS IS THROWING ERRORS, COMMENTED OUT UNTIL PROBLEM FIXED
+                // var dataLayer = L.geoJson(data, {
+                //     onEachFeature: function(feature, layer) {
+                //         layer.bindPopup(
+                //             '<a href="' + feature.properties.id + '/">' +
+                //                 feature.properties.Site_Name +
+                //             '</a>'
+                //         );
+                //     }
+                // });
+                map.addLayer(Hydda_Full);
+                var marker = L.marker([x, y]).addTo(map);
+                }); 
+            
+    </script>
+
+<!-- END GEOCODE SCRIPT -->
+
+{% include 'partials/foot.html' %}

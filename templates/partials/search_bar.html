@@ -1,4 +1,23 @@
 <div class="row">
-    <div class="col-md-1 col-sm-1 col-xs-1 search-indicator" ><i class="fa fa-search"></i></div>
-    <input type="text" class="col-md-11 col-sm-11 col-xs-11" placeholder="Search for a term, e.g. 'Hewlett-Packard' or 'Dallas, TX'">
+    <!-- <div class="dropdown col-md-2 col-sm-2 search-indicator">
+          <button class="dropdown-toggle" type="button" data-toggle="dropdown"><i class="fa fa-search"> Search by </i>
+          <span class="caret"></span></button>
+          <ul class="dropdown-menu col-md-12">
+            <li><a href="#">Contractor name</a></li>
+            <li><a href="#">Location</a></li>
+            <li><a href="#">Service rendered</a></li>
+          </ul>
+        </div> -->
+    <div class="form-group search-indicator col-md-2 col-sm-2">
+    <!-- CURRENTLY A DROPDOWN, SO THAT IT'S EASY TO DETERMINE WHAT TYPE
+         OF PAGE TO RETURN TO THE USER. THIS SHOULD CHANGE WHEN WE THINK
+         OF A MORE ELEGANT SOLUTION -->
+      <select class="form-control search-indicator" id="sel1">
+        <option disabled selected>Search by: </option>
+        <option>Contractor name</option>
+        <option>Location</option>
+        <option>Service rendered</option>
+      </select>
+    </div>    
+    <input type="text" class="col-md-10 col-sm-10 col-xs-10">
 </div>

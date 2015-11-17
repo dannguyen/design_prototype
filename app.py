@@ -20,6 +20,14 @@ def overview_data():
     recipient_city_list = data.contracts_by_city(object_list)
     return render_template(template, object_list=object_list, products_list=products_list, recipient_city_list=recipient_city_list)
 
+@app.route('/location-overview/')
+def location_overview():
+    template = 'location_overview.html'
+    object_list = data.load_data()
+    products_list = data.dollars_by_product_service_code(object_list)
+    recipient_city_list = data.contracts_by_city(object_list)
+    return render_template(template, object_list=object_list, products_list=products_list, recipient_city_list=recipient_city_list)
+
 @app.route('/contract-list/')
 def list_view():
     template = 'list_view.html'

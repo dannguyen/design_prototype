@@ -21,10 +21,6 @@ main {
     background-color: WhiteSmoke;
 }
 
-body {
-    background-color: WhiteSmoke;
-    overflow-x: hidden;
-}
 html, body { height: 100%; }
 
 .container-fluid { 
@@ -66,13 +62,14 @@ li {
 }
 .sidebar li { margin-left: 0; }
 
-h1, h2, h3 { 
+h1, h2, h3, h4 { 
     font-family: 'Pathway Gothic One', sans-serif;
     color: #D00441
 }
 h1 { font-size: 2.7em }
 h2 { font-size: 2em; }
 h3 { font-size: 1.8em; color: black; font-weight: normal; }
+h4 { font-size: 1.3em; color: black; text-align: center; }
 
 span { color: #D00441; }
 
@@ -237,6 +234,8 @@ div.title-box{
 }
 .left { border-right: 1px solid WhiteSmoke; }
 
+.logo-container { height: 200px; margin-bottom: 10px; }
+
 /* Embed and export buttons */
 .option {
     background-color: #57C3EC;
@@ -341,9 +340,30 @@ input[type=submit] {
 .search-indicator .fa.fa-search {
     line-height: 70px;
     color: white;
-    font-size: 20pt;
+    font-size: 14pt;
 }
 .search-indicator { height:70px; background-color: #57C3EC; text-align: center; }
+/*.dropdown-toggle { background-color: #57C3EC; border: none; }
+.dropdown-menu { 
+    z-index: 9999; 
+    border-radius: 0; 
+    border: none;
+}
+.dropdown-menu li { margin-left: 0; padding: 5px; }
+span.caret { 
+    color: white;     
+    border-top: 8px dashed;
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+}*/
+.form-control {
+    border-radius: 0;
+    border: none;
+    color: white;
+    font-size: 14pt;
+    /*margin-left: 10px; */
+}
+.form-group { padding-left: 15px; margin-bottom: 0; }
 /* END SEARCH BAR */
 
 
@@ -560,8 +580,33 @@ path {
     position: absolute;
     left: 0;
 }
-
+#timeline { padding: 20px; height: 150px;  }
+#timeline .axis text { font-size: 11px; }
+#timeline .axis path,
+#timeline .axis line {
+    fill: none;
+    stroke: Gainsboro;
+    shape-rendering: crispEdges;
+}
 /* END D3 */
+
+/* PAGINATION */
+.pagination-page-info {
+    padding: .6em;
+    padding-left: 0;
+    width: 40em;
+    margin: .5em;
+    margin-left: 0;
+    font-size: 12px;
+}
+.pagination-page-info b {
+    color: black;
+    background: #6aa6ed;
+    padding-left: 2px;
+    padding: .1em .25em;
+    font-size: 150%;
+}
+/* END PAGINATION */
 
 /* MENU */
 .slideout-menu {

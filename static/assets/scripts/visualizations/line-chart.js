@@ -1,3 +1,4 @@
+// PLACEHOLDER DATA
 var data = [{
         'fiscal_year': 2000,
         'obligatedAmount': 3000000,
@@ -72,7 +73,10 @@ var yAxis = d3.svg.axis()
     .orient("left");
 
 var line = d3.svg.line()
-    .x(function(d) { return xScale(d.fiscal_year); })
+    .x(function(d) { 
+      console.log('Plotting at x-point: ' +  xScale(d.fiscal_year))
+      return xScale(d.fiscal_year); 
+    })
     .y(function(d) { return yScale(d.obligatedAmount); });
 
 var graph = d3.select("#graph").append("svg")
@@ -82,6 +86,18 @@ var graph = d3.select("#graph").append("svg")
   .append("g")
     .attr("transform", "translate(" + margin + "," + margin + ")");
 
+
+// Un-comment when ready to use real data
+// d3.json('/static/data/sampleHPdata.json', function(error, data) {
+//   if (error) throw error;
+
+//   data = data['usaspendingSearchResults']['result']['doc']
+
+//   data.forEach(function(d) {
+//     d.fiscal_year = d['fiscal_year'];
+//     d.obligatedAmount = d['obligatedAmount']
+//   });
+    
   xScale.domain(d3.extent(data, function(d) { return d.fiscal_year; }));
   yScale.domain(d3.extent(data, function(d) { return d.obligatedAmount; }));
 
@@ -106,16 +122,15 @@ var graph = d3.select("#graph").append("svg")
       .attr("d", line);
 
       var obj = d3.select('#graph').style('width');
-      console.log('original: ' + obj);
 
 
+  // THIS RESIZES THE CHART WHENEVER THE PAGE IS RESIZED
   function resizeLine() {
     var margin = 40
       , width = parseInt(d3.select("#graph").style("width")) - margin * 2
       , height = parseInt(d3.select("#graph").style("height")) - margin * 2;
 
       var obj = parseInt(d3.select('#graph').style('width'));
-      console.log('resized: ' + obj);
 
     /* Update the range of the scale with new width/height */
     xScale.range([0, width]);
@@ -136,6 +151,9 @@ var graph = d3.select("#graph").append("svg")
       .attr("d", line);
   }
 
-d3.select(window).on('resize.line', resizeLine);      
+  d3.select(window).on('resize.line', resizeLine);
 
-  resizeLine();
+  resizeLine();      
+// });
+
+

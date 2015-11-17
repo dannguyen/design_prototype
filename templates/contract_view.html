@@ -3,32 +3,66 @@
 <!-- SEARCH BAR -->
 {% include 'partials/search_bar.html' %}
 
+<!-- BEGIN MAIN CONTENT -->
 <div class="row">
-
-    <!-- BEGIN LEFT CONTENT COLUMN -->
     <div class="col-md-10 col-md-offset-1">
-        <div class="row">
-            <div class="page-identifier col-md-10">
-                <h1>{{ object_list[1]['vendorName'] }}</h1>
+
+    
+        <!-- VENDOR NAME -->
+        <section id="company-name">
+            <div class="row">
+                <div class="page-identifier col-md-10">
+                    <h1>{{ object_list[1]['vendorName'] }}</h1>  <!-- READING FIRST COMPANY NAME IN DATASET AS PLACEHOLDER -->
+                </div>
+                <div class="page-type col-md-2">Contract</div>
             </div>
-            <div class="page-type col-md-2">Contract</div>
-        </div>
+        </section>
+
 
         <!-- SUMMARY -->
-        <div class="row">
-            <div class="subhead">
-                <h3>Summary</h3>
+        <section id="summary">
+            <div class="row">
+                <div class="subhead">
+                    <h3>Summary</h3>
+                </div>
             </div>
-        </div>
+        
+            <!-- SUMMARY STATEMENT, CAN EDIT -->
+            <div class="wrapper">
+                <div class="container inner">
+                    <p>{{ object_list[1]['vendorName'] }} recieved this ${{ object_list[1]['obligatedAmount'] }} contract from {{ object_list[1]['contractingOfficeAgencyID'] }} for {{ object_list[1]['productOrServiceCode'] }}.</p>
+                </div>
+            </div>
+        </section>
 
-        <div class="wrapper">
-            <div class="container inner">
-                <p>{{ object_list[1]['vendorName'] }} recieved this ${{ object_list[1]['obligatedAmount'] }} contract from {{ object_list[1]['contractingOfficeAgencyID'] }} for {{ object_list[1]['productOrServiceCode'] }}.</p>
+
+        <!-- CONTRACT TIMELINE -->
+        <section id="contract-timeline">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="subhead left">
+                        <h3>Contract timeline</h3>
+                    </div>
+                    <!-- <div class="col-md-6">
+                        <table>
+                            <tr><td>Signed date</td><td>{{ object_list[1]['signedDate'] }}</td></tr>
+                            <tr><td>Effective date</td><td>{{ object_list[1]['effectiveDate'] }}</td></tr>
+                            <tr><td>Current completion date</td><td>{{ object_list[1]['currentCompletionDate'] }}</td></tr>
+                            <tr><td>Ultimate completion date</td><td>{{ object_list[1]['ultimateCompletionDate'] }}</td></tr>
+                        </table>
+                    </div> -->
+                    <div class="row">
+                        <div class="col-md-12" id="timeline"></div>
+                        
+                    </div>
+                </div>
             </div>
-        </div>
+        </section>
+
 
         <!-- INVOLVED PARTIES AND RECIPIENT DESCRIPITON -->
-            <div class="row">
+        <div class="row">
+            <section id="involved-parties">
                 <div class="col-md-6">
                     <div class="subhead left">
                         <h3>Contract requestor information</h3>
@@ -41,15 +75,20 @@
                         <tr><td>Humanitarian or peacekeeping operation</td><td>{{ object_list[1]['contingencyHumanitarianPeacekeepingOperation'] }}</td></tr>
                     </table>
                 </div>
+            </section>
+            <section id="recipient-desc">
                 <div class="col-md-6">
                     <div class="subhead">
                         <h3>TKTK</h3>
                     </div>
                     
                 </div>
-            </div>
+            </section>    
+        </div> 
 
-            <!-- CONTRACT DESCRIPTION -->
+
+        <!-- CONTRACT DESCRIPTION -->
+        <section id="contract-desc">    
             <div class="row">
                 <div class="col-md-12">
                     <div class="subhead">
@@ -60,34 +99,11 @@
                     </div>
                 </div>
             </div>
-
-
-            <!-- CONTRACT TIMELINE -->
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="subhead left">
-                        <h3>Contract timeline</h3>
-                    </div>
-                    <div class="col-md-6">
-                        <table>
-                            <tr><td>Signed date</td><td>{{ object_list[1]['signedDate'] }}</td></tr>
-                            <tr><td>Effective date</td><td>{{ object_list[1]['effectiveDate'] }}</td></tr>
-                            <tr><td>Current completion date</td><td>{{ object_list[1]['currentCompletionDate'] }}</td></tr>
-                            <tr><td>Ultimate completion date</td><td>{{ object_list[1]['ultimateCompletionDate'] }}</td></tr>
-                        </table>
-                    </div>
-                    <div class="col-md-6">
-                        <!-- D3 GOES HERE -->
-                        <!-- <div id="calendar"></div> -->
-                    </div>
-                </div>
-            </div>
-
+        </section>
             
 
-            
-
-            <!-- CONTRACT PERFORMANCE LOCATION -->
+        <!-- CONTRACT PERFORMANCE LOCATION -->
+        <section id="performance-location">    
             <div class="row">
                 <div class="subhead col-md-10">
                     <h3>Contract performance location</h3>
@@ -110,8 +126,11 @@
                 <!-- MAP? -->
                 <div id="detail" class="col-md-8"></div>
             </div>
+        </section>    
 
-            <!-- INVOLVED PARTIES AND RECIPIENT DESCRIPITON -->
+
+        <!-- INVOLVED PARTIES AND RECIPIENT DESCRIPITON -->
+        <section id="recipient-information">
             <div class="row">
                 <div class="col-md-6">
                     <div class="subhead left">
@@ -137,8 +156,11 @@
 
                 </div>
             </div>
-            
+        </section>
 
+            
+        <!-- CONTRACT IDENTIFIERS -->
+        <section id="contract-ids">
             <div class="row">
             <div class="subhead col-md-10">
                 <h3>Contract identifiers</h3>
@@ -147,13 +169,13 @@
                     <div class="option">embed</div>
                     <div class="option">export</div>
             </div>
+        </section>    
 
         </div>
     {{ object_list[1] }}
     </div>
-    <!-- END LEFT CONTENT COLUMN -->
 
-</div> <!-- END ROW -->
+</div> <!-- END MAIN CONTENT -->
 
 <!-- GEOCODE SCRIPT -->
 <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
@@ -161,6 +183,8 @@
 
             var geocoder = new google.maps.Geocoder();
             var address = "{{ object_list[1]['streetAddress'] }}, {{ object_list[1]['city'] }}, {{ object_list[1]['state']}}";
+
+            console.log('address: ' + address);
 
             geocoder.geocode( {'address': address}, function(results, status) {
 
@@ -171,18 +195,31 @@
                 var Hydda_Full = L.tileLayer('http://{s}.tile.openstreetmap.se/hydda/full/{z}/{x}/{y}.png', {
                     attribution: 'Tiles courtesy of <a href="http://openstreetmap.se/" target="_blank">OpenStreetMap Sweden</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
                 });
-                var dataLayer = L.geoJson(data, {
-                    onEachFeature: function(feature, layer) {
-                        layer.bindPopup(
-                            '<a href="' + feature.properties.id + '/">' +
-                                feature.properties.Site_Name +
-                            '</a>'
-                        );
-                    }
-                });
+                // THIS IS THROWING ERRORS, COMMENTED OUT UNTIL PROBLEM FIXED
+                // var dataLayer = L.geoJson(data, {
+                //     onEachFeature: function(feature, layer) {
+                //         layer.bindPopup(
+                //             '<a href="' + feature.properties.id + '/">' +
+                //                 feature.properties.Site_Name +
+                //             '</a>'
+                //         );
+                //     }
+                // });
                 map.addLayer(Hydda_Full);
                 var marker = L.marker([x, y]).addTo(map);
                 }); 
+
+
+        // PARSING DATES FOR TIMELINE
+        // TEMPORARILY HERE, WILL MOVE SOON
+        var dates = ["{{ object_list[1]['signedDate'] }}","{{ object_list[1]['effectiveDate'] }}", "{{ object_list[1]['currentCompletionDate'] }}", "{{ object_list[1]['ultimateCompletionDate'] }}"]
+          , dateTimes = []
+          , arrayLength = dates.length;
+
+        for (var i = 0; i < arrayLength; i++) {
+            date = new Date(dates[i]);
+            dateTimes.push(date.getTime());
+        }              
             
         </script>
 

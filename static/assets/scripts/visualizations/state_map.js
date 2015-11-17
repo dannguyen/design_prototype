@@ -1,19 +1,19 @@
+
 var urls = {
     us: "/static/assets/scripts/visualizations/maps/us.json",
-    data: "/static/assets/scripts/visualizations/maps/bachelors-degrees.csv"
+    data: "/static/assets/scripts/visualizations/maps/bachelors-degrees.csv" // PLACEHOLDER!
 };
 
-var margin = {top: 2, left: 2, bottom: 2, right: 2},
-    width = parseInt(d3.select('#map').style('width')),
-    width = width - margin.left - margin.right,
-    mapRatio = .5,
-    height = width * mapRatio;
+var margin = {top: 2, left: 2, bottom: 2, right: 2}
+  , width = parseInt(d3.select('#map').style('width'))
+  , width = width - margin.left - margin.right
+  , mapRatio = .5
+  , height = width * mapRatio;
 
 var formats = {
     percent: d3.format('%')
 };
 
-// projection and path setup
 var projection = d3.geo.albersUsa()
     .scale(width)
     .translate([width / 2, height / 2]);
@@ -21,25 +21,24 @@ var projection = d3.geo.albersUsa()
 var path = d3.geo.path()
     .projection(projection);
 
-// scales and axes
-var colors = d3.scale.quantize()
+var colors = d3.scale.quantile()
+    // .domain()
     .range(colorbrewer.Blues[7]);
 
-// make a map
 var map = d3.select('#map').append('svg')
     .style('height', height + 'px')
     .style('width', width + 'px');
 
-// queue and render
+// QUEUE DATA
 queue()
     .defer(d3.json, urls.us)
     .defer(d3.csv, urls.data)
     .await(render);
 
-// resize
+// MAKES MAP RESPONSIVE
 d3.select(window).on('resize.map', resize); 
 
-// template, for later
+// TOOLTIP TEMPLATE. CODE FOR TEMPLATE ON THE HTML TEMPLATE PAGE
 var template = _.template(d3.select('#map-tooltip-template').html());
 
 function render(err, us, data) {
@@ -91,8 +90,8 @@ function render(err, us, data) {
     });
 }
 
+// UPDATES SIZE OF MAP WHEN WINDOW RESIZES
 function resize() {
-
     // adjust things when the window size changes
     width = parseInt(d3.select('#map').style('width')) - margin.left - margin.right;
     height = width * mapRatio;
@@ -112,6 +111,7 @@ function resize() {
     map.selectAll('.state').attr('d', path);
 }
 
+// ADDS TOOLTIP TO MAP
 function tooltipShow(d, i) {
     var datum = data[d.properties.name];
     if (!datum) return;
