@@ -25,6 +25,7 @@
 
         $(document).ready(function(){  
 
+            // 
             var slideout = new Slideout({
                 'panel': document.getElementById('panel'),
                 'menu': document.getElementById('menu'),
@@ -36,7 +37,8 @@
                 slideout.toggle();
             });
 
-
+            // WHEN USER CLICKS A 'MORE' BUTTON, MORE INFO WILL DISPLAY
+            // NEED TO GET RID OF THIS AND REPLACE WITH PAGINATION 
             $('.more.subsidiaries').on('click', function(){
                 var el = $('#subsidiaries'),
                     curHeight = el.height(),

@@ -12,7 +12,7 @@
         <section id="company-name">
             <div class="row">
                 <div class="page-identifier col-md-10">
-                    <h1>{{ object_list[1]['vendorName'] }}</h1>  <!-- READING FIRST COMPANY NAME IN DATASET AS PLACEHOLDER -->
+                    <h1>{{ object_list[1]['vendorName'] }} {{ object_list[1]['PIID'] }}</h1>  <!-- READING FIRST COMPANY NAME IN DATASET AS PLACEHOLDER -->
                 </div>
                 <div class="page-type col-md-2">Contract</div>
             </div>
@@ -36,6 +36,50 @@
         </section>
 
 
+        <!-- AMOUNTS -->
+        <section id="amounts">
+            <div class="col-md-6 left">
+                <div class="row">
+                    <div class="subhead">
+                        <h3>Amounts</h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <table>
+                        <tr><td>Obligated amount</td><td>${{ object_list[1]['obligatedAmount'] }}</td></tr>
+                        <tr><td>Base & excersized options value</td><td>${{ object_list[1]['baseAndExercisedOptionsValue'] }}</td></tr>
+                        <tr><td>Base & all options value</td><td>${{ object_list[1]['baseAndAllOptionsValue'] }}</td></tr>
+                        <tr><td>Type of contract pricing</td><td>{{ object_list[1]['typeOfContractPricing'] }}</td></tr>
+                        <tr><td>Contract financing</td><td>{{ object_list[1]['contractFinancing'] }}</td></tr>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- CONTRACT INFORMATION -->
+        <section id="contract-info">      
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="subhead">
+                        <h3>Contract information</h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <table>
+                        <tr><td>Award type</td><td>TKTK</td></tr>
+                        <tr><td>Reason for modification</td><td>{{ object_list[1]['reasonForModification'] }}</td></tr>
+                        <tr><td>Sub-contract plan</td><td>{{ object_list[1]['subcontractPlan'] }}</td></tr>
+                        <tr><td>Multi-year contract</td><td>TKTK</td></tr>
+                        <tr><td>Performance-based service contract</td><td>{{ object_list[1]['performanceBasedServiceContract'] }}</td></tr>
+                    </table>
+                </div>  
+            </div>
+        </section>     
+            
+        
+
+
         <!-- CONTRACT TIMELINE -->
         <section id="contract-timeline">
             <div class="row">
@@ -43,6 +87,20 @@
                     <div class="subhead left">
                         <h3>Contract timeline</h3>
                     </div>
+                    <table class="list-summary">
+                        <tr>
+                            <th>Signed date</th>
+                            <th>Effective date</th>
+                            <th>Current completion date</th>
+                            <th>Ultimate completion date</th>
+                        </tr>
+                        <tr>
+                            <td>{{ object_list[1]['signedDate'] }}</td>
+                            <td>{{ object_list[1]['effectiveDate'] }}</td>
+                            <td>{{ object_list[1]['currentCompletionDate'] }}</td>
+                            <td>{{ object_list[1]['ultimateCompletionDate'] }}</td>
+                        </tr>
+                    </table>
                     <!-- <div class="col-md-6">
                         <table>
                             <tr><td>Signed date</td><td>{{ object_list[1]['signedDate'] }}</td></tr>
@@ -65,32 +123,26 @@
             <section id="involved-parties">
                 <div class="col-md-6">
                     <div class="subhead left">
-                        <h3>Contract requestor information</h3>
+                        <h3>Purchaser</h3>
                     </div>
                     <table class="left">
+                        <tr><td>Major agency</td><td>{{ object_list[1]['maj_fund_agency_cat'] }}</td></tr>
                         <tr><td>Major funding agency</td><td>{{ object_list[1]['maj_fund_agency_cat'] }}</td></tr>
-                        <tr><td>Requesting agency</td><td>{{ object_list[1]['contractingOfficeAgencyID'] }}</td></tr>
-                        <tr><td>Requesting office</td><td>{{ object_list[1]['fundingRequestingOfficeID'] }}</td></tr>
-                        <tr><td>Funded by foreign entity</td><td>{{ object_list[1]['fundedByForeignEntity'] }}</td></tr>
-                        <tr><td>Humanitarian or peacekeeping operation</td><td>{{ object_list[1]['contingencyHumanitarianPeacekeepingOperation'] }}</td></tr>
+                        <tr><td>Contracting Office Agency ID</td><td>{{ object_list[1]['contractingOfficeAgencyID'] }}</td></tr>
+                        <tr><td>Contracting Office ID</td><td>{{ object_list[1]['contractingOfficeID'] }}</td></tr>
+                        <tr><td>Funding Requesting Agency ID</td><td>{{ object_list[1]['fundingRequestingAgencyID'] }}</td></tr>
+                        <tr><td>Funding Requesting Office ID</td><td>{{ object_list[1]['fundingRequestingOfficeID'] }}</td></tr>
+
                     </table>
                 </div>
             </section>
-            <section id="recipient-desc">
+
+                   <!-- <tr><td>Funded by foreign entity</td><td>{{ object_list[1]['fundedByForeignEntity'] }}</td></tr>
+                        <tr><td>Humanitarian or peacekeeping operation</td><td>{{ object_list[1]['contingencyHumanitarianPeacekeepingOperation'] }}</td></tr> -->
+
+            <!-- CONTRACT DESCRIPTION -->
+            <section id="contract-desc">
                 <div class="col-md-6">
-                    <div class="subhead">
-                        <h3>TKTK</h3>
-                    </div>
-                    
-                </div>
-            </section>    
-        </div> 
-
-
-        <!-- CONTRACT DESCRIPTION -->
-        <section id="contract-desc">    
-            <div class="row">
-                <div class="col-md-12">
                     <div class="subhead">
                         <h3>Contract description</h3>
                     </div>
@@ -98,8 +150,8 @@
                         <p>{{ object_list[1]['descriptionOfContractRequirement'] }}</p>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>    
+        </div> 
             
 
         <!-- CONTRACT PERFORMANCE LOCATION -->
@@ -120,7 +172,7 @@
                             <tr><td>City</td><td>TKTK</td></tr>
                             <tr><td>State / Country</td><td>{{ object_list[1]['popStateCode'] }} / {{ object_list[1]['placeOfPerformanceCountryCode'] }}</td></tr>
                             <tr><td>ZIP code</td><td>{{ object_list[1]['placeOfPerformanceZIPCode'] }}</td></tr>
-                            <tr><td>Congressional district</td><td>{{ object_list[1]['popStateCode'] }}{{ object_list[1]['placeOfPerformanceCongressionalDistrict'] }}</td></tr>
+                            <tr><td>Congressional district</td><td>{{ object_list[1]['popStateCode'] }}-{{ object_list[1]['placeOfPerformanceCongressionalDistrict'] }}</td></tr>
                         </table>
                     </div>
                 <!-- MAP? -->

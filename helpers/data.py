@@ -4,7 +4,7 @@ import os
 import requests
 import re
 
-DATA_PATH = os.path.join(os.path.dirname(__file__), '../static/data/sampleHPdata.json')
+DATA_PATH = os.path.join(os.path.dirname(__file__), '../static/data/data.json')
 def load_data():
     with open(DATA_PATH) as f:
         d = json.loads(f.read())

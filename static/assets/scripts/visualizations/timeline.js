@@ -1,4 +1,4 @@
-var dataset = [ [2004,  2006], 2004, 2006]
+var dataset = [ [2014,  2100], 2014, 2100]
   , arrayLength = dataset.length // Placeholder data
   , allValues = [];
 
@@ -7,16 +7,23 @@ for (var i = 0; i < arrayLength; i++) {
         else { allValues.push(dataset[i][0]); allValues.push(dataset[i][1])}
 };
 
-var min = d3.min(allValues)
-  , max = d3.max(allValues);
+// Set min value as either 2000, or the smallest given value.
+if ( d3.min(allValues) < 2000 ) { var min = d3.min(allValues) } 
+else { var min = 2000 };
+
+// Set max value as either 2015, or largest given value. 
+if ( d3.max(allValues) > 2015 ) { var max = d3.max(allValues) } 
+else { var max = 2015 };
+
+console.log( 'min: ' + min );        
 
 var margins = 20
-  , width = parseInt(d3.select('#timeline').style('width')) - margins*2
+  , width = parseInt(d3.select('#timeline').style('width'))
   , height = parseInt(d3.select('#timeline').style('height')) - margins*2;
 
 var xScale = d3.scale.linear()
-                .domain([2000, 2015])
-                .range([0, width - margins]);
+                .domain([min, max])
+                .range([0, width - margins*2]);
 
 var xAxis = d3.svg.axis()
                 .scale(xScale)
@@ -39,7 +46,7 @@ svg.selectAll('rect')
         if(isNaN(d) == false) { return xScale(d); }
             else { return xScale(d[0]) } ;
     })
-    .attr('y', margins * 2)
+    .attr('y', margins*2)
     .attr('height', 30)
     .attr('width', function(d) {
         if(isNaN(d) == false) { return 2; }
