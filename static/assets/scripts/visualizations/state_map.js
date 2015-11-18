@@ -109,7 +109,7 @@ function resize() {
     // resize the map
     map.select('.land').attr('d', path);
     map.selectAll('.state').attr('d', path);
-}
+};
 
 // ADDS TOOLTIP TO MAP
 function tooltipShow(d, i) {

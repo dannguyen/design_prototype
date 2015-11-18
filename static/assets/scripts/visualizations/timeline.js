@@ -15,8 +15,6 @@ else { var min = 2000 };
 if ( d3.max(allValues) > 2015 ) { var max = d3.max(allValues) } 
 else { var max = 2015 };
 
-console.log( 'min: ' + min );        
-
 var margins = 20
   , width = parseInt(d3.select('#timeline').style('width'))
   , height = parseInt(d3.select('#timeline').style('height')) - margins*2;
@@ -57,3 +55,44 @@ svg.append('g')
     .attr('class', 'axis')
     .attr("transform", "translate(0," + (height - margins) + ")")
     .call(xAxis);
+
+d3.select(window).on('resize.timeline', resizeTimeline);
+
+function resizeTimeline() {
+    console.log('Timeline resize firing!')
+
+    var margins = 20
+      , width = parseInt(d3.select('#timeline').style('width'))
+      , height = parseInt(d3.select('#timeline').style('height')) - margins*2;
+
+    console.log('width: ' + width);
+
+  var xScale = d3.scale.linear()
+                .domain([min, max])
+                .range([0, width - margins*2]);
+
+  var xAxis = d3.svg.axis()
+                .scale(xScale)
+                .orient('bottom')
+                .tickFormat(d3.format("d"));           
+
+    svg
+        .attr('width', width)
+        .attr('height', height);
+
+    svg.selectAll('rect')
+        .attr('x', function(d) {
+            if(isNaN(d) == false) { return xScale(d); }
+                else { return xScale(d[0]) } ;
+        })
+        .attr('width', function(d) {
+            if(isNaN(d) == false) { return 2; }
+                else { return xScale(d[1]) - xScale(d[0]) }
+        });
+
+    svg.select('.axis')
+        .attr("transform", "translate(0," + (height - margins) + ")")
+        .call(xAxis);              
+
+};
+

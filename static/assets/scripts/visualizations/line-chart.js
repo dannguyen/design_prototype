@@ -149,7 +149,7 @@ var graph = d3.select("#graph").append("svg")
     /* Force D3 to recalculate and update the line */
     graph.selectAll('.line')
       .attr("d", line);
-  }
+  };
 
   d3.select(window).on('resize.line', resizeLine);
 

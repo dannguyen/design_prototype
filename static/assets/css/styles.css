@@ -581,7 +581,7 @@ path {
     left: 0;
 }
 #timeline { height: 150px; }
-#timeline svg { padding: 0 15px; margin: 0 !important; }
+#timeline svg { padding: 0 15px; margin-left: 5px; }
 #timeline .axis text { font-size: 12px; }
 #timeline .axis path,
 #timeline .axis line {
