@@ -59,6 +59,10 @@ def search_tips():
     template = 'search-tips.html'
     return render_template(template)       
 
+@app.route('/explore/')
+def explore():
+    template = 'explore.html'
+    return render_template(template)     
 
 
 

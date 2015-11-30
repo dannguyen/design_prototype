@@ -37,6 +37,30 @@
             </div>
         </section>
 
+
+        <!-- COMPANY INFORMATION -->
+        <section id="company-info">
+            <div class="row">
+                <div class="subhead col-md-10">
+                    <h3>Contract earnings per year</h3>
+                </div>
+                <div class="option-wrapper col-md-2">
+                        <div class="option"><i class="fa fa-code"> embed</i></div>
+                        <div class="option"><i class="fa fa-external-link"> export</i></div>
+                </div>
+            </div>
+            <div class="row">
+                <table>
+                        <tr><td>Business size</td><td>{{ object_list[1]['contractingOfficerBusinessSizeDetermination'] }}</td></tr>
+                        <tr><td>Number of employees</td><td>{{ object_list[1]['numberOfEmployees'] }}</td></tr>
+                        <tr><td>Annual revenue</td><td>${{ object_list[1]['annualRevenue'] }}</td></tr>
+                        <tr><td>Site code / alternate site code</td><td>{{ object_list[1]['vendorSiteCode'] }} / {{ object_list[1]['vendorAlternateSiteCode'] }}</td></tr>
+                        <tr><td>DUNS number</td><td>{{ object_list[1]['DUNSNumber'] }}</td></tr>
+                        
+                    </table>
+            </div>
+        </section>
+
         
         <!-- MOST COMMON CONTRACT CODES FOR THIS COMPANY -->
         <section id="contract-codes">
