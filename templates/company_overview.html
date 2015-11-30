@@ -6,7 +6,7 @@
         <section id="vendor-name">
             <div class="row">
                 <div class="page-identifier col-md-10">
-                    <h1>{{ object_list[0]['vendorName'] }}</h1>
+                    <h1>{{ object_list[1]['vendorName'] }}</h1>
                 </div>
                 <div class="page-type col-md-2">Overview</div>
             </div>
@@ -30,7 +30,7 @@
             <div id="graph" class="col-md-12 aGraph"></div>
 
             <div class="container">
-                <h3>Total dollars from contracts: <span>${{ object_list[0]['obligatedAmount'] }}</span></h3>
+                <h3>Total dollars from contracts: <span>${{ object_list[1]['obligatedAmount'] }}</span></h3>
             </div>
         </section>
 
@@ -81,7 +81,8 @@
                         </tr>
                     {% for prod in products_list[:5] %} <!-- CURRENTLY SHOWS ONLY FIRST FIVE RESULTS -->
                         <tr>
-                            <td style="max-width:300px"><a href="product/{{ prod[4] }} ">{{ prod[0] }}</a></td>
+                            <!-- DEMO LINK BELOW. REMOVE WHEN FUNCTIONAL -->
+                           <td style="max-width:300px"><a href="/contract-list">{{ prod[0] }}</a></td>
                             <td style="text-align:center">{{ prod[2] }}</td>
                             <td style="text-align:right">${{ prod[1] }}</td>                    
                             <td style="max-width:300px"><div class="bar" style="width:{{ prod[3]}}px"></div></td>

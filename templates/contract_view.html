@@ -1,8 +1,5 @@
 {% include 'partials/head.html' %}
 
-<!-- SEARCH BAR -->
-{% include 'partials/search_bar.html' %}
-
 <!-- BEGIN MAIN CONTENT -->
 <div class="row">
     <div class="col-md-10 col-md-offset-1">
@@ -128,6 +125,18 @@
                         <tr><td>Funding Requesting Office ID</td><td>{{ object_list[1]['fundingRequestingOfficeID'] }}</td></tr>
 
                     </table>
+                    <div class="subhead">
+                        <h3>Vendor</h3>
+                    </div>
+                        <div class="img-container" style="height: 180px;">
+                            <a href="/company-overview">
+                                <div class="tag col-md-10 col-xs-12 vendor-profile">
+                                    <p>Vendor profile:</p>
+                                    <h3>{{ object_list[1]['vendorName'] }}</h3>
+                                </div>
+                            </a>
+                        </div>
+
                 </div>
             </section>
 
@@ -189,7 +198,7 @@
 
 
         <!-- INVOLVED PARTIES AND RECIPIENT DESCRIPITON -->
-        <section id="recipient-information">
+        <!-- <section id="recipient-information">
             <div class="row">
                 <div class="col-md-6">
                     <div class="subhead left">
@@ -215,7 +224,7 @@
 
                 </div>
             </div>
-        </section>
+        </section> -->
 
             
         <!-- CONTRACT IDENTIFIERS -->

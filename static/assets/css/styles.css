@@ -149,11 +149,13 @@ div.title-box{
    padding: 0px 30px 10px 30px;
    font-weight: bold;
 }
-.tag h1 { color: #FFFFFF; }
+.tag h1, .tag h3, .tag p { color: #FFFFFF; }
 .tag:hover {
     background-color: rgba(0,0,0,.9);
     cursor: pointer;
 }
+.tag.vendor-profile { background-color: #D00441 }
+.tag.vendor-profile:hover { background-color: #C2003A; }
 .overlay {
     position: absolute;
     left: 0;
@@ -547,6 +549,8 @@ div.subtitle {
     .option { width: 50%; float: left; }
     .option:first-child { border-bottom: 0; border-right: 1px solid white; }
     .page-type { padding: 8px; }
+    .tag.vendor-profile { height: 100%; }
+    .left { border-right: none; }
 }
 
 /* D3 CSS */

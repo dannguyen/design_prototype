@@ -8,9 +8,6 @@ TO DOs:
 <!-- HEAD -->
 {% include 'partials/head.html' %}
 
-<!-- SEARCH BAR -->
-{% include 'partials/search_bar.html' %}
-
 <div class="row">
 <!-- BEGIN LEFT CONTENT COLUMN -->
     <div class="col-md-10 col-md-offset-1">
@@ -20,13 +17,13 @@ TO DOs:
         <section id="main-name">
             <div class="row">
                 <div class="page-identifier col-md-10">
-                    <h1>{{ object_list[0]['vendorName'] }}</h1>
+                    <h1>{{ object_list[1]['vendorName'] }}</h1>
                 </div>
                 <div class="page-type col-md-2">Detail</div>
             </div>
 
             <div class="subhead">
-                <h3>{{ object_list[0]['productOrServiceCode'] }}</h3>
+                <h3>{{ object_list[1]['productOrServiceCode'] }}</h3>
             </div>
         </section>
 
@@ -94,13 +91,8 @@ TO DOs:
             {% for o in object_list[:10] %}
             
                 <tr>
-                    <th colspan="4">{{ o['vendorName'] }}</th>
-                </tr>
-                <tr>
-                    <td>PIID/IDVPIID</td>
-                    <td>{{ o['PIID'] }} / {{ o['IDVModificationNumber'] }}</td>
-                    <td>VISUAL GOES HERE</td>
-                    <td></td>
+                    <th><a href="/contract-detail" class="black">{{ o['vendorName'] }}</a></th>
+                    <th colspan="3"><a href="/contract-detail" class="black">PIID: {{ o['PIID'] }}<!--  / {{ o['IDVModificationNumber'] }} --></a></th>
                 </tr>
                 <tr>
                     <td>Contracting Agency</td>
