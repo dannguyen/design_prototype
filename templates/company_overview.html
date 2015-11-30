@@ -1,8 +1,5 @@
 {% include 'partials/head.html' %}
 
-<!-- SEARCH BAR -->
-{% include 'partials/search_bar.html' %}
-
 <div class="row">
     <!-- BEGIN MAIN CONTENT -->
     <div class="col-md-10 col-md-offset-1">
@@ -76,6 +73,12 @@
             <div>
                 <table>
                     <thead>
+                        <tr>
+                            <th>Product/service code</th>
+                            <th># of contracts</th>
+                            <th>Total amount of contracts</th>
+                            <th></th>
+                        </tr>
                     {% for prod in products_list[:5] %} <!-- CURRENTLY SHOWS ONLY FIRST FIVE RESULTS -->
                         <tr>
                             <td style="max-width:300px"><a href="product/{{ prod[4] }} ">{{ prod[0] }}</a></td>
