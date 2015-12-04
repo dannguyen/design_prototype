@@ -239,8 +239,10 @@
             </div>
         </section>    
 
+        <div id="congress-district"></div>
+        {{ districts_list }}
         </div>
-    {{ object_list[1] }}
+    <!-- {{ object_list[1] }} -->
     </div>
 
 </div> 
@@ -291,8 +293,8 @@
         for (var i = 0; i < arrayLength; i++) {
             date = new Date(dates[i]);
             dateTimes.push(date.getTime());
-        }              
-            
+        }
+
         </script>
 
 <!-- END GEOCODE SCRIPT -->

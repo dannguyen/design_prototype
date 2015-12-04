@@ -24,9 +24,10 @@ def overview_data():
 def location_overview():
     template = 'location_overview.html'
     object_list = data.load_data()
+    districts_list = data.load_districts()
     products_list = data.dollars_by_product_service_code(object_list)
     recipient_city_list = data.contracts_by_city(object_list)
-    return render_template(template, object_list=object_list, products_list=products_list, recipient_city_list=recipient_city_list)
+    return render_template(template, object_list=object_list, districts_list=districts_list, products_list=products_list, recipient_city_list=recipient_city_list)
 
 @app.route('/contract-list/')
 def list_view():
@@ -40,9 +41,10 @@ def list_view():
 def contract_view():
     template = 'contract_view.html'
     object_list = data.load_data()
+    districts_list = data.load_districts()
     products_list = data.dollars_by_product_service_code(object_list)
     recipient_city_list = data.contracts_by_city(object_list)
-    return render_template(template, object_list=object_list, products_list=products_list, recipient_city_list=recipient_city_list)
+    return render_template(template, object_list=object_list, districts_list=districts_list, products_list=products_list, recipient_city_list=recipient_city_list)
 
 @app.route('/glossary/')
 def glossary():

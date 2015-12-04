@@ -35,20 +35,21 @@ function ready(error, us, congress) {
       .datum(topojson.feature(us, us.objects.land))
       .attr("d", path);
 
-  svg.append("clipPath")
-      .attr("id", "clip-land")
-    .append("use")
-      .attr("xlink:href", "#land");
+  // svg.append("clipPath")
+  //     .attr("id", "clip-land")
+  //   .append("use")
+  //     .attr("xlink:href", "#land");
 
   svg.append("g")
       .attr("class", "districts")
-      .attr("clip-path", "url(#clip-land)")
+      // .attr("clip-path", "url(#clip-land)")
     .selectAll("path")
       .data(topojson.feature(congress, congress.objects.districts).features)
     .enter().append("path")
+      .attr('class', 'district')
       .attr("d", path)
     .append("title")
-      .text(function(d) { return d.id; });
+      .text(function(d) { console.log(d.id); return d.id; });
 
   svg.append("path")
       .attr("class", "district-boundaries")
@@ -62,3 +63,27 @@ function ready(error, us, congress) {
 }
 
 d3.select(self.frameElement).style("height", height + "px");
+
+d3.select(window).on('resize.cd_map', resizeCDMap);
+
+function resizeCDMap() {
+    // adjust things when the window size changes
+    width = parseInt(d3.select('#congress-districts-map').style('width')) - margin.left - margin.right;
+    height = width * mapRatio;
+
+    // update projection
+    projection
+        .translate([width / 2, height / 2])
+        .scale(width);
+
+    // resize the map container
+    svg
+        .style('width', width + 'px')
+        .style('height', height + 'px');
+
+    // resize the map
+    svg.select('.districts').attr('d', path);
+    svg.selectAll('.state-boundaries').attr('d', path);
+    svg.selectAll('.district-boundaries').attr('d', path);
+    svg.selectAll('.district').attr('d', path);
+};

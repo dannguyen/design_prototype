@@ -1,0 +1,3042 @@
+{  
+    "states":  [ 
+        { 
+            "state_name": "Alabama",
+            "state_code": "01",
+            "abbr": "AL",
+            "congressional_districts": [
+                {
+                    "district_num": "01",
+                    "representative_name": "Bradley Byrne",
+                    "representative_party": "R",
+                    "representative_bioguideID": "B001289"
+                },
+                {
+                    "district_num": "02",
+                    "representative_name": "Martha Roby",
+                    "representative_party": "R",
+                    "representative_bioguideID": "R000591"
+                },
+                {
+                    "district_num": "03",
+                    "representative_name": "Mike Rogers",
+                    "representative_party": "R",
+                    "representative_bioguideID": "R000575"
+                },
+                {
+                    "district_num": "04",
+                    "representative_name": "Robert B. Aderholt",
+                    "representative_party": "R",
+                    "representative_bioguideID": "A000055"
+                },
+                {
+                    "district_num": "05",
+                    "representative_name": "Mo Brooks",
+                    "representative_party": "R",
+                    "representative_bioguideID": "B001274"
+                },
+                {
+                    "district_num": "06",
+                    "representative_name": "Gary J. Palmer",
+                    "representative_party": "R",
+                    "representative_bioguideID": "P000609"
+                },
+                {
+                    "district_num": "07",
+                    "representative_name": "Terri A. Sewell",
+                    "representative_party": "D",
+                    "representative_bioguideID": "S001185"
+                }
+            ] 
+        },
+        { 
+            "state_name": "Alaska", 
+            "state_code": "02", 
+            "abbr": "AK",
+            "congressional_districts": [
+                {
+                    "representative_name": "Don Young",
+                    "district_num": "00",
+                    "representative_bioguideID": "Y000033",
+                    "representative_party": "R"
+                }
+            ]
+        },
+        { 
+            "state_name": "American Samoa", 
+            "state_code": "03", 
+            "abbr": "AS",
+            "congressional_districts": [
+                {
+                    "representative_name": "Aumua Amata Coleman Radewagen",
+                    "district_num": "00",
+                    "representative_bioguideID": "R000600",
+                    "representative_party": "R"
+                }
+            ]
+        },
+        { 
+            "state_name": "Arizona",
+            "state_code": "04", 
+            "abbr": "AZ",
+            "congressional_districts": [
+                {
+                    "representative_name": "Ann Kirkpatrick",
+                    "district_num": "01",
+                    "representative_bioguideID": "K000368",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Martha McSally",
+                    "district_num": "02",
+                    "representative_bioguideID": "M001197",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Raúl M. Grijalva",
+                    "district_num": "03",
+                    "representative_bioguideID": "G000551",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Paul A. Gosar",
+                    "district_num": "04",
+                    "representative_bioguideID": "G000565",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Matt Salmon",
+                    "district_num": "05",
+                    "representative_bioguideID": "S000018",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "David Schweikert",
+                    "district_num": "06",
+                    "representative_bioguideID": "S001183",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Ruben Gallego",
+                    "district_num": "07",
+                    "representative_bioguideID": "G000574",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Trent Franks",
+                    "district_num": "08",
+                    "representative_bioguideID": "F000448",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Kyrsten Sinema",
+                    "district_num": "09",
+                    "representative_bioguideID": "S001191",
+                    "representative_party": "D"
+                }
+            ] 
+        },
+        { 
+            "state_name": "Arkansas", 
+            "state_code": "05", 
+            "abbr": "AR",
+            "congressional_districts": [
+                {
+                    "representative_name": "Eric A. 'Rick' Crawford",
+                    "district_num": "01",
+                    "representative_bioguideID": "C001087",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "J. French Hill",
+                    "district_num": "02",
+                    "representative_bioguideID": "H001072",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Steve Womack",
+                    "district_num": "03",
+                    "representative_bioguideID": "W000809",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Bruce Westerman",
+                    "district_num": "04",
+                    "representative_bioguideID": "W000821",
+                    "representative_party": "R"
+                }
+            ]
+        },
+        { 
+            "state_name": "California", 
+            "state_code": "06", 
+            "abbr": "CA", 
+            "congressional_districts": [
+                {
+                    "representative_name": "Doug LaMalfa",
+                    "district_num": "01",
+                    "representative_bioguideID": "L000578",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Jared Huffman",
+                    "district_num": "02",
+                    "representative_bioguideID": "H001068",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "John Garamendi",
+                    "district_num": "03",
+                    "representative_bioguideID": "G000559",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Tom McClintock",
+                    "district_num": "04",
+                    "representative_bioguideID": "M001177",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Mike Thompson",
+                    "district_num": "05",
+                    "representative_bioguideID": "T000460",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Doris O. Matsui",
+                    "district_num": "06",
+                    "representative_bioguideID": "M001163",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Ami Bera",
+                    "district_num": "07",
+                    "representative_bioguideID": "B001287",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Paul Cook",
+                    "district_num": "08",
+                    "representative_bioguideID": "C001094",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Jerry McNerney",
+                    "district_num": "09",
+                    "representative_bioguideID": "M001166",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Jeff Denham",
+                    "district_num": "10",
+                    "representative_bioguideID": "D000612",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Mark DeSaulnier",
+                    "district_num": "11",
+                    "representative_bioguideID": "D000623",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Nancy Pelosi",
+                    "district_num": "12",
+                    "representative_bioguideID": "P000197",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Barbara Lee",
+                    "district_num": "13",
+                    "representative_bioguideID": "L000551",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Jackie Speier",
+                    "district_num": "14",
+                    "representative_bioguideID": "S001175",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Eric Swalwell",
+                    "district_num": "15",
+                    "representative_bioguideID": "S001193",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Jim Costa",
+                    "district_num": "16",
+                    "representative_bioguideID": "C001059",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Michael M. Honda",
+                    "district_num": "17",
+                    "representative_bioguideID": "H001034",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Anna G. Eshoo",
+                    "district_num": "18",
+                    "representative_bioguideID": "E000215",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Zoe Lofgren",
+                    "district_num": "19",
+                    "representative_bioguideID": "L000397",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Sam Farr",
+                    "district_num": "20",
+                    "representative_bioguideID": "F000030",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "David G. Valadao",
+                    "district_num": "21",
+                    "representative_bioguideID": "V000129",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Devin Nunes",
+                    "district_num": "22",
+                    "representative_bioguideID": "N000181",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Kevin McCarthy",
+                    "district_num": "23",
+                    "representative_bioguideID": "M001165",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Lois Capps",
+                    "district_num": "24",
+                    "representative_bioguideID": "C001036",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Stephen Knight",
+                    "district_num": "25",
+                    "representative_bioguideID": "K000387",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Julia Brownley",
+                    "district_num": "26",
+                    "representative_bioguideID": "B001285",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Judy Chu",
+                    "district_num": "27",
+                    "representative_bioguideID": "C001080",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Adam B. Schiff",
+                    "district_num": "28",
+                    "representative_bioguideID": "S001150",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Tony Cárdenas",
+                    "district_num": "29",
+                    "representative_bioguideID": "C001097",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Brad Sherman",
+                    "district_num": "30",
+                    "representative_bioguideID": "S000344",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Pete Aguilar",
+                    "district_num": "31",
+                    "representative_bioguideID": "A000371",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Grace F. Napolitano",
+                    "district_num": "32",
+                    "representative_bioguideID": "N000179",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Ted Lieu",
+                    "district_num": "33",
+                    "representative_bioguideID": "L000582",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Xavier Becerra",
+                    "district_num": "34",
+                    "representative_bioguideID": "B000287",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Norma J. Torres",
+                    "district_num": "35",
+                    "representative_bioguideID": "T000474",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Raul Ruiz",
+                    "district_num": "36",
+                    "representative_bioguideID": "R000599",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Karen Bass",
+                    "district_num": "37",
+                    "representative_bioguideID": "B001270",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Linda T. Sánchez",
+                    "district_num": "38",
+                    "representative_bioguideID": "S001156",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Edward R. Royce",
+                    "district_num": "39",
+                    "representative_bioguideID": "R000487",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Lucille Roybal-Allard",
+                    "district_num": "40",
+                    "representative_bioguideID": "R000486",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Mark Takano",
+                    "district_num": "41",
+                    "representative_bioguideID": "T000472",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Ken Calvert",
+                    "district_num": "42",
+                    "representative_bioguideID": "C000059",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Maxine Waters",
+                    "district_num": "43",
+                    "representative_bioguideID": "W000187",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Janice Hahn",
+                    "district_num": "44",
+                    "representative_bioguideID": "H001063",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Mimi Walters",
+                    "district_num": "45",
+                    "representative_bioguideID": "W000820",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Loretta Sanchez",
+                    "district_num": "46",
+                    "representative_bioguideID": "S000030",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Alan S. Lowenthal",
+                    "district_num": "47",
+                    "representative_bioguideID": "L000579",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Dana Rohrabacher",
+                    "district_num": "48",
+                    "representative_bioguideID": "R000409",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Darrell E. Issa",
+                    "district_num": "49",
+                    "representative_bioguideID": "I000056",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Duncan Hunter",
+                    "district_num": "50",
+                    "representative_bioguideID": "H001048",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Juan Vargas",
+                    "district_num": "51",
+                    "representative_bioguideID": "V000130",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Scott H. Peters",
+                    "district_num": "52",
+                    "representative_bioguideID": "P000608",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Susan A. Davis",
+                    "district_num": "53",
+                    "representative_bioguideID": "D000598",
+                    "representative_party": "D"
+                }
+            ]
+        },
+        { 
+            "state_name": "Colorado", 
+            "state_code": "08", 
+            "abbr": "CO",
+            "congressional_districts": [
+                {
+                    "representative_name": "Diana DeGette",
+                    "district_num": "01",
+                    "representative_bioguideID": "D000197",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Jared Polis",
+                    "district_num": "02",
+                    "representative_bioguideID": "P000598",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Scott R. Tipton",
+                    "district_num": "03",
+                    "representative_bioguideID": "T000470",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Ken Buck",
+                    "district_num": "04",
+                    "representative_bioguideID": "B001297",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Doug Lamborn",
+                    "district_num": "05",
+                    "representative_bioguideID": "L000564",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Mike Coffman",
+                    "district_num": "06",
+                    "representative_bioguideID": "C001077",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Ed Perlmutter",
+                    "district_num": "07",
+                    "representative_bioguideID": "P000593",
+                    "representative_party": "D"
+                }
+            ] 
+        },
+        { 
+            "state_name": "Connecticut",
+            "state_code": "09", 
+            "abbr": "CT",
+            "congressional_districts": [
+                {
+                    "representative_name": "John B. Larson",
+                    "district_num": "01",
+                    "representative_bioguideID": "L000557",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Joe Courtney",
+                    "district_num": "02",
+                    "representative_bioguideID": "C001069",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Rosa L. DeLauro",
+                    "district_num": "03",
+                    "representative_bioguideID": "D000216",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "James A. Himes",
+                    "district_num": "04",
+                    "representative_bioguideID": "H001047",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Elizabeth H. Esty",
+                    "district_num": "05",
+                    "representative_bioguideID": "E000293",
+                    "representative_party": "D"
+                }
+            ] 
+        },
+        { 
+            "state_name": "Delaware", 
+            "state_code": "10", 
+            "abbr": "DE",
+            "congressional_districts": [
+                {
+                    "representative_name": "John C. Carney",
+                    "district_num": "00",
+                    "representative_bioguideID": "C001083",
+                    "representative_party": "D"
+                }
+            ] 
+        },
+        { 
+            "state_name": "District of Columbia", 
+            "state_code": "11", 
+            "abbr": "DC",
+            "congressional_districts": [
+                {
+                    "representative_name": "Eleanor,Holmes,Norton",
+                    "district_num": "00",
+                    "representative_bioguideID": "N000147",
+                    "representative_party": "D"
+                }
+            ] 
+        },
+        { 
+            "state_name": "Florida",
+            "state_code": "12", 
+            "abbr": "FL",
+            "congressional_districts": [
+                {
+                    "representative_name": "Jeff Miller",
+                    "district_num": "01",
+                    "representative_bioguideID": "M001144",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Gwen Graham",
+                    "district_num": "02",
+                    "representative_bioguideID": "G000575",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Ted S. Yoho",
+                    "district_num": "03",
+                    "representative_bioguideID": "Y000065",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Ander Crenshaw",
+                    "district_num": "04",
+                    "representative_bioguideID": "C001045",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Corrine Brown",
+                    "district_num": "05",
+                    "representative_bioguideID": "B000911",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Ron DeSantis",
+                    "district_num": "06",
+                    "representative_bioguideID": "D000621",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "John L. Mica",
+                    "district_num": "07",
+                    "representative_bioguideID": "M000689",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Bill Posey",
+                    "district_num": "08",
+                    "representative_bioguideID": "P000599",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Alan Grayson",
+                    "district_num": "09",
+                    "representative_bioguideID": "G000556",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Daniel Webster",
+                    "district_num": "10",
+                    "representative_bioguideID": "W000806",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Richard B. Nugent",
+                    "district_num": "11",
+                    "representative_bioguideID": "N000185",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Gus M. Bilirakis",
+                    "district_num": "12",
+                    "representative_bioguideID": "B001257",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "David W. Jolly",
+                    "district_num": "13",
+                    "representative_bioguideID": "J000296",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Kathy Castor",
+                    "district_num": "14",
+                    "representative_bioguideID": "C001066",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Dennis A. Ross",
+                    "district_num": "15",
+                    "representative_bioguideID": "R000593",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Vern Buchanan",
+                    "district_num": "16",
+                    "representative_bioguideID": "B001260",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Thomas J. Rooney",
+                    "district_num": "17",
+                    "representative_bioguideID": "R000583",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Patrick Murphy",
+                    "district_num": "18",
+                    "representative_bioguideID": "M001191",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Curt Clawson",
+                    "district_num": "19",
+                    "representative_bioguideID": "C001102",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Alcee L. Hastings",
+                    "district_num": "20",
+                    "representative_bioguideID": "H000324",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Theodore E. Deutch",
+                    "district_num": "21",
+                    "representative_bioguideID": "D000610",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Lois Frankel",
+                    "district_num": "22",
+                    "representative_bioguideID": "F000462",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Debbie Wasserman Schultz",
+                    "district_num": "23",
+                    "representative_bioguideID": "W000797",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Frederica S. Wilson",
+                    "district_num": "24",
+                    "representative_bioguideID": "W000808",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Mario Diaz-Balart",
+                    "district_num": "25",
+                    "representative_bioguideID": "D000600",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Carlos Curbelo",
+                    "district_num": "26",
+                    "representative_bioguideID": "C001107",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Ileana Ros-Lehtinen",
+                    "district_num": "27",
+                    "representative_bioguideID": "R000435",
+                    "representative_party": "R"
+                }
+            ] 
+        },
+        { 
+            "state_name": "Georgia",
+            "state_code": "13", 
+            "abbr": "GA",
+            "congressional_districts": [
+                {
+                    "representative_name": "Earl L. 'Buddy' Carter",
+                    "district_num": "01",
+                    "representative_bioguideID": "C001103",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Sanford D. Bishop",
+                    "district_num": "02",
+                    "representative_bioguideID": "B000490",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Lynn A. Westmoreland",
+                    "district_num": "03",
+                    "representative_bioguideID": "W000796",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Henry,C. 'Hank',Johnson",
+                    "district_num": "04",
+                    "representative_bioguideID": "J000288",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "John Lewis",
+                    "district_num": "05",
+                    "representative_bioguideID": "L000287",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Tom Price",
+                    "district_num": "06",
+                    "representative_bioguideID": "P000591",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Rob Woodall",
+                    "district_num": "07",
+                    "representative_bioguideID": "W000810",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Austin Scott",
+                    "district_num": "08",
+                    "representative_bioguideID": "S001189",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Doug Collins",
+                    "district_num": "09",
+                    "representative_bioguideID": "C001093",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Jody B. Hice",
+                    "district_num": "10",
+                    "representative_bioguideID": "H001071",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Barry Loudermilk",
+                    "district_num": "11",
+                    "representative_bioguideID": "L000583",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Rick W. Allen",
+                    "district_num": "12",
+                    "representative_bioguideID": "A000372",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "David Scott",
+                    "district_num": "13",
+                    "representative_bioguideID": "S001157",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Tom Graves",
+                    "district_num": "14",
+                    "representative_bioguideID": "G000560",
+                    "representative_party": "R"
+                }
+            ]
+        },
+        { 
+            "state_name": "Guam", 
+            "state_code": "14", 
+            "abbr": "GU",
+            "congressional_districts": [
+                {
+                    "representative_name": "Madeleine Z. Bordallo",
+                    "district_num": "00",
+                    "representative_bioguideID": "B001245",
+                    "representative_party": "D"
+                }
+            ]
+        },
+        { 
+            "state_name": "Hawaii", 
+            "state_code": "15", 
+            "abbr": "HI",
+            "congressional_districts": [
+                {
+                    "representative_name": "Mark Takai",
+                    "district_num": "01",
+                    "representative_bioguideID": "T000473",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Tulsi Gabbard",
+                    "district_num": "02",
+                    "representative_bioguideID": "G000571",
+                    "representative_party": "D"
+                }
+            ]
+        },
+        { 
+            "state_name": "Idaho", 
+            "state_code": "16", 
+            "abbr": "ID",
+            "congressional_districts": [
+                {
+                    "representative_name": "Raúl R. Labrador",
+                    "district_num": "01",
+                    "representative_bioguideID": "L000573",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Michael K. Simpson",
+                    "district_num": "02",
+                    "representative_bioguideID": "S001148",
+                    "representative_party": "R"
+                }
+            ] 
+        },
+        { 
+            "state_name": "Illinois", 
+            "state_code": "17", 
+            "abbr": "IL",
+            "congressional_districts": [
+                {
+                    "representative_name": "Bobby L. Rush",
+                    "district_num": "01",
+                    "representative_bioguideID": "R000515",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Robin L. Kelly",
+                    "district_num": "02",
+                    "representative_bioguideID": "K000385",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Daniel Lipinski",
+                    "district_num": "03",
+                    "representative_bioguideID": "L000563",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Luis V. Gutiérrez",
+                    "district_num": "04",
+                    "representative_bioguideID": "G000535",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Mike Quigley",
+                    "district_num": "05",
+                    "representative_bioguideID": "Q000023",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Peter J. Roskam",
+                    "district_num": "06",
+                    "representative_bioguideID": "R000580",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Danny K. Davis",
+                    "district_num": "07",
+                    "representative_bioguideID": "D000096",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Tammy Duckworth",
+                    "district_num": "08",
+                    "representative_bioguideID": "D000622",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Janice D. Schakowsky",
+                    "district_num": "09",
+                    "representative_bioguideID": "S001145",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Robert J. Dold",
+                    "district_num": "10",
+                    "representative_bioguideID": "D000613",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Bill Foster",
+                    "district_num": "11",
+                    "representative_bioguideID": "F000454",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Mike Bost",
+                    "district_num": "12",
+                    "representative_bioguideID": "B001295",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Rodney Davis",
+                    "district_num": "13",
+                    "representative_bioguideID": "D000619",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Randy Hultgren",
+                    "district_num": "14",
+                    "representative_bioguideID": "H001059",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "John Shimkus",
+                    "district_num": "15",
+                    "representative_bioguideID": "S000364",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Adam Kinzinger",
+                    "district_num": "16",
+                    "representative_bioguideID": "K000378",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Cheri Bustos",
+                    "district_num": "17",
+                    "representative_bioguideID": "B001286",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Darin LaHood",
+                    "district_num": "18",
+                    "representative_bioguideID": "L000585",
+                    "representative_party": "R"
+                }
+            ] 
+        },
+        { 
+            "state_name": "Indiana",
+            "state_code": "18", 
+            "abbr": "IN",
+            "congressional_districts": [
+                {
+                    "representative_name": "Peter J. Visclosky",
+                    "district_num": "01",
+                    "representative_bioguideID": "V000108",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Jackie Walorski",
+                    "district_num": "02",
+                    "representative_bioguideID": "W000813",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Marlin A. Stutzman",
+                    "district_num": "03",
+                    "representative_bioguideID": "S001188",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Todd Rokita",
+                    "district_num": "04",
+                    "representative_bioguideID": "R000592",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Susan W. Brooks",
+                    "district_num": "05",
+                    "representative_bioguideID": "B001284",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Luke Messer",
+                    "district_num": "06",
+                    "representative_bioguideID": "M001189",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "André Carson",
+                    "district_num": "07",
+                    "representative_bioguideID": "C001072",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Larry Bucshon",
+                    "district_num": "08",
+                    "representative_bioguideID": "B001275",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Todd C. Young",
+                    "district_num": "09",
+                    "representative_bioguideID": "Y000064",
+                    "representative_party": "R"
+                }
+            ] 
+        },
+        { 
+            "state_name": "Iowa", 
+            "state_code": "19", 
+            "abbr": "IA",
+            "congressional_districts": [
+                {
+                    "representative_name": "Rod Blum",
+                    "district_num": "01",
+                    "representative_bioguideID": "B001294",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "David Loebsack",
+                    "district_num": "02",
+                    "representative_bioguideID": "L000565",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "David Young",
+                    "district_num": "03",
+                    "representative_bioguideID": "Y000066",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Steve King",
+                    "district_num": "04",
+                    "representative_bioguideID": "K000362",
+                    "representative_party": "R"
+                }
+            ] 
+        },
+        { 
+            "state_name": "Kansas", 
+            "state_code": "20", 
+            "abbr": "KS",
+            "congressional_districts": [
+                {
+                    "representative_name": "Tim Huelskamp",
+                    "district_num": "01",
+                    "representative_bioguideID": "H001057",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Lynn Jenkins",
+                    "district_num": "02",
+                    "representative_bioguideID": "J000290",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Kevin Yoder",
+                    "district_num": "03",
+                    "representative_bioguideID": "Y000063",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Mike Pompeo",
+                    "district_num": "04",
+                    "representative_bioguideID": "P000602",
+                    "representative_party": "R"
+                }
+            ] 
+        },
+        { 
+            "state_name": "Kentucky", 
+            "state_code": "21", 
+            "abbr": "KY",
+            "congressional_districts": [
+                {
+                    "representative_name": "Ed Whitfield",
+                    "district_num": "01",
+                    "representative_bioguideID": "W000413",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Brett Guthrie",
+                    "district_num": "02",
+                    "representative_bioguideID": "G000558",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "John A. Yarmuth",
+                    "district_num": "03",
+                    "representative_bioguideID": "Y000062",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Thomas Massie",
+                    "district_num": "04",
+                    "representative_bioguideID": "M001184",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Harold Rogers",
+                    "district_num": "05",
+                    "representative_bioguideID": "R000395",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Andy Barr",
+                    "district_num": "06",
+                    "representative_bioguideID": "B001282",
+                    "representative_party": "R"
+                }
+            ] 
+        },
+        { 
+            "state_name": "Louisiana", 
+            "state_code": "22", 
+            "abbr": "LA",
+            "congressional_districts": [
+                {
+                    "representative_name": "Steve Scalise",
+                    "district_num": "01",
+                    "representative_bioguideID": "S001176",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Cedric L. Richmond",
+                    "district_num": "02",
+                    "representative_bioguideID": "R000588",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Charles W. Boustany",
+                    "district_num": "03",
+                    "representative_bioguideID": "B001255",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "John Fleming",
+                    "district_num": "04",
+                    "representative_bioguideID": "F000456",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Ralph,Lee,Abraham",
+                    "district_num": "05",
+                    "representative_bioguideID": "A000374",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Garret Graves",
+                    "district_num": "06",
+                    "representative_bioguideID": "G000577",
+                    "representative_party": "R"
+                }
+            ] 
+        },
+        { 
+            "state_name": "Maine", 
+            "state_code": "23", 
+            "abbr": "ME",
+            "congressional_districts": [
+                {
+                    "representative_name": "Chellie Pingree",
+                    "district_num": "01",
+                    "representative_bioguideID": "P000597",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Bruce Poliquin",
+                    "district_num": "02",
+                    "representative_bioguideID": "P000611",
+                    "representative_party": "R"
+                }
+            ] 
+        },
+        { 
+            "state_name": "Maryland", 
+            "state_code": "24", 
+            "abbr": "MD",
+            "congressional_districts": [
+                {
+                    "representative_name": "Andy Harris",
+                    "district_num": "01",
+                    "representative_bioguideID": "H001052",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "C. A. Dutch,Ruppersberger",
+                    "district_num": "02",
+                    "representative_bioguideID": "R000576",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "John P. Sarbanes",
+                    "district_num": "03",
+                    "representative_bioguideID": "S001168",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Donna F. Edwards",
+                    "district_num": "04",
+                    "representative_bioguideID": "E000290",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Steny H. Hoyer",
+                    "district_num": "05",
+                    "representative_bioguideID": "H000874",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "John K. Delaney",
+                    "district_num": "06",
+                    "representative_bioguideID": "D000620",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Elijah E. Cummings",
+                    "district_num": "07",
+                    "representative_bioguideID": "C000984",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Chris Van Hollen",
+                    "district_num": "08",
+                    "representative_bioguideID": "V000128",
+                    "representative_party": "D"
+                }
+            ] 
+        },
+        { 
+            "state_name": "Massachusetts", 
+            "state_code": "25", 
+            "abbr": "MA",
+            "congressional_districts": [
+                {
+                    "representative_name": "Richard E. Neal",
+                    "district_num": "01",
+                    "representative_bioguideID": "N000015",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "James P. McGovern",
+                    "district_num": "02",
+                    "representative_bioguideID": "M000312",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Niki Tsongas",
+                    "district_num": "03",
+                    "representative_bioguideID": "T000465",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Joseph P. Kennedy",
+                    "district_num": "04",
+                    "representative_bioguideID": "K000379",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Katherine M. Clark",
+                    "district_num": "05",
+                    "representative_bioguideID": "C001101",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Seth Moulton",
+                    "district_num": "06",
+                    "representative_bioguideID": "M001196",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Michael E. Capuano",
+                    "district_num": "07",
+                    "representative_bioguideID": "C001037",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Stephen F. Lynch",
+                    "district_num": "08",
+                    "representative_bioguideID": "L000562",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "William R. Keating",
+                    "district_num": "09",
+                    "representative_bioguideID": "K000375",
+                    "representative_party": "D"
+                }
+            ] 
+        },
+        { 
+            "state_name": "Michigan", 
+            "state_code": "26", 
+            "abbr": "MI",
+            "congressional_districts": [
+                {
+                    "representative_name": "Dan Benishek",
+                    "district_num": "01",
+                    "representative_bioguideID": "B001271",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Bill Huizenga",
+                    "district_num": "02",
+                    "representative_bioguideID": "H001058",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Justin Amash",
+                    "district_num": "03",
+                    "representative_bioguideID": "A000367",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "John R. Moolenaar",
+                    "district_num": "04",
+                    "representative_bioguideID": "M001194",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Daniel T. Kildee",
+                    "district_num": "05",
+                    "representative_bioguideID": "K000380",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Fred Upton",
+                    "district_num": "06",
+                    "representative_bioguideID": "U000031",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Tim Walberg",
+                    "district_num": "07",
+                    "representative_bioguideID": "W000798",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Mike Bishop",
+                    "district_num": "08",
+                    "representative_bioguideID": "B001293",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Sander M. Levin",
+                    "district_num": "09",
+                    "representative_bioguideID": "L000263",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Candice S. Miller",
+                    "district_num": "10",
+                    "representative_bioguideID": "M001150",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "David A. Trott",
+                    "district_num": "11",
+                    "representative_bioguideID": "T000475",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Debbie Dingell",
+                    "district_num": "12",
+                    "representative_bioguideID": "D000624",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "John Conyers",
+                    "district_num": "13",
+                    "representative_bioguideID": "C000714",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Brenda L. Lawrence",
+                    "district_num": "14",
+                    "representative_bioguideID": "L000581",
+                    "representative_party": "D"
+                }
+            ] 
+        },
+        { 
+            "state_name": "Minnesota", 
+            "state_code": "27", 
+            "abbr": "MN",
+            "congressional_districts": [
+                {
+                    "representative_name": "Timothy J. Walz",
+                    "district_num": "01",
+                    "representative_bioguideID": "W000799",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "John Kline",
+                    "district_num": "02",
+                    "representative_bioguideID": "K000363",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Erik Paulsen",
+                    "district_num": "03",
+                    "representative_bioguideID": "P000594",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Betty McCollum",
+                    "district_num": "04",
+                    "representative_bioguideID": "M001143",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Keith Ellison",
+                    "district_num": "05",
+                    "representative_bioguideID": "E000288",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Tom Emmer",
+                    "district_num": "06",
+                    "representative_bioguideID": "E000294",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Collin C. Peterson",
+                    "district_num": "07",
+                    "representative_bioguideID": "P000258",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Richard M. Nolan",
+                    "district_num": "08",
+                    "representative_bioguideID": "N000127",
+                    "representative_party": "D"
+                }
+            ] 
+        },
+        { 
+            "state_name": "Mississippi",
+            "state_code": "28", 
+            "abbr": "MS",
+            "congressional_districts": [
+                {
+                    "representative_name": "Trent Kelly",
+                    "district_num": "01",
+                    "representative_bioguideID": "K000388",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Bennie G. Thompson",
+                    "district_num": "02",
+                    "representative_bioguideID": "T000193",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Gregg Harper",
+                    "district_num": "03",
+                    "representative_bioguideID": "H001045",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Steven M. Palazzo",
+                    "district_num": "04",
+                    "representative_bioguideID": "P000601",
+                    "representative_party": "R"
+                }
+            ]
+        },
+        { 
+            "state_name": "Missouri", 
+            "state_code": "29", 
+            "abbr": "MO",
+            "congressional_districts": [
+                {
+                    "representative_name": "Wm. Lacy,Clay",
+                    "district_num": "01",
+                    "representative_bioguideID": "C001049",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Ann Wagner",
+                    "district_num": "02",
+                    "representative_bioguideID": "W000812",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Blaine Luetkemeyer",
+                    "district_num": "03",
+                    "representative_bioguideID": "L000569",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Vicky Hartzler",
+                    "district_num": "04",
+                    "representative_bioguideID": "H001053",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Emanuel Cleaver",
+                    "district_num": "05",
+                    "representative_bioguideID": "C001061",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Sam Graves",
+                    "district_num": "06",
+                    "representative_bioguideID": "G000546",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Billy Long",
+                    "district_num": "07",
+                    "representative_bioguideID": "L000576",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Jason Smith",
+                    "district_num": "08",
+                    "representative_bioguideID": "S001195",
+                    "representative_party": "R"
+                }
+            ] 
+        },
+        { 
+            "state_name": "Montana",
+            "state_code": "30", 
+            "abbr": "MT",
+            "congressional_districts": [
+                {
+                    "representative_name": "Ryan K. Zinke",
+                    "district_num": "00",
+                    "representative_bioguideID": "Z000018",
+                    "representative_party": "R"
+                }
+            ] 
+        },
+        { 
+            "state_name": "Nebraska", 
+            "state_code": "31", 
+            "abbr": "NE",
+            "congressional_districts": [
+                {
+                    "representative_name": "Jeff Fortenberry",
+                    "district_num": "01",
+                    "representative_bioguideID": "F000449",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Brad Ashford",
+                    "district_num": "02",
+                    "representative_bioguideID": "A000373",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Adrian Smith",
+                    "district_num": "03",
+                    "representative_bioguideID": "S001172",
+                    "representative_party": "R"
+                }
+            ] 
+        },
+        { 
+            "state_name": "Nevada", 
+            "state_code": "32", 
+            "abbr": "NV",
+            "congressional_districts": [
+                {
+                    "representative_name": "Dina Titus",
+                    "district_num": "01",
+                    "representative_bioguideID": "T000468",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Mark E. Amodei",
+                    "district_num": "02",
+                    "representative_bioguideID": "A000369",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Joseph J. Heck",
+                    "district_num": "03",
+                    "representative_bioguideID": "H001055",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Cresent Hardy",
+                    "district_num": "04",
+                    "representative_bioguideID": "H001070",
+                    "representative_party": "R"
+                }
+            ] 
+        },
+        { 
+            "state_name": "New Hampshire", 
+            "state_code": "33", 
+            "abbr": "NH",
+            "congressional_districts": [
+                {
+                    "representative_name": "Frank C. Guinta",
+                    "district_num": "01",
+                    "representative_bioguideID": "G000570",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Ann M. Kuster",
+                    "district_num": "02",
+                    "representative_bioguideID": "K000382",
+                    "representative_party": "D"
+                }
+            ] 
+        },
+        { 
+            "state_name": "New Jersey", 
+            "state_code": "34", 
+            "abbr": "NJ",
+            "congressional_districts": [
+                {
+                    "representative_name": "Donald Norcross",
+                    "district_num": "01",
+                    "representative_bioguideID": "N000188",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Frank A. LoBiondo",
+                    "district_num": "02",
+                    "representative_bioguideID": "L000554",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Thomas MacArthur",
+                    "district_num": "03",
+                    "representative_bioguideID": "M001193",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Christopher H. Smith",
+                    "district_num": "04",
+                    "representative_bioguideID": "S000522",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Scott Garrett",
+                    "district_num": "05",
+                    "representative_bioguideID": "G000548",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Frank Pallone",
+                    "district_num": "06",
+                    "representative_bioguideID": "P000034",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Leonard Lance",
+                    "district_num": "07",
+                    "representative_bioguideID": "L000567",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Albio Sires",
+                    "district_num": "08",
+                    "representative_bioguideID": "S001165",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Bill Pascrell",
+                    "district_num": "09",
+                    "representative_bioguideID": "P000096",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Donald M. Payne",
+                    "district_num": "10",
+                    "representative_bioguideID": "P000604",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Rodney P. Frelinghuysen",
+                    "district_num": "11",
+                    "representative_bioguideID": "F000372",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Bonnie Watson Coleman",
+                    "district_num": "12",
+                    "representative_bioguideID": "W000822",
+                    "representative_party": "D"
+                }
+            ] 
+        },
+        { 
+            "state_name": "New Mexico", 
+            "state_code": "35", 
+            "abbr": "NM",
+            "congressional_districts": [
+                {
+                    "representative_name": "Michelle Lujan Grisham",
+                    "district_num": "01",
+                    "representative_bioguideID": "L000580",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Stevan Pearce",
+                    "district_num": "02",
+                    "representative_bioguideID": "P000588",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Ben Ray Luján",
+                    "district_num": "03",
+                    "representative_bioguideID": "L000570",
+                    "representative_party": "D"
+                }
+            ] 
+        },
+        { 
+            "state_name": "New York", 
+            "state_code": "36", 
+            "abbr": "NY",
+            "congressional_districts": [
+                {
+                    "representative_name": "Lee M. Zeldin",
+                    "district_num": "01",
+                    "representative_bioguideID": "Z000017",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Peter T. King",
+                    "district_num": "02",
+                    "representative_bioguideID": "K000210",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Steve Israel",
+                    "district_num": "03",
+                    "representative_bioguideID": "I000057",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Kathleen M. Rice",
+                    "district_num": "04",
+                    "representative_bioguideID": "R000602",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Gregory W. Meeks",
+                    "district_num": "05",
+                    "representative_bioguideID": "M001137",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Grace Meng",
+                    "district_num": "06",
+                    "representative_bioguideID": "M001188",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Nydia M. Velázquez",
+                    "district_num": "07",
+                    "representative_bioguideID": "V000081",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Hakeem S. Jeffries",
+                    "district_num": "08",
+                    "representative_bioguideID": "J000294",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Yvette D. Clarke",
+                    "district_num": "09",
+                    "representative_bioguideID": "C001067",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Jerrold Nadler",
+                    "district_num": "10",
+                    "representative_bioguideID": "N000002",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Daniel M. Donovan",
+                    "district_num": "11",
+                    "representative_bioguideID": "D000625",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Carolyn B. Maloney",
+                    "district_num": "12",
+                    "representative_bioguideID": "M000087",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Charles B. Rangel",
+                    "district_num": "13",
+                    "representative_bioguideID": "R000053",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Joseph Crowley",
+                    "district_num": "14",
+                    "representative_bioguideID": "C001038",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "José E. Serrano",
+                    "district_num": "15",
+                    "representative_bioguideID": "S000248",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Eliot L. Engel",
+                    "district_num": "16",
+                    "representative_bioguideID": "E000179",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Nita M. Lowey",
+                    "district_num": "17",
+                    "representative_bioguideID": "L000480",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Sean,Patrick,Maloney",
+                    "district_num": "18",
+                    "representative_bioguideID": "M001185",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Christopher P. Gibson",
+                    "district_num": "19",
+                    "representative_bioguideID": "G000564",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Paul Tonko",
+                    "district_num": "20",
+                    "representative_bioguideID": "T000469",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Elise M. Stefanik",
+                    "district_num": "21",
+                    "representative_bioguideID": "S001196",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Richard L. Hanna",
+                    "district_num": "22",
+                    "representative_bioguideID": "H001051",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Tom Reed",
+                    "district_num": "23",
+                    "representative_bioguideID": "R000585",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "John Katko",
+                    "district_num": "24",
+                    "representative_bioguideID": "K000386",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Louise,McIntosh,Slaughter",
+                    "district_num": "25",
+                    "representative_bioguideID": "S000480",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Brian Higgins",
+                    "district_num": "26",
+                    "representative_bioguideID": "H001038",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Chris Collins",
+                    "district_num": "27",
+                    "representative_bioguideID": "C001092",
+                    "representative_party": "R"
+                }
+            ] 
+        },
+        { 
+            "state_name": "North Carolina", 
+            "state_code": "37", 
+            "abbr": "NC",
+            "congressional_districts": [
+                {
+                    "representative_name": "G. K. Butterfield",
+                    "district_num": "01",
+                    "representative_bioguideID": "B001251",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Renee L. Ellmers",
+                    "district_num": "02",
+                    "representative_bioguideID": "E000291",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Walter B. Jones",
+                    "district_num": "03",
+                    "representative_bioguideID": "J000255",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "David E. Price",
+                    "district_num": "04",
+                    "representative_bioguideID": "P000523",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Virginia Foxx",
+                    "district_num": "05",
+                    "representative_bioguideID": "F000450",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Mark Walker",
+                    "district_num": "06",
+                    "representative_bioguideID": "W000819",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "David Rouzer",
+                    "district_num": "07",
+                    "representative_bioguideID": "R000603",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Richard Hudson",
+                    "district_num": "08",
+                    "representative_bioguideID": "H001067",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Robert Pittenger",
+                    "district_num": "09",
+                    "representative_bioguideID": "P000606",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Patrick T. McHenry",
+                    "district_num": "10",
+                    "representative_bioguideID": "M001156",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Mark Meadows",
+                    "district_num": "11",
+                    "representative_bioguideID": "M001187",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Alma S. Adams",
+                    "district_num": "12",
+                    "representative_bioguideID": "A000370",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "George Holding",
+                    "district_num": "13",
+                    "representative_bioguideID": "H001065",
+                    "representative_party": "R"
+                }
+            ] 
+        },
+        { 
+            "state_name": "North Dakota", 
+            "state_code": "38", 
+            "abbr": "ND",
+            "congressional_districts": [
+                {
+                    "representative_name": "Kevin Cramer",
+                    "district_num": "00",
+                    "representative_bioguideID": "C001096",
+                    "representative_party": "R"
+                }
+            ] 
+        },
+        { 
+            "state_name": "Ohio", 
+            "state_code": "39", 
+            "abbr": "OH",
+            "congressional_districts": [
+                {
+                    "representative_name": "Steve Chabot",
+                    "district_num": "01",
+                    "representative_bioguideID": "C000266",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Brad R. Wenstrup",
+                    "district_num": "02",
+                    "representative_bioguideID": "W000815",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Joyce Beatty",
+                    "district_num": "03",
+                    "representative_bioguideID": "B001281",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Jim Jordan",
+                    "district_num": "04",
+                    "representative_bioguideID": "J000289",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Robert E. Latta",
+                    "district_num": "05",
+                    "representative_bioguideID": "L000566",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Bill Johnson",
+                    "district_num": "06",
+                    "representative_bioguideID": "J000292",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Bob Gibbs",
+                    "district_num": "07",
+                    "representative_bioguideID": "G000563",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": null,
+                    "district_num": "08", 
+                    "representative_bioguideID": null,
+                    "representative_party": null
+                },
+                {
+                    "representative_name": "Marcy Kaptur",
+                    "district_num": "09",
+                    "representative_bioguideID": "K000009",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Michael R. Turner",
+                    "district_num": "10",
+                    "representative_bioguideID": "T000463",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Marcia L. Fudge",
+                    "district_num": "11",
+                    "representative_bioguideID": "F000455",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Patrick J. Tiberi",
+                    "district_num": "12",
+                    "representative_bioguideID": "T000462",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Tim Ryan",
+                    "district_num": "13",
+                    "representative_bioguideID": "R000577",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "David P. Joyce",
+                    "district_num": "14",
+                    "representative_bioguideID": "J000295",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Steve Stivers",
+                    "district_num": "15",
+                    "representative_bioguideID": "S001187",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "James B. Renacci",
+                    "district_num": "16",
+                    "representative_bioguideID": "R000586",
+                    "representative_party": "R"
+                }
+            ] 
+        },
+        { 
+            "state_name": "Oklahoma", 
+            "state_code": "40", 
+            "abbr": "OK",
+            "congressional_districts": [
+                {
+                    "representative_name": "Jim Bridenstine",
+                    "district_num": "01",
+                    "representative_bioguideID": "B001283",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Markwayne Mullin",
+                    "district_num": "02",
+                    "representative_bioguideID": "M001190",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Frank D. Lucas",
+                    "district_num": "03",
+                    "representative_bioguideID": "L000491",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Tom Cole",
+                    "district_num": "04",
+                    "representative_bioguideID": "C001053",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Steve Russell",
+                    "district_num": "05",
+                    "representative_bioguideID": "R000604",
+                    "representative_party": "R"
+                }
+            ] 
+        },
+        { 
+            "state_name": "Oregon", 
+            "state_code": "41", 
+            "abbr": "OR",
+            "congressional_districts": [
+                {
+                    "representative_name": "Suzanne Bonamici",
+                    "district_num": "01",
+                    "representative_bioguideID": "B001278",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Greg Walden",
+                    "district_num": "02",
+                    "representative_bioguideID": "W000791",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Earl Blumenauer",
+                    "district_num": "03",
+                    "representative_bioguideID": "B000574",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Peter A. DeFazio",
+                    "district_num": "04",
+                    "representative_bioguideID": "D000191",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Kurt Schrader",
+                    "district_num": "05",
+                    "representative_bioguideID": "S001180",
+                    "representative_party": "D"
+                }
+            ] 
+        },
+        { 
+            "state_name": "Pennsylvania", 
+            "state_code": "42", 
+            "abbr": "PA",
+            "congressional_districts": [
+                {
+                    "representative_name": "Robert A. Brady",
+                    "district_num": "01",
+                    "representative_bioguideID": "B001227",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Chaka Fattah",
+                    "district_num": "02",
+                    "representative_bioguideID": "F000043",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Mike Kelly",
+                    "district_num": "03",
+                    "representative_bioguideID": "K000376",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Scott Perry",
+                    "district_num": "04",
+                    "representative_bioguideID": "P000605",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Glenn Thompson",
+                    "district_num": "05",
+                    "representative_bioguideID": "T000467",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Ryan A. Costello",
+                    "district_num": "06",
+                    "representative_bioguideID": "C001106",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Patrick Meehan",
+                    "district_num": "07",
+                    "representative_bioguideID": "M001181",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Michael G. Fitzpatrick",
+                    "district_num": "08",
+                    "representative_bioguideID": "F000451",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Bill Shuster",
+                    "district_num": "09",
+                    "representative_bioguideID": "S001154",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Tom Marino",
+                    "district_num": "10",
+                    "representative_bioguideID": "M001179",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Lou Barletta",
+                    "district_num": "11",
+                    "representative_bioguideID": "B001269",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Keith J. Rothfus",
+                    "district_num": "12",
+                    "representative_bioguideID": "R000598",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Brendan F. Boyle",
+                    "district_num": "13",
+                    "representative_bioguideID": "B001296",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Michael F. Doyle",
+                    "district_num": "14",
+                    "representative_bioguideID": "D000482",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Charles W. Dent",
+                    "district_num": "15",
+                    "representative_bioguideID": "D000604",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Joseph R. Pitts",
+                    "district_num": "16",
+                    "representative_bioguideID": "P000373",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Matt Cartwright",
+                    "district_num": "17",
+                    "representative_bioguideID": "C001090",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Tim Murphy",
+                    "district_num": "18",
+                    "representative_bioguideID": "M001151",
+                    "representative_party": "R"
+                }
+            ] 
+        },
+        { 
+            "state_name": "Puerto Rico", 
+            "state_code": "43", 
+            "abbr": "PR",
+            "congressional_districts": [
+                {
+                    "representative_name": "Pedro R. Pierluisi",
+                    "district_num": "00",
+                    "representative_bioguideID": "P000596",
+                    "representative_party": "D"
+                }
+            ] 
+        },
+        { 
+            "state_name": "Rhode Island", 
+            "state_code": "44", 
+            "abbr": "RI",
+            "congressional_districts": [
+                {
+                    "representative_name": "David N. Cicilline",
+                    "district_num": "01",
+                    "representative_bioguideID": "C001084",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "James R. Langevin",
+                    "district_num": "02",
+                    "representative_bioguideID": "L000559",
+                    "representative_party": "D"
+                }
+            ] 
+        },
+        { 
+            "state_name": "South Carolina", 
+            "state_code": "45", 
+            "abbr": "SC",
+            "congressional_districts": [
+                {
+                    "representative_name": "Mark Sanford",
+                    "district_num": "01",
+                    "representative_bioguideID": "S000051",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Joe Wilson",
+                    "district_num": "02",
+                    "representative_bioguideID": "W000795",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Jeff Duncan",
+                    "district_num": "03",
+                    "representative_bioguideID": "D000615",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Trey Gowdy",
+                    "district_num": "04",
+                    "representative_bioguideID": "G000566",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Mick Mulvaney",
+                    "district_num": "05",
+                    "representative_bioguideID": "M001182",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "James E. Clyburn",
+                    "district_num": "06",
+                    "representative_bioguideID": "C000537",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Tom Rice",
+                    "district_num": "07",
+                    "representative_bioguideID": "R000597",
+                    "representative_party": "R"
+                }
+            ] 
+        },
+        { 
+            "state_name": "South Dakota", 
+            "state_code": "46", 
+            "abbr": "SD",
+            "congressional_districts": [
+                {
+                    "representative_name": "Kristi L. Noem",
+                    "district_num": "00",
+                    "representative_bioguideID": "N000184",
+                    "representative_party": "R"
+                }
+            ] 
+        },
+        { 
+            "state_name": "Tennessee", 
+            "state_code": "47", 
+            "abbr": "TN",
+            "congressional_districts": [
+                {
+                    "representative_name": "David P. Roe",
+                    "district_num": "01",
+                    "representative_bioguideID": "R000582",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "John J. Duncan",
+                    "district_num": "02",
+                    "representative_bioguideID": "D000533",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Charles J. 'Chuck' Fleischmann",
+                    "district_num": "03",
+                    "representative_bioguideID": "F000459",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Scott DesJarlais",
+                    "district_num": "04",
+                    "representative_bioguideID": "D000616",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Jim Cooper",
+                    "district_num": "05",
+                    "representative_bioguideID": "C000754",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Diane Black",
+                    "district_num": "06",
+                    "representative_bioguideID": "B001273",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Marsha Blackburn",
+                    "district_num": "07",
+                    "representative_bioguideID": "B001243",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Stephen,Lee,Fincher",
+                    "district_num": "08",
+                    "representative_bioguideID": "F000458",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Steve Cohen",
+                    "district_num": "09",
+                    "representative_bioguideID": "C001068",
+                    "representative_party": "D"
+                }
+            ] 
+        },
+        { 
+            "state_name": "Texas", 
+            "state_code": "48", 
+            "abbr": "TX",
+            "congressional_districts": [
+                {
+                    "representative_name": "Louie Gohmert",
+                    "district_num": "01",
+                    "representative_bioguideID": "G000552",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Ted Poe",
+                    "district_num": "02",
+                    "representative_bioguideID": "P000592",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Sam Johnson",
+                    "district_num": "03",
+                    "representative_bioguideID": "J000174",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "John Ratcliffe",
+                    "district_num": "04",
+                    "representative_bioguideID": "R000601",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Jeb Hensarling",
+                    "district_num": "05",
+                    "representative_bioguideID": "H001036",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Joe Barton",
+                    "district_num": "06",
+                    "representative_bioguideID": "B000213",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "John,Abney,Culberson",
+                    "district_num": "07",
+                    "representative_bioguideID": "C001048",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Kevin Brady",
+                    "district_num": "08",
+                    "representative_bioguideID": "B000755",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Al Green",
+                    "district_num": "09",
+                    "representative_bioguideID": "G000553",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Michael T. McCaul",
+                    "district_num": "10",
+                    "representative_bioguideID": "M001157",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "K. Michael,Conaway",
+                    "district_num": "11",
+                    "representative_bioguideID": "C001062",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Kay Granger",
+                    "district_num": "12",
+                    "representative_bioguideID": "G000377",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Mac Thornberry",
+                    "district_num": "13",
+                    "representative_bioguideID": "T000238",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Randy K. Weber",
+                    "district_num": "14",
+                    "representative_bioguideID": "W000814",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Rubén Hinojosa",
+                    "district_num": "15",
+                    "representative_bioguideID": "H000636",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Beto O’Rourke",
+                    "district_num": "16",
+                    "representative_bioguideID": "O000170",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Bill Flores",
+                    "district_num": "17",
+                    "representative_bioguideID": "F000461",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Sheila Jackson Lee",
+                    "district_num": "18",
+                    "representative_bioguideID": "J000032",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Randy Neugebauer",
+                    "district_num": "19",
+                    "representative_bioguideID": "N000182",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Joaquin Castro",
+                    "district_num": "20",
+                    "representative_bioguideID": "C001091",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Lamar Smith",
+                    "district_num": "21",
+                    "representative_bioguideID": "S000583",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Pete Olson",
+                    "district_num": "22",
+                    "representative_bioguideID": "O000168",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Will Hurd",
+                    "district_num": "23",
+                    "representative_bioguideID": "H001073",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Kenny Marchant",
+                    "district_num": "24",
+                    "representative_bioguideID": "M001158",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Roger Williams",
+                    "district_num": "25",
+                    "representative_bioguideID": "W000816",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Michael C. Burgess",
+                    "district_num": "26",
+                    "representative_bioguideID": "B001248",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Blake Farenthold",
+                    "district_num": "27",
+                    "representative_bioguideID": "F000460",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Henry Cuellar",
+                    "district_num": "28",
+                    "representative_bioguideID": "C001063",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Gene Green",
+                    "district_num": "29",
+                    "representative_bioguideID": "G000410",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Eddie,Bernice,Johnson",
+                    "district_num": "30",
+                    "representative_bioguideID": "J000126",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "John R. Carter",
+                    "district_num": "31",
+                    "representative_bioguideID": "C001051",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Pete Sessions",
+                    "district_num": "32",
+                    "representative_bioguideID": "S000250",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Marc A. Veasey",
+                    "district_num": "33",
+                    "representative_bioguideID": "V000131",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Filemon Vela",
+                    "district_num": "34",
+                    "representative_bioguideID": "V000132",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Lloyd Doggett",
+                    "district_num": "35",
+                    "representative_bioguideID": "D000399",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Brian Babin",
+                    "district_num": "36",
+                    "representative_bioguideID": "B001291",
+                    "representative_party": "R"
+                }
+            ] 
+        },
+        { 
+            "state_name": "Utah", 
+            "state_code": "49", 
+            "abbr": "UT",
+            "congressional_districts": [
+                {
+                    "representative_name": "Rob Bishop",
+                    "district_num": "01",
+                    "representative_bioguideID": "B001250",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Chris Stewart",
+                    "district_num": "02",
+                    "representative_bioguideID": "S001192",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Jason Chaffetz",
+                    "district_num": "03",
+                    "representative_bioguideID": "C001076",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Mia B. Love",
+                    "district_num": "04",
+                    "representative_bioguideID": "L000584",
+                    "representative_party": "R"
+                }
+            ] 
+        },
+        { 
+            "state_name": "Vermont",
+            "state_code": "50", 
+            "abbr": "VT",
+            "congressional_districts": [
+                {
+                    "representative_name": "Peter Welch",
+                    "district_num": "00",
+                    "representative_bioguideID": "W000800",
+                    "representative_party": "D"
+                }
+            ] 
+        },
+        { 
+            "state_name": "Virginia", 
+            "state_code": "51", 
+            "abbr": "VA",
+            "congressional_districts": [
+                {
+                    "representative_name": "Robert J. Wittman",
+                    "district_num": "01",
+                    "representative_bioguideID": "W000804",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "E. Scott,Rigell",
+                    "district_num": "02",
+                    "representative_bioguideID": "R000589",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Robert,C. “Bobby”,Scott",
+                    "district_num": "03",
+                    "representative_bioguideID": "S000185",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "J. Randy,Forbes",
+                    "district_num": "04",
+                    "representative_bioguideID": "F000445",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Robert Hurt",
+                    "district_num": "05",
+                    "representative_bioguideID": "H001060",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Bob Goodlatte",
+                    "district_num": "06",
+                    "representative_bioguideID": "G000289",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Dave Brat",
+                    "district_num": "07",
+                    "representative_bioguideID": "B001290",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Donald S. Beyer",
+                    "district_num": "08",
+                    "representative_bioguideID": "B001292",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "H. Morgan,Griffith",
+                    "district_num": "09",
+                    "representative_bioguideID": "G000568",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Barbara Comstock",
+                    "district_num": "10",
+                    "representative_bioguideID": "C001105",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Gerald E. Connolly",
+                    "district_num": "11",
+                    "representative_bioguideID": "C001078",
+                    "representative_party": "D"
+                }
+            ] 
+        },
+        { 
+            "state_name": "Virgin Islands",
+            "state_code": "52", 
+            "abbr": "VI",
+            "congressional_districts": [
+                {
+                    "representative_name": "Stacey E. Plaskett",
+                    "district_num": "00",
+                    "representative_bioguideID": "P000610",
+                    "representative_party": "D"
+                }
+            ] 
+        },
+        { 
+            "state_name": "Washington", 
+            "state_code": "53", 
+            "abbr": "WA",
+            "congressional_districts": [
+                {
+                    "representative_name": "Suzan K. DelBene",
+                    "district_num": "01",
+                    "representative_bioguideID": "D000617",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Rick Larsen",
+                    "district_num": "02",
+                    "representative_bioguideID": "L000560",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Jaime Herrera Beutler",
+                    "district_num": "03",
+                    "representative_bioguideID": "H001056",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Dan Newhouse",
+                    "district_num": "04",
+                    "representative_bioguideID": "N000189",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Cathy McMorris Rodgers",
+                    "district_num": "05",
+                    "representative_bioguideID": "M001159",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Derek Kilmer",
+                    "district_num": "06",
+                    "representative_bioguideID": "K000381",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Jim McDermott",
+                    "district_num": "07",
+                    "representative_bioguideID": "M000404",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "David G. Reichert",
+                    "district_num": "08",
+                    "representative_bioguideID": "R000578",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Adam Smith",
+                    "district_num": "09",
+                    "representative_bioguideID": "S000510",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Denny Heck",
+                    "district_num": "10",
+                    "representative_bioguideID": "H001064",
+                    "representative_party": "D"
+                }
+            ] 
+        },
+        { 
+            "state_name": "West Virginia", 
+            "state_code": "54", 
+            "abbr": "WV",
+            "congressional_districts": [
+                {
+                    "representative_name": "David B. McKinley",
+                    "district_num": "01",
+                    "representative_bioguideID": "M001180",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Alexander X. Mooney",
+                    "district_num": "02",
+                    "representative_bioguideID": "M001195",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Evan H. Jenkins",
+                    "district_num": "03",
+                    "representative_bioguideID": "J000297",
+                    "representative_party": "R"
+                }
+            ] 
+        },
+        { 
+            "state_name": "Wisconsin", 
+            "state_code": "55", 
+            "abbr": "WI",
+            "congressional_districts": [
+                {
+                    "representative_name": "Paul D. Ryan",
+                    "district_num": "01",
+                    "representative_bioguideID": "R000570",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Mark Pocan",
+                    "district_num": "02",
+                    "representative_bioguideID": "P000607",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Ron Kind",
+                    "district_num": "03",
+                    "representative_bioguideID": "K000188",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "Gwen Moore",
+                    "district_num": "04",
+                    "representative_bioguideID": "M001160",
+                    "representative_party": "D"
+                },
+                {
+                    "representative_name": "F. James Sensenbrenner",
+                    "district_num": "05",
+                    "representative_bioguideID": "S000244",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Glenn Grothman",
+                    "district_num": "06",
+                    "representative_bioguideID": "G000576",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Sean P. Duffy",
+                    "district_num": "07",
+                    "representative_bioguideID": "D000614",
+                    "representative_party": "R"
+                },
+                {
+                    "representative_name": "Reid J. Ribble",
+                    "district_num": "08",
+                    "representative_bioguideID": "R000587",
+                    "representative_party": "R"
+                }
+            ] 
+        },
+        { 
+            "state_name": "Wyoming",
+            "state_code": "56", 
+            "abbr": "WY",
+            "congressional_districts": [
+                {
+                    "representative_name": "Cynthia M. Lummis",
+                    "district_num": "00",
+                    "representative_bioguideID": "L000571",
+                    "representative_party": "R"
+                }
+            ] 
+        },
+        { 
+            "state_name": "Northern Mariana Islands", 
+            "state_code": "69", 
+            "abbr": "MP",
+            "congressional_districts": [
+                {
+                    "representative_name": "Gregorio Kilili Camacho Sablan",
+                    "district_num": "00",
+                    "representative_bioguideID": "S001177",
+                    "representative_party": "D"
+                }
+            ] 
+        }
+    ]
+}

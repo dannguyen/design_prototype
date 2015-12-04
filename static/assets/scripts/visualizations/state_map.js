@@ -80,8 +80,8 @@ function render(err, us, data) {
         });
     
 
-    states.on('mouseover', syncedMouseIn)
-        .on('mouseout', syncedMouseOut);
+    states.on('mouseover', tooltipShow)
+        .on('mouseout', tooltipHide);
     
     // var stateClasses = states.attr('class').split(' ')[1];
     states.each(function(d){
@@ -130,17 +130,24 @@ function tooltipHide(d, i) {
     $(this).tooltip('hide');
 }
 
-function syncedMouseIn(d) {
-    tooltipShow; // NOT WORKING
-    var name =  d.properties.name.replace(/\s/g, '-');
-        d3.selectAll('.percent.' + name).style('fill', '#D00441');
-}
-function syncedMouseOut(d) {
-    tooltipHide; // NOT WORKING
-    var name =  d.properties.name.replace(/\s/g, '-');
-        d3.selectAll('.percent.' + name ).style('fill', '#57C3EC')
+// function syncedMouseIn(d) {
+    
+//     // console.log('syncedMouseIn working!');
+
+    
+//     var name =  d.properties.name.replace(/\s/g, '-');
+//         d3.selectAll('.percent.' + name).style('fill', '#D00441');
+//         tooltipShow; // NOT WORKING
+// }
+// function syncedMouseOut(d) {
+
+//     // console.log('syncedMouseOut working!');
+
+//     tooltipHide; // NOT WORKING
+//     var name =  d.properties.name.replace(/\s/g, '-');
+//         d3.selectAll('.percent.' + name ).style('fill', '#57C3EC')
             
-}
+// }
 
 // highlight my code blocks
 d3.selectAll('pre code').each(function() {
