@@ -1,6 +1,11 @@
-var dataset = [ [2014,  2100], 2014, 2100]
+var dataset = [[2014,  2100], 2014, 2100]
   , arrayLength = dataset.length // Placeholder data
   , allValues = [];
+
+// TOOLTIP TEMPLATE. CODE FOR TEMPLATE ON THE HTML TEMPLATE PAGE
+var template = _.template(d3.select('#timeline-tooltip-template').html());  
+
+console.log('template: ' + template);
 
 for (var i = 0; i < arrayLength; i++) {
     if(isNaN(dataset[i]) == false) { allValues.push(dataset[i]) }
@@ -56,6 +61,9 @@ svg.append('g')
     .attr("transform", "translate(0," + (height - margins) + ")")
     .call(xAxis);
 
+d3.select('rect').on('mouseover', tooltipShow)
+        .on('mouseout', tooltipHide);
+
 d3.select(window).on('resize.timeline', resizeTimeline);
 
 function resizeTimeline() {
@@ -96,3 +104,20 @@ function resizeTimeline() {
 
 };
 
+function tooltipShow(d, i) {
+    console.log('tooltip firing!');
+    var datum = dataset[d];
+    if (!datum) return;
+
+    $(this).tooltip({
+        title: template(datum),
+        html: true,
+        container: svg.node().parentNode,
+        placement: 'auto'
+    }).tooltip('show');
+}
+
+function tooltipHide(d, i) {
+    console.log('tooltip hiding!');
+    $(this).tooltip('hide');
+}

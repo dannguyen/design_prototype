@@ -101,7 +101,6 @@
                         </table>
                     </div> -->
                     <div class="row">
-                        <div class="col-md-12" id="timeline"></div>
                         
                     </div>
                 </div>
@@ -184,13 +183,18 @@
 
             <div class="row">
                 <div class="col-md-4">
+                {% for d in districts_list['congressional_districts'] %}
+                    {% if ((d['abbr'] == object_list[1]['popStateCode']) and (d['district_num'] == object_list[1]['placeOfPerformanceCongressionalDistrict'])) %}
                         <table>
                             <tr><td>City</td><td>TKTK</td></tr>
                             <tr><td>State / Country</td><td>{{ object_list[1]['popStateCode'] }} / {{ object_list[1]['placeOfPerformanceCountryCode'] }}</td></tr>
                             <tr><td>ZIP code</td><td>{{ object_list[1]['placeOfPerformanceZIPCode'] }}</td></tr>
                             <tr><td>Congressional district</td><td>{{ object_list[1]['popStateCode'] }}-{{ object_list[1]['placeOfPerformanceCongressionalDistrict'] }}</td></tr>
+                            <tr><td>District representative</td><td><a href="https://www.opensecrets.org/races/summary.php?cycle=2014&id={{ object_list[1]['popStateCode'] }}{{ object_list[1]['placeOfPerformanceCongressionalDistrict'] }}" target="_blank">{{ d['representative_name'] }} ({{ d['representative_party'] }})</a></td></tr>
                         </table>
-                    </div>
+                        {% endif %}
+                {% endfor %}        
+                </div>
                 <!-- MAP? -->
                 <div id="detail" class="col-md-8"></div>
             </div>
@@ -239,16 +243,14 @@
             </div>
         </section>    
 
-        <div id="congress-district"></div>
-        {{ districts_list }}
-        </div>
-    <!-- {{ object_list[1] }} -->
     </div>
 
 </div> 
 <!-- END MAIN CONTENT -->
 
-
+<script type="x-jst" id="timeline-tooltip-template">
+    <h5>HELLO</h5>
+</script>
 
 
 <!-- GEOCODE SCRIPT -->

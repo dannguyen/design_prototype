@@ -10,11 +10,11 @@ def load_data():
         d = json.loads(f.read())
     return d['usaspendingSearchResults']['result']['doc']
 
-DISTRICTS_PATH = os.path.join(os.path.dirname(__file__), '../static/data/districts.json')
+DISTRICTS_PATH = os.path.join(os.path.dirname(__file__), '../static/data/districts_new.json')
 def load_districts():
     with open(DISTRICTS_PATH) as f:
         d = json.loads(f.read())
-    return d        
+    return d            
 
 # CLEAN AGENCY FIELD
 def clean_officeID(hpdata):
